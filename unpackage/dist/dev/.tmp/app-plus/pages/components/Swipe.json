@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Swipe",
+  "usingComponents": {
+    "swipe": "/components/Swipe/Swipe"
+  }
+}

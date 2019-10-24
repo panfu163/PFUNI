@@ -1,0 +1,1 @@
+<view class="data-v-7a133a40"><block wx:if="{{visible}}"><view class="{{['uni-content data-v-7a133a40',position=='top'?'placetop':position=='bottom'?'placebottom':'placemiddle']}}"><block wx:if="{{icon=='icon'}}"><image class="loading data-v-7a133a40" src="../../static/loading.gif"></image></block><view class="data-v-7a133a40">{{message}}</view></view></block></view>

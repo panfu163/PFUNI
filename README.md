@@ -1,0 +1,41 @@
+# PFUIN
+
+#### 介绍
+PFUIN一款基于UNI-APP开发跨平台应用实现的精致移动端组件库，编写一套代码，可编译到iOS、Android、H5、小程序等多个平台。
+
+#### 软件架构
+```bash
+├── common                                      #公用文件
+├── components                                  #uni-app组件目录
+     └─Dialog.vue                               #可复用的Dialog组件
+	 └─Toast.vue                               #可复用的Toast组件
+├── pages                                       #业务页面文件存放的目录
+│  ├─components                                 #组件实例 
+     └─Dialog.vue                               #Dialog实例及文档
+	 └─Toast.vue                                #Toast实例及文档
+│  ├─index
+│  │  └─index.vue                               #index页面-所有组件入口
+│  └─list
+│     └─list.vue                                #list页面
+├─static                #存放应用引用静态资源（如图片、视频等）的地方，注意：静态资源只能存放于此
+├─main.js               #Vue初始化入口文件
+├─App.vue               #应用配置，用来配置App全局样式以及监听 应用生命周期
+├─manifest.json         #配置应用名称、appid、logo、版本等打包信息，
+├─pages.json            #配置页面路由、导航条、选项卡等页面类信息	   
+├─package.json          #项目及工具的依赖配置文件
+├─README.md             #说明
+```
+
+
+#### 使用说明
+
+1. 在网址https://uniapp.dcloud.io查看基础文档
+2. 需下载HBuilderX来打包项目
+
+
+#### 参与贡献
+
+1. Fork 本仓库
+2. 新建 Feat_xxx 分支
+3. 提交代码
+4. 新建 Pull Request

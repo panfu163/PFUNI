@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Select",
+  "usingComponents": {
+    "select": "/components/Select/Select"
+  }
+}

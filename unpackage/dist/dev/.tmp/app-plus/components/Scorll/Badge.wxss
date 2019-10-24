@@ -1,0 +1,45 @@
+
+.trianglePanel{
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-align-self:flex-end;
+       -ms-flex-item-align:end;
+           align-self:flex-end;
+   color: white;
+   /* border: red 1px solid; */
+}
+.textbox{
+	-webkit-align-self: flex-start;
+	    -ms-flex-item-align: start;
+	        align-self: flex-start;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	z-index: 1;
+	margin: 1px;
+	/* 字符空格不忽略 */
+	white-space: pre;     
+	word-break: break-all;
+}
+
+/* 右上三角	上 左有宽度  下 右 无宽度 */
+.triangle-topright{
+/*   top:0;
+   left:0; */
+   z-index: 0;
+   width:0;
+   height:0;
+}
+
+

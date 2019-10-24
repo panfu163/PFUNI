@@ -1,0 +1,154 @@
+ //配置页面路由、导航条、选项卡等页面类信息
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText":"PFUNI",
+				"navigationStyle":"custom",
+				"app-plus":{
+				   "titleView":false
+				}
+			}
+		},
+		{
+			"path": "pages/loadmore/Loadmore",
+			"style": {
+				"navigationBarTitleText":"Loadmore"
+			}
+		},{
+			"path": "pages/loadmore/loading",
+			"style": {
+				"navigationBarTitleText":"loading"
+			}
+		},{
+			"path": "pages/components/Toast",
+			"style": {
+				"navigationBarTitleText": "Toast"
+			}
+		},{
+			"path": "pages/components/Dialog",
+			"style": {
+				"navigationBarTitleText":"Dialog"
+			}
+		},{
+			"path": "pages/components/Popup",
+			"style": {
+				"navigationBarTitleText":"Popup"
+			}
+		},{
+			"path": "pages/components/Picke",
+			"style": {
+				"navigationBarTitleText":"Picke"
+			}
+		},{
+			"path": "pages/components/DatePicke",
+			"style": {
+				"navigationBarTitleText":"DatePicke"
+			}
+		},{
+			"path": "pages/components/Scorll",
+			"style": {
+				"navigationBarTitleText":"Scorll"
+			}
+		},{
+			"path": "pages/components/Swipe",
+			"style": {
+				"navigationBarTitleText":"Swipe"
+			}
+		},{
+			"path": "pages/components/IndexList",
+			"style": {
+				"navigationBarTitleText":"IndexList"
+			}
+		},{
+			"path": "pages/components/LoadMore",
+			"style": {
+				"navigationBarTitleText":"LoadMore"
+			}
+		},{
+			"path": "pages/components/Dropload",
+			"style": {
+				"navigationBarTitleText":"Dropload"
+			}
+		},{
+			"path": "pages/components/Speaker",
+			"style": {
+				"navigationBarTitleText":"Speaker"
+			}
+		},{
+			"path": "pages/components/ChechBox",
+			"style": {
+				"navigationBarTitleText":"ChechBox"
+			}
+		},{
+			"path": "pages/components/Radio",
+			"style": {
+				"navigationBarTitleText":"Radio"
+			}
+		},{
+			"path": "pages/components/Input",
+			"style": {
+				"navigationBarTitleText":"Input"
+			}
+		},{
+			"path": "pages/components/Textarea",
+			"style": {
+				"navigationBarTitleText":"Textarea"
+			}
+		},{
+			"path": "pages/components/Select",
+			"style": {
+				"navigationBarTitleText":"Select"
+			}
+		},{
+			"path": "pages/components/Switch",
+			"style": {
+				"navigationBarTitleText":"Switch"
+			}
+		},{
+			"path": "pages/components/Upload",
+			"style": {
+				"navigationBarTitleText":"Upload"
+			}
+		},{
+			"path": "pages/components/CountDown",
+			"style": {
+				"navigationBarTitleText":"CountDown"
+			}
+		}
+	],
+	"subPackages": [{
+		 "root":"pagesA",//子包的根目录
+		 "pages": [{
+		            "path": "LoadingMore",
+		            "style": {
+				        "navigationBarTitleText":"上拉加载"
+					}
+		   }]
+	}],
+	 "preloadRule": { //分包预载配置
+	        "pagesA/LoadingMore": {
+	            "network": "all", //在指定网络下预下载，可选值为：all（不限网络）、wifi（仅wifi下预下载）
+	            "packages": ["__APP__"] //进入页面后预下载分包的 root 或 name。APP 表示主包
+	        }
+	 },
+	"globalStyle": { //用于设置应用的状态栏、导航条、标题、窗口背景色等。
+		"navigationBarTextStyle": "white", //导航栏标题颜色，仅支持 black/white
+		"navigationBarTitleText": "PFUIN", //导航栏标题文字内容
+		"navigationBarBackgroundColor": "#0d0d0d", //导航栏背景颜色
+		"backgroundColor": "#F8F8F8", //窗口的背景色-微信小程序
+		"enablePullDownRefresh":false, //是否开启下拉刷新，详见页面生命周期。
+		"onReachBottomDistance":50  //页面上拉触底事件触发时距页面底部距离，单位为px，详见页面生命周期
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}

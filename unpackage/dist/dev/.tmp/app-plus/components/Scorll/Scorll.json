@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "badge": "/components/Scorll/Badge"
+  },
+  "component": true
+}
