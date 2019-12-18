@@ -1,14 +1,21 @@
-<!---
- @author  PanFu
- @data 2019-10-17 14:39
- @description input
- @version 1.0
- @E-mail  panfu163@126.com
+<!--*
+  * Input 表单
+  * ============================================================================
+  * 版权所有 2020-2024 www.pfuni.cn，并保留所有权利。
+  * 网站地址: http://www.pfuni.cn；
+  * ----------------------------------------------------------------------------
+  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
+  * 使用；不允许对程序代码以任何形式任何目的的再发布。
+  * 侵权必究，请遵守版权约定！
+  * ============================================================================
+  *version 1.0.0
+  *author : PanFu panfu163@126.com
+  *last update date : 2020-01-01 00:00
 -->
 <template>
 	<view class="input-box">
 		<slot></slot>
-		<view  class="title" v-show="title">{{title}}</view>
+		<view  class="title" v-show="title" v-html="title"></view>
 		<view class="iconfont" :class="iconLeft" v-show="iconLeft"></view>
 		<input class="inputBox" :class="{'input-left':iconLeft,'input-right':iconRight}"
 		      :disabled="disabled" 
@@ -97,38 +104,40 @@ export default {
 	 box-sizing: border-box;
 	 width:100%;
 	 .title{
-		 font-size: 12upx;
-		 margin-bottom:20upx;
-		 line-height:70upx;
-		 padding-right:40upx;
+		 font-size:32rpx;
+		 margin-bottom:20rpx;
+		 line-height:80rpx;
+		 padding-right:40rpx;
 	 }
 	 .iconfont{
 		 position: absolute;
-		 top:15upx;
-		 left:15upx;
-		 font-size:40upx;
+		 top:15rpx;
+		 left:15rpx;
+		 font-size:40rpx;
 		 color:#999
 	 }
 	 .icon-right{
 		 position: absolute;
-		 top:15upx;
+		 top:15rpx;
 		 left:91%;
-		 font-size:40upx;
+		 font-size:40rpx;
 		 color:#999
 	 }
 	 .inputBox{
 		 flex:1;
-		 border:1upx solid #eee;
-		 padding:10upx 20upx;
+		 border:1rpx solid #eee;
+		 padding:20rpx 40rpx;
 		 display:block;
 		 position:relative;
-		 margin-bottom:20upx;
+		 margin-bottom:20rpx;
+		 overflow:hidden;
+		 height:100%;
 		 }
 	.input-left{
-		padding-left:100upx
+		padding-left:100rpx
 	 }	
 	 .input-right{
-		 padding-right:100upx
+		 padding-right:100rpx
 	 }
  }
 </style>

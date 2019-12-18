@@ -1,9 +1,16 @@
-<!---
- @author  PanFu
- @data 2019-10-17 14:39
- @description 单选
- @version 1.0
- @E-mail  panfu163@126.com
+<!--
+  * Radio 单选
+  * ============================================================================
+  * 版权所有 2019-2024 www.pfuni.cn，并保留所有权利。
+  * 网站地址: http://www.pfuni.cn；
+  * ----------------------------------------------------------------------------
+  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
+  * 使用；不允许对程序代码以任何形式任何目的的再发布。
+  * 侵权必究，请遵守版权约定！
+  * ============================================================================
+  *version 1.0.0
+  *author : PanFu 1150928736@qq.com 
+  *last update date : 2019-12-06 14:39
 -->
 <template>
 	  <view class="radiobox-box">
@@ -56,7 +63,6 @@
 		
 	},
 	onLoad(){
-		
 		 
 	},
     methods:{
@@ -90,17 +96,17 @@
 			flex-wrap:wrap;
 		}
 		.radioboxDefault{
-		  padding:10upx;
+		  padding:10rpx;
 		  text-align:center;
 		  margin:0 auto;
 		  display: inline-flex;
-			line-height:40upx;
+			line-height:40rpx;
 		}
 		.selectBoxDefault{
 		  color:#2b9939
 		}
 		.iconfont{
-			padding-right:10upx;
+			padding-right:10rpx;
 		}
 	
 	}	
@@ -110,11 +116,11 @@
 		flex-wrap:wrap;
 	}
 	.radiobox{
-	  border: 1px solid #EB5248;
-	  border-radius:7upx;
-	  padding:10upx;
+	  border: 1rpx solid #EB5248;
+	  border-radius:7rpx;
+	  padding:10rpx;
 	  text-align:center;
-	  margin:10upx;
+	  margin:10rpx;
 	}
 	.selectBox{
 	  background:#EB5248;

@@ -24,11 +24,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.PFUIN-textarea.data-v-1a7115f0 {
+.PFUIN-textarea.data-v-29e3ffcc {
   padding: 0;
   margin: 0;
 }
-.PFUIN-textarea .uni-textarea.data-v-1a7115f0 {
+.PFUIN-textarea .uni-textarea.data-v-29e3ffcc {
     width: 100%;
     border: 1rpx solid #eee;
     padding: 20rpx;
@@ -37,10 +37,10 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
-.PFUIN-textarea textarea.data-v-1a7115f0 {
+.PFUIN-textarea textarea.data-v-29e3ffcc {
     width: 100%;
 }
-.PFUIN-textarea .bottom.data-v-1a7115f0 {
+.PFUIN-textarea .bottom.data-v-29e3ffcc {
     text-align: right;
     width: 100%;
     padding-top: 10rpx;

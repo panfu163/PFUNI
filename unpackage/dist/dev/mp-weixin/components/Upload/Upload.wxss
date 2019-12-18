@@ -24,7 +24,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.box-image.data-v-7f2ee5d0 {
+.box-image.data-v-3749160c {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -36,7 +36,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.box-image .content.data-v-7f2ee5d0 {
+.box-image .content.data-v-3749160c {
     height: 180rpx;
     line-height: 180rpx;
     width: 200rpx;
@@ -45,11 +45,11 @@
     border-radius: 5rpx;
     border: 1rpx solid #eee;
 }
-.box-image .content .image.data-v-7f2ee5d0 {
+.box-image .content .image.data-v-3749160c {
       width: 100%;
       height: 100%;
 }
-.box-image .fileinput.data-v-7f2ee5d0 {
+.box-image .fileinput.data-v-3749160c {
     background: #fff;
     text-align: center;
     border-radius: 10rpx;
@@ -62,7 +62,7 @@
     font-size: 100rpx;
     color: #999;
 }
-.bnt.data-v-7f2ee5d0 {
+.bnt.data-v-3749160c {
   background: #2b9939;
   width: 100%;
   height: 50rpx;

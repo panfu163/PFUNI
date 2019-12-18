@@ -1,11 +1,34 @@
+<!--
+  * Index 组件首页
+  * ============================================================================
+  * 版权所有 2020-2024 www.pfuni.cn，并保留所有权利。
+  * 网站地址: http://www.pfuni.cn；
+  * ----------------------------------------------------------------------------
+  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
+  * 使用；不允许对程序代码以任何形式任何目的的再发布。
+  * 侵权必究，请遵守版权约定！
+  * ============================================================================
+  *version 1.0.0
+  *author : PanFu panfu163@126.com
+  *last update date : 2020-01-01 00:00
+-->
 <template>
 	<view class="content">
-       <image class="logo" src="../../static/logo.png"></image>
-	   <view class="explain">
+       <image class="logo animated slideInUp" src="../../static/logo.png"></image>
+	   <view class="explain animated slideInUp">
 		   {{title}}一款基于UNI-APP开发跨平台应用实现的精致移动端组件库，编写一套代码，
 		   可编译到iOS、Android、H5、小程序等多个平台。 
 	   </view>
-	     <view class="list">
+	   <view class="list animated slideInUp">
+	     <view class="title">基础样式</view>
+		 <view class="info" @click='goto("../components/Layout")'><i class="iconfont icon-arrowright"></i>Layout 布局</view>
+		 <view class="info" @click='goto("../components/Button")'><i class="iconfont icon-arrowright"></i>Button 按钮</view>
+		 <view class="info" @click='goto("../components/Border")'><i class="iconfont icon-arrowright"></i>Border 边框</view>
+		 <view class="info" @click='goto("../components/Cell")'><i class="iconfont icon-arrowright"></i>Cell 单元格</view>
+		 <view class="info" @click='goto("../components/Loading")'><i class="iconfont icon-arrowright"></i>Loading 加载图标</view>
+		 <view class="info" @click='goto("../components/Icon")'><i class="iconfont icon-arrowright"></i>Icon 图标</view>
+		 </view>
+	     <view class="list animated slideInUp">
 	   		    <view class="title">Basics 基础组件</view>
 				<view class="info" @click='goto("../components/Toast")'><i class="iconfont icon-arrowright"></i>Toast</view>
 				<view class="info" @click='goto("../components/Dialog")'><i class="iconfont icon-arrowright"></i>Dialog</view>   
@@ -14,22 +37,19 @@
 	   			<view class="info" @click='goto("../components/DatePicke")'><i class="iconfont icon-arrowright"></i>DatePicke</view>
 				<view class="info" @click='goto("../components/CountDown")'><i class="iconfont icon-arrowright"></i>CountDown</view>
 	   </view>
-	   <view class="list">
+	   <view class="list animated slideInUp">
 		    <view class="title">Scorll 滚动组件</view>
 		   	<view class="info" @click='goto("../components/Scorll")'><i class="iconfont icon-arrowright"></i>Scorll</view>
 			<view class="info" @click='goto("../components/IndexList")'><i class="iconfont icon-arrowright"></i>IndexList</view>
 			<view class="info" @click='goto("../components/Swipe")'><i class="iconfont icon-arrowright"></i>Swipe</view>
-			<view class="info" @click='goto("../components/Dropload")'><i class="iconfont icon-arrowright"></i>Dropload
-			 <text class="text">弹出使用-不适合放长列表(uniapp官方说明)</text>
-			</view>
-			<view class="info" @click='goto("../components/LoadMore")'><i class="iconfont icon-arrowright"></i>LoadMore
-			 <text class="text">适合放长列表</text>
-			</view>
 			<view class="info" @click='goto("../components/Speaker")'><i class="iconfont icon-arrowright"></i>Speaker
 			 <text class="text">滚动公告</text>
 			</view>
+			<view class="info" @click='goto("../components/Dropload")'><i class="iconfont icon-arrowright"></i>Dropload
+			 <text class="text">弹出使用-不适合放长列表</text>
+			</view>
 	   </view>
-	     <view class="list">
+	     <view class="list animated slideInUp">
 	   		    <view class="title">Form 表单组件</view>
 	   		   	<view class="info" @click='goto("../components/ChechBox")'><i class="iconfont icon-arrowright"></i>ChechBox</view>
 	   			<view class="info" @click='goto("../components/Radio")'><i class="iconfont icon-arrowright"></i>Radio</view>
@@ -39,12 +59,16 @@
 				<view class="info" @click='goto("../components/Switch")'><i class="iconfont icon-arrowright"></i>Switch</view>
 				<view class="info" @click='goto("../components/Upload")'><i class="iconfont icon-arrowright"></i>Upload</view>
 	   </view>
-	   <view class="list">
+	   <view class="list animated slideInUp">
 	   	   		    <view class="title">Example 常用实例</view>
 	   	   		   	<view class="info" @click='goto("../../pagesA/LoadingMore")'>
 					<i class="iconfont icon-arrowright"></i>上拉加载</view>
+	 <view class="info" @click='goto("../components/LoadMore")'>
+		 <i class="iconfont icon-arrowright"></i>上拉下拉加载
+	  <text class="text">适合放长列表</text>
+	 </view>
 	  </view>
-	  <view class="list">
+	  <view class="list animated slideInUp">
 			<view class="title">subPackages 分包常用实例</view>
 			<view class="info" @click='goto("../../pagesA/LoadingMore")'>
 			<i class="iconfont icon-arrowright"></i>上拉加载</view>
@@ -87,51 +111,51 @@
 	 background:#f5f5f5;
 	 -webkit-overflow-scrolling:touch;
 	 .logo{
-		  height:100upx;
-		  width:100upx;
-		  font-size:200upx;
+		  height:100rpx;
+		  width:100rpx;
+		  font-size:200rpx;
 		  color:#2b9939;
-		  margin:50upx auto;
+		  margin:50rpx auto;
 		  display: block;
 		  }
 	 .explain{
-		  font-size:30upx;
+		  font-size:30rpx;
 		  color: #0d0d0d;
 		  text-align:justify;
-		  margin:20upx auto 40upx;
-		  padding:0 50upx;
+		  margin:20rpx auto 40rpx;
+		  padding:0 50rpx;
 		  box-sizing: border-box;
-		  text-indent:50upx;
+		  text-indent:50rpx;
 	    }	  
      .list{
 		  box-sizing: border-box;
 		  background: #fff;
 		  overflow: hidden;
-		  font-size:18upx;
+		  font-size:18rpx;
 		  .title{
-			   padding:20upx 20upx; 
-			   font-size:24upx;
-			   border-bottom:1upx solid #eee;
+			   padding:20rpx 20rpx; 
+			   font-size:24rpx;
+			   border-bottom:1rpx solid #eee;
 			   font-weight: bold;
 			   color: #2b9939;
 			   }
 		  .info{
 			   position:relative;
-			   padding:20upx 40upx;
-			   border-bottom:1upx;
-			   border-bottom:1upx solid #eee;
+			   padding:20rpx 40rpx;
+			   border-bottom:1rpx;
+			   border-bottom:1rpx solid #eee;
 			   .text{
 				 position: absolute;
-				 top:20upx;
-				 right:70upx;
+				 top:20rpx;
+				 right:70rpx;
 				 color:#999;  
 			   }
 			   .iconfont{
 				   position: absolute;
-				   top:20upx;
+				   top:20rpx;
 				   right:0;
 				   color:#999;
-			       padding:0 20upx 0 0;
+			       padding:0 20rpx 0 0;
 			   }
 			}	   
 	   }

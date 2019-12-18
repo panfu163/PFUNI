@@ -10,16 +10,40 @@
 				   "titleView":false
 				}
 			}
-		},
-		{
-			"path": "pages/loadmore/Loadmore",
+		},{
+			"path": "pages/components/Layout",
 			"style": {
-				"navigationBarTitleText":"Loadmore"
+				"navigationBarTitleText":"Layout"
 			}
 		},{
-			"path": "pages/loadmore/loading",
+			"path": "pages/components/Button",
 			"style": {
-				"navigationBarTitleText":"loading"
+				"navigationBarTitleText":"Button"
+			}
+		},{
+			"path": "pages/components/Border",
+			"style": {
+				"navigationBarTitleText":"Border"
+			}
+		},{
+			"path": "pages/components/Loading",
+			"style": {
+				"navigationBarTitleText":"Loading"
+			}
+		},{
+			"path": "pages/components/Icon",
+			"style": {
+				"navigationBarTitleText":"Icon"
+			}
+		},{
+			"path": "pages/components/Cell",
+			"style": {
+				"navigationBarTitleText":"Cell"
+			}
+		},{
+			"path": "pages/loadmore/LoadMore",
+			"style": {
+				"navigationBarTitleText":"LoadMore"
 			}
 		},{
 			"path": "pages/components/Toast",

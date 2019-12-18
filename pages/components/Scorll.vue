@@ -1,7 +1,21 @@
+<!--
+  * Scorll 画廊组件
+  * ============================================================================
+  * 版权所有 2020-2024 www.pfuni.cn，并保留所有权利。
+  * 网站地址: http://www.pfuni.cn；
+  * ----------------------------------------------------------------------------
+  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
+  * 使用；不允许对程序代码以任何形式任何目的的再发布。
+  * 侵权必究，请遵守版权约定！
+  * ============================================================================
+  *version 1.0.0
+  *author : PanFu panfu163@126.com
+  *last update date : 2020-01-01 00:00
+-->
 <template>
 	<view class="content">
-	
-	
+		<view class="h2">Scorll 画廊组件</view>
+		<view class="tip">Scorll组件主要用于非模态信息提醒，无需用户交互.<strong>注:</strong>由于此组件基于UNI-APP实现，所以在使用之前，请确保自己了解过 </view>
 		<Scorll 
 			 :galleryheight="165" 
 			  bkstart="#000000" 
@@ -16,134 +30,19 @@
 			 :images="testimgs" 
 			 @clickimg="onclickimg">
 			</Scorll>
-	
-		<view class="h2">Scorll</view>
-		<view class="tip">Scorll组件主要用于非模态信息提醒，无需用户交互。</view>
-		<view><strong>注:</strong>由于此组件基于PFUIN实现，所以在使用之前，请确保自己了解过 </view>
-		<view class="h3">示例</view>
-		<pre class="pre html">
-			<element contenteditable="true">{{htmlData}}</element>
-		  <!-- <span class="isCopy"  @click="copyHtml()">复制</span> -->
-		</pre>
-		<view class="title">基本用法</view>
-		  <pre  class="pre js">
-		<element contenteditable="true">{{jsData}}</element>
-		 </pre >
-	  <view class="list">
-		  <view class="th">
-			  <text>属性名</text>
-			  <text>说明</text>
-			  <text>类型</text>
-			  <text>默认值</text>
-			  <text>版本</text>
-		  </view>
-		  <view class="td">
-			  <text>galleryheight</text>
-			  <text>画廊高度 单位px</text>
-			  <text>Number</text>
-			  <text>165</text>
-			  <text>1.0.0</text>
-		  </view>
-		<view class="td">
-					  <text>imgviewwidth</text>
-					  <text>图片框宽度 单位px</text>
-					  <text>Number</text>
-					  <text>85</text>
-					  <text>1.0.0</text>
-		</view>
-			<view class="td">
-					  <text>imgviewheight</text>
-					  <text>图片框高度 单位px</text>
-					  <text>Number</text>
-					  <text>105</text>
-					  <text>1.0.0</text>
-		</view>
-		       <view class="td">
-				  <text>bkstart</text>
-				  <text>背景起始色</text>
-				  <text>String</text>
-				  <text>#000000</text>
-				  <text>1.0.0</text>
-		</view>
-             <view class="td">
-				  <text>bkend</text>
-				  <text>背景终止色</text>
-				  <text>String</text>
-				  <text>#000000</text>
-				  <text>1.0.0</text>
-		</view>
-		    <view class="td">
-				  <text>showbadge</text>
-				  <text>是否显示角标</text>
-				  <text>Boolean</text>
-				  <text>false</text>
-				  <text>1.0.0</text>
-		</view>
-		    <view class="td">
-				  <text>badegtype</text>
-				  <text>角标类型 round:圆角类型 trian:三角类型</text>
-				  <text>String</text>
-				  <text>trian</text>
-				  <text>1.0.0</text>
-		</view>
-		 <view class="td">
-				  <text>badegwidth</text>
-				  <text>角标宽度 （仅仅对三角角标有效）单位px</text>
-				  <text>String</text>
-				  <text>25</text>
-				  <text>1.0.0</text>
-		</view>
-		 <view class="td">
-				  <text>badegheight</text>
-				  <text>角标高度 （仅仅对三角角标有效）单位px</text>
-				  <text>String</text>
-				  <text>25</text>
-				  <text>1.0.0</text>
-		</view>
-			 <view class="td">
-				  <text>showdec</text>
-				  <text>是否显示描述</text>
-				  <text>Boolean</text>
-				  <text>false</text>
-				  <text>1.0.0</text>
-		</view>
-				 <view class="td">
-				  <text>images</text>
-				  <text>图源数组对象，结构看下面说明</text>
-				  <text>Object</text>
-				  <text>无</text>
-				  <text>1.0.0</text>
-		</view>
-	  </view>
-	 <Toasts ref="Toast"></Toasts>
+     <Toast ref="Toast"></Toast>
 	</view>
 </template>
 
 <script>
-	import Toasts from '../../components/Toast/Toast.vue'
-    import Scorll from '../../components/Scorll/Scorll.vue'
+	import {Scorll,Toast} from '@/components/PFUNI.js'
 		export default {
 			components: {
-				Toasts,
+				Toast,
 				Scorll
 			},
 		data() {
 			return {
-				htmlData:`	<Scorll 
-			 :galleryheight="165" 
-			  bkstart="#000000" 
-			  bkend="#000000" 
-			 :imgviewwidth="85" 
-			 :imgviewheight="105" 
-			 :showbadge="true"
-			  badegtype="trian" 
-			  badegwidth="25" 
-			  badegheight="25" 
-			 :showdec="true" 
-			 :images="testimgs" 
-			 @clickimg="onclickimg">
-			</Scorll>`,
-				jsData:`看当前页面代码`,
 					// 画廊示例数据
 				testimgs: [{
 						url: "http://p1.meituan.net/movie/d94e5c3054778f6f48bff3a813b0b7cd5300998.jpg@170w_235h_1e_1c",
@@ -209,115 +108,39 @@
 
 <style lang="scss" scoped="scoped">
 .content{
-	padding:40upx;
+	padding:40rpx;
 	box-sizing: border-box;
-	font-size: 14upx;
+	font-size: 14rpx;
 	.bnt{
 		  position: relative;
 		  width:100%;
 		  background: #2b9939;
 		  color: #fff;
-		  height:60upx;
-		  line-height:60upx;
-		  margin:0 auto 40upx;
+		  height:60rpx;
+		  line-height:60rpx;
+		  margin:0 auto 40rpx;
 		  text-align: center;
-		  font-size: 16upx;
-		  border-radius:10upx;
+		  font-size: 16rpx;
+		  border-radius:10rpx;
 		 } 
 	.h2{
-		font-size:24upx; 
-		margin-bottom:10upx; 
+		font-size:24rpx; 
+		margin-bottom:10rpx; 
 		font-weight: bold;
 		}  
 	.h3{
-		 font-size:20upx; 
-		 margin:20upx auto; 
+		 font-size:20rpx; 
+		 margin:20rpx auto; 
 		 font-weight: bold;
 		 color:red;
 	    }	 
 	.tip{
-		 font-size: 14upx; 
+		 font-size: 14rpx; 
 		 text-indent:15rpx; 
-		 margin:20upx auto;
-		} 
-	.pre{
-		 background:#eee;
-		 color: #000;  
-		 padding:20upx 20upx;
-		 border-radius:10upx;
-		 margin-bottom:10upx;
-		 box-sizing: border-box;
-		 overflow:auto;
-		 word-wrap:normal;
-		 element{
-				width:100%;
-				display:block;
-				height: 100%;
-				}
-		 .isCopy{
-				position:absolute;
-				right:10upx;
-				bottom:5upx;
-				background: #55A532;
-				color: #fff;
-				padding:5upx;
-				border-radius:2upx;
-				}
-		}		
-	.html,.js{
-		 position:relative;
-		 }
-	.html::before{
-		content:"HTML";
-		position:absolute;
-		top:0;
-		right:12upx;
-		color:#999;
-		}
-	.js::before{
-		content:"JS";
-		position:absolute;
-		top:0;
-		right:12upx;
-		color:#999;
-		}
+		 margin:20rpx auto;
+		} 		
 	.title{
-		margin:20upx auto;
-		}
-	.list{
-		border:1upx solid #eee;
-		border-right:0;
-		border-bottom:0;
-		margin:20upx auto;
-		}
-		.th{
-			background:#f8f8f8;
-			display: flex;
-			}
-			text{
-				display:inline-block;
-				flex: 1;
-				height:50upx;
-				line-height:50upx;
-				text-align:center;
-				border-right:1upx solid #eee;
-				}
-		.td{
-			display: flex;
-			}
-			text{
-				display:inline-block;
-				flex: 1;
-				text-align:center;
-				min-height:50upx;
-				line-height:50upx;
-				border-right:1upx solid #eee;
-				border-bottom:1upx solid #eee;
-				padding:20upx auto;
-				overflow: hidden; 
-					}
-	.swipe,.swiper-warp{
-		background:#2b9939;	
-		}
+		margin:20rpx auto;
+		}	
 }						
-</style>	
+</style>

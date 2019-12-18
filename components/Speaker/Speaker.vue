@@ -1,9 +1,16 @@
-<!---
- @author  PanFu
- @data 2019-10-17 14:39
- @description 滚动公告
- @version 1.0
- @E-mail  panfu163@126.com
+<!--
+  * Speaker 公告滚动
+  * ============================================================================
+  * 版权所有 2020-2024 www.pfuni.cn，并保留所有权利。
+  * 网站地址: http://www.pfuni.cn；
+  * ----------------------------------------------------------------------------
+  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
+  * 使用；不允许对程序代码以任何形式任何目的的再发布。
+  * 侵权必究，请遵守版权约定！
+  * ============================================================================
+  *version 1.0.0
+  *author : PanFu panfu163@126.com
+  *last update date : 2020-01-01 00:00
 -->
 <template name="Speaker">
 	<view v-if="!scrolling" class="Speaker-swiper">
@@ -56,28 +63,28 @@ export default {
 <style lang="scss" scoped>
 .Speaker-swiper{
 	width:100%; 
-	padding:10upx 0; 
+	padding:10rpx 0; 
 	display:flex; 
 	flex-wrap:nowrap;
 	swiper{
 		width:100%; 
-		height:60upx; 
+		height:60rpx; 
 		overflow:hidden;
 		}
 	swiper-item{
-		line-height:60upx;
-		height:60upx;
+		line-height:60rpx;
+		height:60rpx;
 		overflow:hidden;
 	}
 	navigator{
-		 line-height:60upx;
-		 height:60upx;
+		 line-height:60rpx;
+		 height:60rpx;
 		 overflow:hidden;
 		}
 		.iconfont{
-			height:60upx; 
-			line-height:60upx;
-			margin-right:16upx;
+			height:60rpx; 
+			line-height:60rpx;
+			margin-right:16rpx;
 			display:inline-block; 
 			flex-shrink:0;
 			
@@ -87,15 +94,15 @@ export default {
 
 .scroll-body{
 	width:100%;
-	line-height:60upx; 
-	height:60upx;
+	line-height:60rpx; 
+	height:60rpx;
 	overflow:hidden;
 	display:flex;
 	position:relative;
 	.iconfont{
-		height:60upx; 
-		line-height:60upx;
-		margin-right:16upx;
+		height:60rpx; 
+		line-height:60rpx;
+		margin-right:16rpx;
 		display:inline-block; 
 		flex-shrink:0;
 		position:absolute;
@@ -103,12 +110,12 @@ export default {
 		left:0;
 		z-index:9;
 		background:#fff;
-		padding:0 20upx 0 0;
+		padding:0 20rpx 0 0;
 	 }
 	.scrolling{
 		animation:scrollingx 12s linear infinite;
-		line-height:60upx;
-		height:60upx; 
+		line-height:60rpx;
+		height:60rpx; 
 		white-space:nowrap;
 		border:0;
 		position:relative;

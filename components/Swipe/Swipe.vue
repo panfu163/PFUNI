@@ -1,9 +1,16 @@
-<!---
- @author  PanFu
- @data 2019-10-17 14:39
- @description 焦点图
- @version 1.0
- @E-mail  panfu163@126.com
+<!--
+  * Swipe 焦点图
+  * ============================================================================
+  * 版权所有 2020-2024 www.pfuni.cn，并保留所有权利。
+  * 网站地址: http://www.pfuni.cn；
+  * ----------------------------------------------------------------------------
+  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
+  * 使用；不允许对程序代码以任何形式任何目的的再发布。
+  * 侵权必究，请遵守版权约定！
+  * ============================================================================
+  *version 1.0.0
+  *author : PanFu panfu163@126.com
+  *last update date : 2020-01-01 00:00
 -->
 <template>
 	<view class="swiper-warp">
@@ -123,9 +130,9 @@
 		}
 		.dots-item {
 			flex-shrink: 0;
-			width: 16upx;
+			width: 16rpx;
 			border-radius: 50%;
-			margin-left: 12upx;
+			margin-left: 12rpx;
 			background: rgba(0, 0, 0, .3);
 			transition: all 0.2s linear;
 		}
@@ -144,7 +151,7 @@
 		
 		.dots-nav {
 			bottom: 0;
-			height: 80upx;
+			height: 80rpx;
 			justify-content: flex-start;
 			background: rgba(0, 0, 0, 0.2);
 			box-sizing: box-sizing;
@@ -155,10 +162,10 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 			white-space: nowrap;
-			font-size: 28upx;
+			font-size: 28rpx;
 			color: #fff;
 			box-sizing: box-sizing;
-			margin: 0 30upx;
+			margin: 0 30rpx;
 		}
 		
 		.dots-indexes {
@@ -166,7 +173,7 @@
 			justify-content: center;
 			align-items: center;
 			color: #fff;
-			font-size: 24upx;
+			font-size: 24rpx;
 		}
 	}
 </style>

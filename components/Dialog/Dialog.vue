@@ -1,17 +1,22 @@
-<!---
- @author  PanFu
- @data 2019-10-17 14:39
- @description 弹出框
- @version 1.0
- @E-mail  panfu163@126.com
+<!--
+  * Dialog 弹出框
+  * ============================================================================
+  * 版权所有 2019-2024 www.pfuni.cn，并保留所有权利。
+  * 网站地址: http://www.pfuni.cn；
+  * ----------------------------------------------------------------------------
+  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
+  * 使用；不允许对程序代码以任何形式任何目的的再发布。
+  * ============================================================================
+  *time 2019-10-17 14:39
+  *version 1.0.0
 -->
 <template>
 	<view>
-		<view class="uni-mask"  v-if="isShow" @click="hide">
+		<view class="dialog-mask"  v-if="isShow" @click="hide">
 		</view>
-		<view v-if="isContent" class="uni-content">
-			<view class="uni-title">{{titile}}</view>
-			<view class="uni-info">{{message}}</view>
+		<view v-if="isContent" class="dialog-content">
+			<view class="dialog-title">{{titile}}</view>
+			<view class="dialog-info">{{message}}</view>
 			<view class="box">
 				<view class="left"   v-if="isShowBnt"  @click="getCancel">{{cancel}}</view>
 				<view   @click="getConfirm">{{confirm}}</view>
@@ -73,16 +78,17 @@
 	}
 </script>
 
-<style lang="stylus" scoped="scoped">
-.uni-mask
-	background: rgba(0, 0, 0, 0.6);
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	z-index: 99;
-.uni-content 
+<style lang="scss" scoped="scoped">
+.dialog-mask{
+		background: rgba(0, 0, 0, 0.6);
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 99;
+	}
+.dialog-content{ 
 	width: 80%;
 	position: fixed;
 	left: 50%;
@@ -90,29 +96,37 @@
 	background: #FFF;
 	z-index:100;
 	transform: translate(-50%,-50%);
-	box-shadow: 0 5upx 2upx #f5f5f5;
+	box-shadow: 0 5rpx 2rpx #f5f5f5;
 	transition: opacity .3s linear;
 	-webkit-transition:opacity .3s linear;
-.uni-title
-	text-align:center	
-	height:80upx;
-	line-height:80upx;
-	border-bottom:2upx solid #eee;
-	font-size:30upx;
-.uni-info
-	padding:60upx 30upx;
-	color: #999; 
-.box
-	display:flex;
-	border-top:1upx solid #eee;
-	view
-		 flex:1;
-		 text-align:center;
-		 padding:30upx;
-		 color: #55A532; 
-	.left
-		border-right:1upx solid #eee; 
-		color: #333; 
+	border:1rpx solid #eee;
+	.dialog-title{
+		text-align:center;	
+		height:80rpx;
+		line-height:80rpx;
+		border-bottom:2rpx solid #eee;
+		font-size:30rpx;
+		}
+	.dialog-info{
+		padding:60rpx 30rpx;
+		color: #999;
+		 }
+	.box{
+		display:flex;
+		border-top:1rpx solid #eee;
+		view{
+			 flex:1;
+			 text-align:center;
+			 padding:30rpx;
+			 color: #55A532; 
+			 font-size:28rpx;
+			 }
+		.left{
+			border-right:1rpx solid #eee; 
+			color: #333; 
+			}
+	}
+}	
 @keyframes opacity{
 	from {opacity:0}
 	to {opacity:1}
@@ -122,5 +136,3 @@
 	to {opacity:1}
 }			
 </style>
-
-

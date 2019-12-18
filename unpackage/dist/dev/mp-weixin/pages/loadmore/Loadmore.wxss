@@ -24,13 +24,13 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.content.data-v-537d2a4c {
+.content.data-v-0b114e70 {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 14rpx;
 }
-.content .loade-more-con.data-v-537d2a4c {
+.content .loade-more-con.data-v-0b114e70 {
     background: #fff;
     display: -webkit-box;
     display: -webkit-flex;
@@ -41,16 +41,16 @@
             box-sizing: border-box;
     border-bottom: 1rpx solid #eee;
 }
-.content .loade-more-con .left.data-v-537d2a4c {
+.content .loade-more-con .left.data-v-0b114e70 {
       width: 20%;
 }
-.content .loade-more-con .left .img.data-v-537d2a4c {
+.content .loade-more-con .left .img.data-v-0b114e70 {
         background: #eee;
         height: 80rpx;
         width: 80rpx;
         margin: 0 auto;
 }
-.content .loade-more-con .right.data-v-537d2a4c {
+.content .loade-more-con .right.data-v-0b114e70 {
       width: 80%;
 }
 

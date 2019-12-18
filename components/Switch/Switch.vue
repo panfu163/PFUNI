@@ -1,9 +1,16 @@
-<!---
- @author  PanFu
- @data 2019-10-17 14:39
- @description switch 开关按钮
- @version 1.0
- @E-mail  panfu163@126.com
+<!--
+  * Switch 开关
+  * ============================================================================
+  * 版权所有 2020-2024 www.pfuni.cn，并保留所有权利。
+  * 网站地址: http://www.pfuni.cn；
+  * ----------------------------------------------------------------------------
+  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
+  * 使用；不允许对程序代码以任何形式任何目的的再发布。
+  * 侵权必究，请遵守版权约定！
+  * ============================================================================
+  *version 1.0.0
+  *author : PanFu panfu163@126.com
+  *last update date : 2020-01-01 00:00
 -->
 <template>
      <div class="switch-box">
@@ -18,7 +25,7 @@
 <!--script-->
 <script>
 export default {
-	 name:'pfSwitch',
+	 name:'Switchs',
 	 props: {
 		   msg: {
                 type: Boolean,
@@ -83,17 +90,17 @@ export default {
 <!--css-->
 <style lang="scss" scoped="scoped">
 .switch-box{
-    width:82upx;
+    width:82rpx;
    .switch{
     display:none;
    }
    label{
     position:relative;
     display: block;
-    padding: 1px;
-    border-radius: 24px;
-    height: 22px;
-    margin-bottom: 15px;
+    padding:1rpx;
+    border-radius:48rpx;
+    height:44rpx;
+    margin-bottom:30rpx;
     background-color: #eee;
     cursor:pointer;
     vertical-align:top;
@@ -102,8 +109,8 @@ export default {
    label:before{
     content:'';
     display: block;
-    border-radius: 24px;
-    height: 22px;
+    border-radius:48rpx;
+    height:44rpx;
     background-color:#fff;
     -webkit-transform: scale(1, 1);
     -webkit-transition: all 0.3s ease;
@@ -113,42 +120,42 @@ export default {
     position: absolute;
     top: 50%;  
     left: 50%;  
-    margin-top: -11px;  
-    margin-left: -11px;
-    width: 22px;
-    height: 22px;
-    border-radius: 22px;
+    margin-top: -22rpx;  
+    margin-left: -22rpx;
+    width: 44rpx;
+    height: 44rpx;
+    border-radius: 44rpx;
     background-color:#fff;
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.08);
-    -webkit-transform: translateX(-9px);
+    box-shadow: 1rpx 1rpx 1rpx 1rpx rgba(0,0,0,0.08);
+    -webkit-transform: translateX(-18rpx);
     -webkit-transition: all 0.3s ease;
         }
     label.red:after{
-		-webkit-transform:translateX(9px);
+		-webkit-transform:translateX(18rpx);
 	 }
     label.red:before{
 		background-color:#de0b23;
 	}
    label.blue:after{
-		-webkit-transform:translateX(9px);
+		-webkit-transform:translateX(18rpx);
 	 }
 	label.blue:before{
 		background-color:#4395ff;
 	}
 	label.green:after{
-			-webkit-transform:translateX(9px);
+			-webkit-transform:translateX(18rpx);
 		 }
 	label.green:before{
 		background-color:#009a61;
 	}
 	label.black:after{
-			-webkit-transform:translateX(9px);
+			-webkit-transform:translateX(18rpx);
 		 }
 	label.black:before{
 		background-color:#000;
 	}
 	label.grey:after{
-			-webkit-transform:translateX(9px);
+			-webkit-transform:translateX(18rpx);
 		 }
 	label.grey:before{
 		background-color:#eee;

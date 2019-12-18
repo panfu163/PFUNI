@@ -25,14 +25,14 @@
 /* 透明度 */
 /* 文章场景相关 */
 /**方框样式**/
-.chechbox-box.data-v-cd05dfe0 {
+.chechbox-box.data-v-6a19fa3a {
   width: 100%;
   /**默认样式**/
 }
-.chechbox-box .boxDefault.data-v-cd05dfe0 {
+.chechbox-box .boxDefault.data-v-6a19fa3a {
     width: 100%;
 }
-.chechbox-box .boxDefault .checkboxChange.data-v-cd05dfe0 {
+.chechbox-box .boxDefault .checkboxChange.data-v-6a19fa3a {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -41,7 +41,7 @@
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
 }
-.chechbox-box .boxDefault .checkboxDefault.data-v-cd05dfe0 {
+.chechbox-box .boxDefault .checkboxDefault.data-v-6a19fa3a {
       padding: 10rpx;
       text-align: center;
       margin: 0 auto;
@@ -51,13 +51,13 @@
       display: inline-flex;
       line-height: 40rpx;
 }
-.chechbox-box .boxDefault .selectBoxDefault.data-v-cd05dfe0 {
+.chechbox-box .boxDefault .selectBoxDefault.data-v-6a19fa3a {
       color: #2b9939;
 }
-.chechbox-box .boxDefault .iconfont.data-v-cd05dfe0 {
+.chechbox-box .boxDefault .iconfont.data-v-6a19fa3a {
       padding-right: 10rpx;
 }
-.chechbox-box .checkboxChange.data-v-cd05dfe0 {
+.chechbox-box .checkboxChange.data-v-6a19fa3a {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -66,14 +66,14 @@
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
 }
-.chechbox-box .checkbox.data-v-cd05dfe0 {
+.chechbox-box .checkbox.data-v-6a19fa3a {
     border: 1px solid #EB5248;
     border-radius: 7rpx;
     padding: 10rpx;
     text-align: center;
     margin: 10rpx;
 }
-.chechbox-box .selectBox.data-v-cd05dfe0 {
+.chechbox-box .selectBox.data-v-6a19fa3a {
     background: #EB5248;
     color: #fff;
 }

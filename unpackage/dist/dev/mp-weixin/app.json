@@ -13,15 +13,24 @@
     "pages/components/IndexList",
     "pages/components/LoadMore",
     "pages/components/Dropload",
+    "pages/components/Speaker",
     "pages/components/ChechBox",
     "pages/components/Radio",
     "pages/components/Input",
     "pages/components/Textarea",
     "pages/components/Select",
     "pages/components/Switch",
-    "pages/components/Upload"
+    "pages/components/Upload",
+    "pages/components/CountDown"
   ],
-  "subPackages": [],
+  "subPackages": [
+    {
+      "root": "pagesA",
+      "pages": [
+        "LoadingMore"
+      ]
+    }
+  ],
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "PFUIN",
@@ -30,7 +39,14 @@
     "enablePullDownRefresh": false,
     "onReachBottomDistance": 50
   },
+  "preloadRule": {
+    "pagesA/LoadingMore": {
+      "network": "all",
+      "packages": [
+        "__APP__"
+      ]
+    }
+  },
   "permission": {},
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

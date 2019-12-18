@@ -1,9 +1,16 @@
-<!---
- @author  PanFu
- @data 2019-10-17 14:39
- @description 下拉选择
- @version 1.0
- @E-mail  panfu163@126.com
+<!--
+  * Select 表单多选
+  * ============================================================================
+  * 版权所有 2020-2024 www.pfuni.cn，并保留所有权利。
+  * 网站地址: http://www.pfuni.cn；
+  * ----------------------------------------------------------------------------
+  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
+  * 使用；不允许对程序代码以任何形式任何目的的再发布。
+  * 侵权必究，请遵守版权约定！
+  * ============================================================================
+  *version 1.0.0
+  *author : PanFu panfu163@126.com
+  *last update date : 2020-01-01 00:00
 -->
 <template>
 	<view class="pf-selectBox">
@@ -212,39 +219,39 @@ export default {
 		position: relative;
 		.iconfont{
 			position:absolute;
-			top:25upx;
-			right:20upx;
-			font-size:40upx;
+			top:25rpx;
+			right:20rpx;
+			font-size:40rpx;
 			color:#999
 		}
 		.uni-input{
-			height: 100upx;
-			border:1px solid #eee;
-			padding:0 10upx;
-			margin-bottom: 20upx;
+			height: 100rpx;
+			border:1rpx solid #eee;
+			padding:0 10rpx;
+			margin-bottom: 20rpx;
 		}
 	    .list{
-			border:1px solid #eee;
+			border:1rpx solid #eee;
 			position: absolute;
-			top:100upx;
-			height:200upx;
+			top:100rpx;
+			height:200rpx;
 			overflow-y:auto;
 			background:#fff;
 			width:100%;
 			box-sizing: border-box;
 			z-index:9;
 			.item{
-				padding:10px;
-				border-bottom:1px solid #eee;
+				padding:20rpx;
+				border-bottom:1rpx solid #eee;
 				position:relative;
 				&:last-child{
 					border:0;
 				}
 				.iconfont{
 					position:absolute;
-					top:20upx;
-					left:10upx;
-					font-size:28upx;
+					top:20rpx;
+					left:10rpx;
+					font-size:28rpx;
 					color:#2b9939;
 				}
 			}
@@ -252,34 +259,34 @@ export default {
 				color:#eee;
 			}
 			.active{
-				padding-left:60upx;
+				padding-left:60rpx;
 			}
 			.items{
-				padding-left:60upx;
+				padding-left:60rpx;
 			}
 		}
 		.checkbox{
 			position: absolute;
-			top:300upx;
-			height:73upx;
+			top:300rpx;
+			height:73rpx;
 			background:#fff;
 			width:100%;
 			box-sizing: border-box;
-			border:1px solid #eee;
+			border:1rpx solid #eee;
 			border-top:0;
 			overflow:hidden;
-			padding:10upx 20upx;
+			padding:10rpx 20rpx;
 			z-index:9;
 			text-align:right;
 			.bnt{
-				border:1px solid #eee;
-				margin:0 20upx;
-				height:50upx;
-				line-height:50upx;
+				border:1rpx solid #eee;
+				margin:0 20rpx;
+				height:50rpx;
+				line-height:50rpx;
 				text-align: center;
-				padding:0 20upx;
+				padding:0 20rpx;
 				overflow:hidden;
-				border-radius:5upx;
+				border-radius:5rpx;
 				display: inline-block;
 			}
 		}

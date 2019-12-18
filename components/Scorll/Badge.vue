@@ -68,7 +68,7 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 1;
-	margin: 1px;
+	margin: 1rpx;
 	/* 字符空格不忽略 */
 	white-space: pre;     
 	word-break: break-all;

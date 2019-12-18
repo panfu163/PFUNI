@@ -1,9 +1,16 @@
-<!---
- @author  PanFu
- @data 2019-10-17 14:39
- @description 图片上传
- @version 1.0
- @E-mail  panfu163@126.com
+<!--
+  * Upload 图片上传
+  * ============================================================================
+  * 版权所有 2020-2024 www.pfuni.cn，并保留所有权利。
+  * 网站地址: http://www.pfuni.cn；
+  * ----------------------------------------------------------------------------
+  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
+  * 使用；不允许对程序代码以任何形式任何目的的再发布。
+  * 侵权必究，请遵守版权约定！
+  * ============================================================================
+  *version 1.0.0
+  *author : PanFu panfu163@126.com
+  *last update date : 2020-01-01 00:00
 -->
 <template>
 	<view>
@@ -168,13 +175,13 @@ export default {
 	width:100%;
 	box-sizing: border-box;
 	.content{
-		height:180upx;
-		line-height:180upx;
-		width:200upx;
-		margin-right:20upx;
-		margin-bottom:20upx;
-		border-radius: 5upx;
-		border:1upx solid #eee;
+		height:180rpx;
+		line-height:180rpx;
+		width:200rpx;
+		margin-right:20rpx;
+		margin-bottom:20rpx;
+		border-radius: 5rpx;
+		border:1rpx solid #eee;
 		.image{
 			width: 100%;
 			height:100%;
@@ -183,25 +190,25 @@ export default {
 	.fileinput{
 			   background:#fff;
 			   text-align:center;
-			   border-radius:10upx;
-			   height:180upx;
-			   line-height:180upx;
-			   width:220upx;
+			   border-radius:10rpx;
+			   height:180rpx;
+			   line-height:180rpx;
+			   width:220rpx;
 			   position:relative;
 			   overflow:hidden;
-			   border:1upx solid #999;
-			   font-size:100upx;
+			   border:1rpx solid #999;
+			   font-size:100rpx;
 			   color: #999	   
 	}    
 }  
 .bnt{
 	background:#2b9939;
 	width:100%;
-	height:50upx;
-	line-height:50upx;
+	height:50rpx;
+	line-height:50rpx;
 	text-align:center;
-	margin:25upx auto;
-	border-radius:10upx;
+	margin:25rpx auto;
+	border-radius:10rpx;
 	color:#fff;  
 	
 }              

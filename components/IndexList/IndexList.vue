@@ -1,9 +1,16 @@
-<!---
- @author  PanFu
- @data 2019-10-17 14:39
- @description 城市索引查询
- @version 1.0
- @E-mail  panfu163@126.com
+<!--
+  * Indexlist 快速索引
+  * ============================================================================
+  * 版权所有 2020-2024 www.pfuni.cn，并保留所有权利。
+  * 网站地址: http://www.pfuni.cn；
+  * ----------------------------------------------------------------------------
+  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
+  * 使用；不允许对程序代码以任何形式任何目的的再发布。
+  * 侵权必究，请遵守版权约定！
+  * ============================================================================
+  *version 1.0.0
+  *author : PanFu panfu163@126.com
+  *last update date : 2020-01-01 00:00
 -->
 <template>
 	<view>
@@ -59,7 +66,7 @@
 <script>
 import city from '../../components/IndexList/city.js'
 export default {
-	name:'IndexList',
+	name:'IndexLists',
 	 props: {
 		  cityData:{
 			type: Object,
@@ -209,19 +216,19 @@ export default {
 			.nodata{
 				width: 100%;
 				text-align: center;
-	  		font-size:20upx;
+	  		font-size:20rpx;
 				.icon-jinggao{
 					 display: block;
-					 font-size:100upx;
+					 font-size:100rpx;
 					 color: red;
 				}
 			}
 		  .mask-toast{
-				    width:100upx;
-						height:100upx;
-						line-height:100upx;
-						border-radius:10upx;
-						font-size:30upx;
+				    width:100rpx;
+						height:100rpx;
+						line-height:100rpx;
+						border-radius:10rpx;
+						font-size:30rpx;
 						position:fixed;
 						text-align: center;
 						color: #fff;
@@ -235,7 +242,7 @@ export default {
 			}
       .list-search{
 			background:#fff;
-			padding:10upx 20upx ;
+			padding:10rpx 20rpx ;
 			display:flex;
 			box-sizing:border-box;
 			position:fixed;
@@ -246,34 +253,34 @@ export default {
 			input{
 				background:#eee;
 				width:60%;
-				height:80upx;
-				padding-left:100upx;
-				margin-right:20upx;
-				border-radius: 10upx;
-				font-size: 20upx
+				height:80rpx;
+				padding-left:100rpx;
+				margin-right:20rpx;
+				border-radius: 10rpx;
+				font-size: 20rpx
 			}
 			.iconfont{
 				position:absolute;
-				top:20upx;
-				left:40upx;
+				top:20rpx;
+				left:40rpx;
 				z-index:99;
-				font-size:48upx; 
+				font-size:48rpx; 
 				color:#999
 			}
 			.search-button{
 				width:28%;
-				height:80upx;
-				line-height:80upx;
+				height:80rpx;
+				line-height:80rpx;
 				background: #2b9939;
 				color: #fff
 			}
 		} 
 				.list-right-wrapper {
 			  position:fixed;
-			  top:120upx;
-			  right:10upx;
-			  padding: 20upx 0;
-			  border-radius: 40upx;
+			  top:120rpx;
+			  right:10rpx;
+			  padding: 20rpx 0;
+			  border-radius: 40rpx;
 			  z-index: 2;
 			  background: #f5f5f5;
 			  box-sizing: border-box;
@@ -283,8 +290,8 @@ export default {
 			  display:block;
 			  justify-content: center;
 			  align-items: center;
-			  padding: 5upx 15upx;
-			  font-size: 26upx;
+			  padding: 5rpx 15rpx;
+			  font-size: 26rpx;
 			  color: #666;
 			  text-align:center
 			}
@@ -296,22 +303,22 @@ export default {
 		  width: 100%;
 		  height: 100%;
 		  box-sizing: border-box;
-			margin-top:100upx;
+			margin-top:100rpx;
 		  /* 样式控制  */	
 			.list-title {
 			  background: #f5f5f5;
 			  color: #666;
-			  font-size: 36upx;
-			  padding: 10upx;
-			  padding-left: 30upx;
-			  padding-top: 15upx;
+			  font-size: 36rpx;
+			  padding: 10rpx;
+			  padding-left: 30rpx;
+			  padding-top: 15rpx;
 			}
 
 			.list-name {
 			  position: relative;
-			  font-size: 28upx;
-			  padding: 15upx;
-			  padding-left: 30upx;
+			  font-size: 28rpx;
+			  padding: 15rpx;
+			  padding-left: 30rpx;
 			  color: #999;
 			  background:#fff;
 			}
@@ -321,23 +328,23 @@ export default {
 			  left: 30rpx;
 			  right: 0;
 			  top: 0;
-			  height: 1px;
+			  height: 1rpx;
 			  background: #f5f5f5;
 			}
 			/* 热门城市横排显示样式  */
 			.list-horizontal {
 			  display: flex;
 			  flex-wrap: wrap;
-			  padding: 10upx;
-			  padding-right: 50upx;
+			  padding: 10rpx;
+			  padding-right: 50rpx;
 			  background: #fff
 			}
 
 			.list-horizontal .list-name {
-			  padding: 5upx 20upx;
-			  border: 1upx #ccc solid;
-			  border-radius: 10upx;
-			  margin:8upx;
+			  padding: 5rpx 20rpx;
+			  border: 1rpx #ccc solid;
+			  border-radius: 10rpx;
+			  margin:8rpx;
 			}
 	}	
    }

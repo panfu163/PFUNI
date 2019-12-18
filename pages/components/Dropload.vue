@@ -1,6 +1,22 @@
+<!--
+  * Dropload 弹出加载更多
+  * ============================================================================
+  * 版权所有 2020-2024 www.pfuni.cn，并保留所有权利。
+  * 网站地址: http://www.pfuni.cn；
+  * ----------------------------------------------------------------------------
+  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
+  * 使用；不允许对程序代码以任何形式任何目的的再发布。
+  * 侵权必究，请遵守版权约定！
+  * ============================================================================
+  *version 1.0.0
+  *author : PanFu panfu163@126.com
+  *last update date : 2020-01-01 00:00
+-->
 <template>
 	<view class="content">
-	  <view class="bnt" @click="getLoadMore">加载更多</view>
+	<view class="h2">Dropload 弹出加载更多</view>
+	<view class="tip">Dropload组件主要用于非模态信息提醒，无需用户交互。<strong>注:</strong>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过 </view>
+	  <view class="bnt" @click="getLoadMore">弹出加载更多</view>
 	   <Dropload 
 	       ref="myScroll"
 		   :listData="items" 
@@ -17,77 +33,14 @@
 				</view>
 			</view>
 		</Dropload>
-		
-		<view class="h2">Toast</view>
-		<view class="tip">Toast组件主要用于非模态信息提醒，无需用户交互。</view>
-		<view><strong>注:</strong>由于此组件基于PFUIN实现，所以在使用之前，请确保自己了解过 </view>
-		<view class="h3">示例</view>
-		<pre class="pre html">
-			<element contenteditable="true">{{htmlData}}</element>
-		  <!-- <span class="isCopy"  @click="copyHtml()">复制</span> -->
-		</pre>
-		<view class="title">基本用法</view>
-		  <pre  class="pre js">
-		<element contenteditable="true">{{jsData2}}</element>
-		 </pre >
-	  <view class="title">time 字段决定了 Toast 显示的时间，如果设置为 0，则不会消失，需要手动调用组件的 hide 方法。</view>
-	  
-	  <pre  class="pre js">
-	 <element contenteditable="true">{{jsData}}</element>
-	  </pre >
-	  <view class="list">
-		  <view class="th">
-			  <text>属性名</text>
-			  <text>说明</text>
-			  <text>类型</text>
-			  <text>默认值</text>
-			  <text>版本</text>
-		  </view>
-		  <view class="td">
-			  <text>info</text>
-			  <text>轮播图的数据，通过数组长度决定指示点个数</text>
-			  <text>Array</text>
-			  <text>无</text>
-			  <text>1.0.0</text>
-		  </view>
-		<view class="td">
-					  <text>current</text>
-					  <text>当前指示点索引，必须是通过 swiper 的 change 事件获取到的 e.detail.current</text>
-					  <text>Number	</text>
-					  <text>0</text>
-					  <text>1.0.0</text>
-		</view>
-			<view class="td">
-					  <text>dotsStyles</text>
-					  <text>指示点样式</text>
-					  <text>Object</text>
-					  <text>无</text>
-					  <text>1.0.0</text>
-		</view>
-		       <view class="td">
-				  <text>mode</text>
-				  <text>指示点的类型，可选值：default 、 indexes 、 long 、nav</text>
-				  <text>String</text>
-				  <text>default</text>
-				  <text>1.0.0</text>
-		</view>
-       <view class="td">
-				  <text>field</text>
-				  <text>mode 为 nav 时，显示的内容字段（mode = nav 时必填）</text>
-				  <text>String</text>
-				  <text>无</text>
-				  <text>1.0.0</text>
-		</view>
-	  </view>
-	
 	</view>
 </template>
 
 <script>
-	import Dropload from '../../components/Dropload/Dropload.vue'
+	  import {Dropload} from "@/components/PFUNI.js";
 		export default {
 			components: {
-				Dropload,
+				Dropload
 			},
 		data() {
 			return {

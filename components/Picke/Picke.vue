@@ -6,21 +6,21 @@
  @E-mail  panfu163@126.com
 -->
 <template>
-	<view class="w-picker">
+	<view class="pf-picker">
 		<div class="mask" :class="{'show':showPicker}" @tap="maskTap" catchtouchmove="true"></div>
-		<view class="w-picker-cnt" :class="{'show':showPicker}">
-			<view class="w-picker-hd" catchtouchmove="true">
-			  <view class="w-picker-btn" @tap="pickerCancel">取消</view>
-			  <view class="w-picker-btn" :style="{'color':themeColor}" @tap="pickerConfirm">确定</view>
+		<view class="pf-picker-cnt" :class="{'show':showPicker}">
+			<view class="pf-picker-hd" catchtouchmove="true">
+			  <view class="pf-picker-btn" @tap="pickerCancel">取消</view>
+			  <view class="pf-picker-btn" :style="{'color':themeColor}" @tap="pickerConfirm">确定</view>
 			</view>
-			<view class="w-picker-view" v-if="mode=='provinces'">
+			<view class="pf-picker-view" v-if="mode=='provinces'">
 				<picker-view indicator-style="height: 40px;" :value="pickVal" @change="bindChange">
 					<picker-view-column>
 						<view class="item" v-for="(item,index) in datas.provinces" :key="index">{{item.label}}</view>
 					</picker-view-column>
 				</picker-view>
 			</view>
-				<view class="w-picker-view" v-if="mode=='city'">
+				<view class="pf-picker-view" v-if="mode=='city'">
 				<picker-view indicator-style="height: 40px;" :value="pickVal" @change="bindChange">
 					<picker-view-column>
 						<view class="item" v-for="(item,index) in datas.provinces" :key="index">{{item.label}}</view>
@@ -30,7 +30,7 @@
 					</picker-view-column>
 				</picker-view>
 			</view>
-				<view class="w-picker-view" v-if="mode=='areas'">
+				<view class="pf-picker-view" v-if="mode=='areas'">
 				<picker-view indicator-style="height: 40px;" :value="pickVal" @change="bindChange">
 					<picker-view-column>
 						<view class="item" v-for="(item,index) in datas.provinces" :key="index">{{item.label}}</view>
@@ -183,8 +183,8 @@
 </script>
 
 
-<style lang="scss">
-	.w-picker{
+<style lang="scss" scoped="scoped">
+	.pf-picker{
 		.mask {
 		  position: fixed;
 		  z-index: 1000;
@@ -201,7 +201,7 @@
 			visibility: visible;
 			opacity: 1;
 		}
-		.w-picker-cnt {
+		.pf-picker-cnt {
 		  position: fixed;
 		  bottom: 0;
 		  left: 0;
@@ -210,40 +210,40 @@
 		  transform: translateY(100%);
 		  z-index: 3000;
 		}
-		.w-picker-cnt.show {
+		.pf-picker-cnt.show {
 		  transform: translateY(0);
 		}
-		.w-picker-hd {
+		.pf-picker-hd {
 		  display: flex;
-		  padding: 9px 15px;
+		  padding: 18rpx 30rpx;
 		  background-color: #fff;
 		  position: relative;
 		  text-align: center;
-		  font-size: 17px;
+		  font-size:24rpx;
 		  justify-content: space-between;
 		}
-		.w-picker-hd:after {
+		.pf-picker-hd:after {
 		  content: ' ';
 		  position: absolute;
 		  left: 0;
 		  bottom: 0;
 		  right: 0;
-		  height: 1px;
-		  border-bottom: 1px solid #e5e5e5;
+		  height: 1rpx;
+		  border-bottom: 1rpx solid #e5e5e5;
 		  color: #e5e5e5;
 		  transform-origin: 0 100%;
 		  transform: scaleY(0.5);
 		}
 		.item {
 		  text-align: center;
-		  line-height: 40px;
+		  line-height: 80rpx;
 		  text-overflow: ellipsis;
 		  white-space: nowrap;
-		  font-size: 16px;
+		  font-size:32rpx;
 		}
-		.w-picker-view {
+		.pf-picker-view {
 		  width: 100%;
-		  height: 238px;
+		  height: 472rpx;
 		  overflow: hidden;
 		  background-color: rgba(255, 255, 255, 1);
 		  z-index: 666;
