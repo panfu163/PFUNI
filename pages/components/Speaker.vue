@@ -15,7 +15,7 @@
 <template>
 	<view class="content">
 		<view class="h2">Speaker 滚动公告</view>
-			<view class="tip">Speaker组件主要用于非模态信息提醒，无需用户交互。<strong>注:</strong>由于此组件基于PFUIN实现，所以在使用之前，请确保自己了解过 </view>
+			<view class="tip">Speaker组件主要用于滚动公告，无需用户交互。<strong>注:</strong>由于此组件基于PFUIN实现，所以在使用之前，请确保自己了解过 </view>
 				<view  class="h2">横向滚动</view>
 				<Speaker :vertical="false" :interval="5000" iconClass="icon-tubiao1jingyin" :list="list"></Speaker>
 				<view  class="h2">竖向滚动</view>

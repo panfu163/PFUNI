@@ -16,7 +16,7 @@
 	<view class="content">
 		
 		<view class="h2">Select</view>
-		<view class="tip">Select组件主要用于非模态信息提醒，无需用户交互。<strong>注:</strong>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过 </view>
+		<view class="tip">Select组件主要用于表单多选，无需用户交互。<strong>注:</strong>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过 </view>
 		<view class="h3">示例</view>
 		  <Select 
 		    @getList='getList'

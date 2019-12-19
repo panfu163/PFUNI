@@ -38,7 +38,7 @@ export default {
 		  }
 		},
 	props: {
-	  listData: {
+	    listData: {
 				type: Array,
 				default: function () {
 				  return []
@@ -64,10 +64,10 @@ export default {
 				};
 			}
 		},
-	pullDown:{ //刷新回调
-			type:Function,
-			require:true
-		},
+		pullDown:{ //刷新回调
+				type:Function,
+				require:true
+			},
 	   },  
 	created() {
 		

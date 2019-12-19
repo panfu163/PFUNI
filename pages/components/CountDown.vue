@@ -1,5 +1,5 @@
 <!--
-  * Dialog 弹出框
+  * CountDown 倒计时
   * ============================================================================
   * 版权所有 2020-2024 www.pfuni.cn，并保留所有权利。
   * 网站地址: http://www.pfuni.cn；
@@ -15,11 +15,26 @@
 <template>
 	<view class="content">
 		<view class="h2">CountDown 倒计时</view>
-		<view class="tip">CountDown组件主要用于非模态信息提醒，无需用户交互。</view>
-		<view class="bnt" @click="showToast">点击Dialog</view>
-		<view class="bnt" @click="showToast2">点击Dialog</view>
-		<view><strong>注:</strong>由于此组件基于PFUIN实现，所以在使用之前，请确保自己了解过 </view>
-		<view class="h3">注意：如果没有特殊要求可以使用uniapp官网提供的uni.showModal()这个方法</view>
+		<view class="tip">CountDown组件主要用于时间倒计时，无需用户交互。<strong>注:</strong>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过 </view>
+		<view class="h3">示例1</view>
+		<CountDown
+		:years="years"
+		:months="months"
+		:days="days"
+		:hours="hours"
+		:minutes="minutes"
+		:seconds="seconds"
+		></CountDown>
+		<view class="h3">示例2</view>
+		<CountDown
+		:type="'box'"
+		:years="yearing"
+		:months="monthing"
+		:days="days"
+		:hours="hours"
+		:minutes="minutes"
+		:seconds="seconds"
+		></CountDown>
 	</view>
 </template>
 
@@ -31,6 +46,14 @@
 			},
 		data() {
 			return {
+				yearing:"2021",
+				monthing:"12",
+				years:"2020",
+				months:"12",
+				days:"18",
+				hours:"22",
+				minutes:"0",
+				seconds:"0",
 			}
 		},
 		onLoad(e) {
@@ -40,28 +63,7 @@
 	    
 	    },
 		methods: {
-	        showToast() { //显示头部
-			   console.log("===========")
-			   this.$refs.Dialog.show({message:"我是Dialog内容哦~~",
-			   isShowBnt:true,
-			   isShow:true,
-			   onConfirm:()=>{
-				    this.$refs.Toast.show("你点击啦确定确定哦~~");
-			   },onCancel:()=>{
-				   this.$refs.Toast.show("你点击啦取消")
-			   }});
-	        },
-		   showToast2() { //显示头部
-			   this.$refs.Dialog.show(
-			   {message:"我是Dialog内容哦~~",
-			   isShowBnt:true,
-			   isShow:false,
-			   onConfirm:()=>{
-				    this.$refs.Toast.show("你点击啦确定确定哦~~");
-			   },onCancel:()=>{
-				   this.$refs.Toast.show("你点击啦取消")
-			   }});
-			}
+			
 		}
 	}
 	

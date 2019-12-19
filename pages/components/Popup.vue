@@ -1,5 +1,5 @@
 <!--
-  * Popup 弹框抽提
+  * Popup 弹框抽屉
   * ============================================================================
   * 版权所有 2020-2024 www.pfuni.cn，并保留所有权利。
   * 网站地址: http://www.pfuni.cn；
@@ -15,7 +15,7 @@
 <template>
 	<view class="content">
 		<view class="h2">Popup 弹框</view>
-		<view class="tip">Popup组件主要用于非模态信息提醒，无需用户交互。
+		<view class="tip">Popup组件主要用于弹框抽屉效果，无需用户交互。
 		<strong>注:</strong>由于此组件基于UNI-APP实现，所以在使用之前，请确保自己了解过
 		</view>
 			<view class="bnt" @click="showToastTop">点击上部弹出Popup-top</view>

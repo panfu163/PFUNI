@@ -21,12 +21,12 @@
 	   </view>
 	   <view class="list animated slideInUp">
 	     <view class="title">基础样式</view>
-		 <view class="info" @click='goto("../components/Layout")'><i class="iconfont icon-arrowright"></i>Layout 布局</view>
-		 <view class="info" @click='goto("../components/Button")'><i class="iconfont icon-arrowright"></i>Button 按钮</view>
-		 <view class="info" @click='goto("../components/Border")'><i class="iconfont icon-arrowright"></i>Border 边框</view>
-		 <view class="info" @click='goto("../components/Cell")'><i class="iconfont icon-arrowright"></i>Cell 单元格</view>
-		 <view class="info" @click='goto("../components/Loading")'><i class="iconfont icon-arrowright"></i>Loading 加载图标</view>
-		 <view class="info" @click='goto("../components/Icon")'><i class="iconfont icon-arrowright"></i>Icon 图标</view>
+		 <view class="info" @click='goto("../components/Layout")'><i class="iconfont icon-arrowright"></i>Layout <text class="text">布局</text></view>
+		 <view class="info" @click='goto("../components/Button")'><i class="iconfont icon-arrowright"></i>Button <text class="text">按钮</text></view>
+		 <view class="info" @click='goto("../components/Border")'><i class="iconfont icon-arrowright"></i>Border <text class="text">边框</text></view>
+		 <view class="info" @click='goto("../components/Cell")'><i class="iconfont icon-arrowright"></i>Cell <text class="text">单元格</text></view>
+		 <view class="info" @click='goto("../components/Loading")'><i class="iconfont icon-arrowright"></i>Loading <text class="text">加载图标</text></view>
+		 <view class="info" @click='goto("../components/Icon")'><i class="iconfont icon-arrowright"></i>Icon<text class="text">图标</text></view>
 		 </view>
 	     <view class="list animated slideInUp">
 	   		    <view class="title">Basics 基础组件</view>
@@ -35,7 +35,10 @@
 	   			<view class="info" @click='goto("../components/Popup")'><i class="iconfont icon-arrowright"></i>Popup</view>
 	   			<view class="info" @click='goto("../components/Picke")'><i class="iconfont icon-arrowright"></i>Picke</view>
 	   			<view class="info" @click='goto("../components/DatePicke")'><i class="iconfont icon-arrowright"></i>DatePicke</view>
-				<view class="info" @click='goto("../components/CountDown")'><i class="iconfont icon-arrowright"></i>CountDown</view>
+				<view class="info" @click='goto("../components/CountDown")'><i class="iconfont icon-arrowright"></i>CountDown <text class="text">倒进时</text></view>
+				<view class="info" @click='goto("../components/NubmerAnimate")'><i class="iconfont icon-arrowright"></i>NubmerAnimate<text class="text">数值动画</text></view>
+	            <view class="info" @click='goto("../components/CirProgress")'><i class="iconfont icon-arrowright"></i>CirProgress<text class="text">进度圆环/条</text></view>
+			    <view class="info" @click='goto("../components/LotteryDraw")'><i class="iconfont icon-arrowright"></i>LotteryDraw<text class="text">抽奖大转盘</text></view>
 	   </view>
 	   <view class="list animated slideInUp">
 		    <view class="title">Scorll 滚动组件</view>

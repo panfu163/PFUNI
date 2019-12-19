@@ -15,7 +15,7 @@
 <template>
 	<view class="content">
 		<view class="h2">Upload 图片上传</view>
-		<view class="tip">Upload组件主要用于非模态信息提醒，无需用户交互。<strong>注:</strong>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过 </view>
+		<view class="tip">Upload组件主要图片上传，无需用户交互。<strong>注:</strong>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过 </view>
 		<view class="h3">示例</view>
 		<Upload ref="Upload" 
 		        :url="url"

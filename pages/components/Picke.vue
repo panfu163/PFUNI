@@ -15,7 +15,7 @@
 <template>
 	<view class="content">
 		<view class="h2">Picke</view>
-		<view class="tip">Picke组件主要用于非模态信息提醒，无需用户交互。<strong>注:</strong>由于此组件基于UNI-APP实现，所以在使用之前，请确保自己了解过 </view>
+		<view class="tip">Picke组件主要用于城市滑动选择，无需用户交互。<strong>注:</strong>由于此组件基于UNI-APP实现，所以在使用之前，请确保自己了解过 </view>
 		  <view class="bnt" :class="[{'active':index==tabIndex}]" @tap="toggleTab(index)" v-for="(item,index) in tabList" :key="index">{{item.name}}</view>
 		  <Picke :mode="mode" :defaultVal="defaultVal" @confirm="onConfirm" ref="Picke"></Picke>
 		<view>返回结果:{{city}}</view>

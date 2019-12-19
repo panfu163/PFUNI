@@ -36,9 +36,24 @@
 				"navigationBarTitleText":"Icon"
 			}
 		},{
+			"path": "pages/components/LotteryDraw",
+			"style": {
+				"navigationBarTitleText":"LotteryDraw"
+			}
+		},{
 			"path": "pages/components/Cell",
 			"style": {
 				"navigationBarTitleText":"Cell"
+			}
+		},{
+			"path": "pages/components/NubmerAnimate",
+			"style": {
+				"navigationBarTitleText":"NubmerAnimate"
+			}
+		},{
+			"path": "pages/components/CirProgress",
+			"style": {
+				"navigationBarTitleText":"CirProgress"
 			}
 		},{
 			"path": "pages/loadmore/LoadMore",
