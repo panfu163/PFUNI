@@ -155,6 +155,11 @@
 			"style": {
 				"navigationBarTitleText":"CountDown"
 			}
+		},{
+			"path": "pages/components/Keyboard",
+			"style": {
+				"navigationBarTitleText":"Keyboard"
+			}
 		}
 	],
 	"subPackages": [{

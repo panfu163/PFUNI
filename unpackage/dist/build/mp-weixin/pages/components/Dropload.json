@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Dropload",
+  "usingComponents": {
+    "dropload": "/components/Dropload/Dropload"
+  }
+}

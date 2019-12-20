@@ -1,0 +1,1 @@
+<block wx:if="{{loadingType<5&&show}}"><view class="loading data-v-fb479770"><block wx:if="{{loadingType===1}}"><view class="loading-icon data-v-fb479770" style="{{'color:'+(iconColor)+';'}}"></view></block><text style="{{'color:'+(textColor)+';'}}" class="data-v-fb479770">{{loadingText[loadingType]}}</text></view></block>

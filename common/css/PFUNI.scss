@@ -1,0 +1,96 @@
+/*
+  * PFUNI 基础样式
+  * ============================================================================
+  * 版权所有 2020-2024 www.pfuni.cn，并保留所有权利。
+  * 网站地址: http://www.pfuni.cn；
+  * ----------------------------------------------------------------------------
+  * 这不是一个自由软件！您只能在不用于商业目的的前提下对程序代码进行修改和
+  * 使用；不允许对程序代码以任何形式任何目的的再发布。
+  * 侵权必究，请遵守版权约定！
+  * ============================================================================
+  *version 1.0.0
+  *author : PanFu panfu163@126.com
+  *last update date : 2020-01-01 00:00
+*/
+@import url("animate.css");/**动画效果**/
+
+*{font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;margin:0;padding:0;box-sizing:border-box;-webkit-text-size-adjust: none;font-size:12rpx;}
+
+
+/* flex 布局 
+ *预设了五个响应尺寸:xs、sm、md、lg 和 xl
+ *justify	
+   flex 布局下的水平排列方式	
+   start/end/center/space-around/space-between	
+*/
+
+.pf-flex{
+	display:flex;
+	flex-wrap: wrap;
+	&.row{flex-direction:row;}
+	&.column{flex-direction:column;}
+    &.direction{flex-direction:row;}
+	&.start{align-items:flex-start;}
+	&.end{align-items:flex-end;}	
+	&.center{align-items:center;}
+	&.baseline{align-items:baseline;}
+	&.space-around{align-items:space-around;}
+	&.space-between{align-items:space-between;}
+	&.justify-start{justify-content:flex-start;}
+	&.justify-end{justify-content:flex-end;}	
+	&.justify-center{justify-content:center;}
+	&.justify-between{justify-content:space-between;}
+	&.justify-around{justify-content:space-around;}
+	&.xl>view{
+		flex:1;
+		&.xl-1{flex:1;}
+		&.xl-2{flex:2;}
+		&.xl-3{flex:3;}
+		&.xl-4{flex:4;}
+		&.xl-5{flex:5;}
+		&.xl-6{flex:6;}
+		&.xl-7{flex:7;}
+		&.xl-8{flex:8;}
+		&.xl-9{flex:9;}
+		&.xl-10{flex:10;}
+		&.xl-11{flex:11;}
+		&.xl-12{flex:12;}
+	}
+}
+
+/*Border 边框**/
+.pf-border{
+	height:10rpx;
+	border-radius:0;
+	border:1px solid #eee;
+	&.max{
+	  border-radius:20rpx;
+	}
+	&.min{border-radius:5rpx;}
+	&.round{border-radius:50%; overflow:hidden;}
+	&.box-shadow{
+		box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+	}
+	&.box-shadow-tint{box-shadow: 0 2rpx 12rpx 0 rgba(0, 0, 0, 0.1)}
+	
+}
+
+/**loading**/
+.pf-loading{
+	width:80rpx;
+	height:80rpx;
+	font-size:80rpx; 
+	justify-content:center;
+	text-align:center;
+	color:#333;
+	&.min{
+		width:40rpx;
+		height:40rpx;
+		font-size:40rpx; 
+	}
+	&.max{
+		width:180rpx;
+		height:180rpx;
+		font-size:180rpx; 
+	} 
+}

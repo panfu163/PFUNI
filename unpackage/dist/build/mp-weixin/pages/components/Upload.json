@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "Upload",
+  "usingComponents": {
+    "upload": "/components/Upload/Upload"
+  }
+}

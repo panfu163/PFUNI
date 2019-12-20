@@ -39,6 +39,7 @@
 				<view class="info" @click='goto("../components/NubmerAnimate")'><i class="iconfont icon-arrowright"></i>NubmerAnimate<text class="text">数值动画</text></view>
 	            <view class="info" @click='goto("../components/CirProgress")'><i class="iconfont icon-arrowright"></i>CirProgress<text class="text">进度圆环/条</text></view>
 			    <view class="info" @click='goto("../components/LotteryDraw")'><i class="iconfont icon-arrowright"></i>LotteryDraw<text class="text">抽奖大转盘</text></view>
+	            <view class="info" @click='goto("../components/Keyboard")'><i class="iconfont icon-arrowright"></i>Keyboard<text class="text">移动端键盘</text></view>
 	   </view>
 	   <view class="list animated slideInUp">
 		    <view class="title">Scorll 滚动组件</view>
