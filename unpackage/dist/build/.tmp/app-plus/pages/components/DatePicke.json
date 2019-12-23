@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "DatePicke",
-  "usingComponents": {
-    "date-pickes": "/components/DatePicke/DatePicke"
-  }
-}

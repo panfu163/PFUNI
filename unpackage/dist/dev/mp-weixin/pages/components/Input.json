@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "Input",
-  "usingComponents": {
-    "nui-input": "/components/Input/Input"
-  }
-}

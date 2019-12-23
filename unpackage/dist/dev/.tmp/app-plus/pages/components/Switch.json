@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "Switch",
-  "usingComponents": {
-    "pf-switch": "/components/Switch/Switch"
-  }
-}

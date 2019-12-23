@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "CountDown",
-  "usingComponents": {
-    "count-down": "/components/CountDown/CountDown"
-  }
-}

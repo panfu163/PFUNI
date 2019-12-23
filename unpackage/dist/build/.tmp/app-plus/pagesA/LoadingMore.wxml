@@ -1,1 +1,0 @@
-<view class="LoadingMore data-v-9abf6180"><view class="refreshDmo data-v-9abf6180"><block wx:for="{{demoDate}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="data-v-9abf6180">{{item}}</view></block></view><loading vue-id="1" loadingType="{{loadingType}}" class="data-v-9abf6180" bind:__l="__l"></loading></view>

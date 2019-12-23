@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "ChechBox",
-  "usingComponents": {
-    "pf-checkbox": "/components/Checkbox/Checkbox"
-  }
-}

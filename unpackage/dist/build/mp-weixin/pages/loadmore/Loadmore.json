@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "Loadmore",
-  "usingComponents": {
-    "load-more": "/components/LoadMore/LoadMore"
-  }
-}

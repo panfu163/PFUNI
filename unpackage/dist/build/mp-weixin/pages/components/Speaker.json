@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "Speaker",
-  "usingComponents": {
-    "speaker": "/components/Speaker/Speaker"
-  }
-}

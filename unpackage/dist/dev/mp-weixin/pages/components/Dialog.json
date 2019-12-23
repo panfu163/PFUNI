@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "Dialog",
-  "usingComponents": {
-    "toasts": "/components/Toast/Toast",
-    "dialogs": "/components/Dialog/Dialog"
-  }
-}

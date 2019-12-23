@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "Radio",
-  "usingComponents": {
-    "pf-radio": "/components/Radio/Radio"
-  }
-}

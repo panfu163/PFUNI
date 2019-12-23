@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "IndexList",
-  "usingComponents": {
-    "index-list": "/components/IndexList/IndexList"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "Scorll",
-  "usingComponents": {
-    "toasts": "/components/Toast/Toast",
-    "scorll": "/components/Scorll/Scorll"
-  }
-}
