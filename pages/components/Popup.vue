@@ -15,8 +15,7 @@
 <template>
 	<view class="content">
 		<view class="h2">Popup 弹框</view>
-		<view class="tip">Popup组件主要用于弹框抽屉效果，无需用户交互。
-		<strong>注:</strong>由于此组件基于UNI-APP实现，所以在使用之前，请确保自己了解过
+		<view class="tip">Popup组件主要用于弹框抽屉效果，无需用户交互。<b>注:</b>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过!
 		</view>
 			<view class="bnt" @click="showToastTop">点击上部弹出Popup-top</view>
 			<view class="bnt" @click="showToastCentre">点击中部弹出Popup-centre</view>
@@ -35,7 +34,7 @@
 </template>
 
 <script>
-		import {Popup} from "@/components/PFUNI.js";
+		 import Popup from "@/components/Popup/Popup";
 		export default {
 			components: {
 				Popup,
@@ -75,7 +74,6 @@
 .content{
 	padding:40upx;
 	box-sizing: border-box;
-	font-size: 14rpx;
 	.bnt{
 		  position: relative;
 		  width:100%;
@@ -85,23 +83,18 @@
 		  line-height:60rpx;
 		  margin:0 auto 40rpx;
 		  text-align: center;
-		  font-size: 16rpx;
 		  border-radius:10rpx;
 		 } 
 	.h2{
-		font-size:24rpx; 
+		font-size:28rpx; 
 		margin-bottom:10rpx; 
 		font-weight: bold;
 		}  
 	.h3{
-		 font-size:20rpx; 
 		 margin:20rpx auto; 
-		 font-weight: bold;
 		 color:red;
 	    }	 
 	.tip{
-		 font-size: 14rpx; 
-		 text-indent:15rpx; 
 		 margin:20rpx auto;
 		} 		
 	.title{

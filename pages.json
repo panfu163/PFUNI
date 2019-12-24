@@ -66,9 +66,9 @@
 				"navigationBarTitleText": "Toast"
 			}
 		},{
-			"path": "pages/components/Dialog",
+			"path": "pages/components/Confirm",
 			"style": {
-				"navigationBarTitleText":"Dialog"
+				"navigationBarTitleText":"Confirm"
 			}
 		},{
 			"path": "pages/components/Popup",

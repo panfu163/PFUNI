@@ -13,14 +13,14 @@
   *last update date : 2020-01-01 00:00
 -->
 <template>
-	<view class="Layout">
-		<view class="h3">Layout 布局</view>
+	<view class="content">
+		<view class="h2">Layout 布局</view>
 		<view>通过基础的 12 分栏，迅速简便地创建布局。</view>
-		<view class="h4">普通行向</view>
+		<view class="h3">普通行向</view>
 	<view class="pf-flex row xl">
 		<view class="xl-12">1</view>
 	</view>	
-		<view class="h4">单行局中</view>	
+		<view class="h3">单行局中</view>	
 		<view class="pf-flex row xl">
 			<view class="xl-1">1</view>
 			<view class="xl-1">2</view>
@@ -44,38 +44,38 @@
 			<view class="xl-1">1</view>
 			<view class="xl-2">3</view>
 		</view>	
-		<view class="h4">两端局中</view>
+		<view class="h3">两端局中</view>
 		<view class="pf-flex row justify-between">
 			<view class="xl-2">1</view>
 			<view class="xl-1">2</view>
 		</view>
-		<view class="h4">单行局中</view>
+		<view class="h3">单行局中</view>
 		<view class="pf-flex direction  justify-center">
 			<view class="xl-2">1</view>
 			<view class="xl-1">2</view>
 		</view>		
-		<view class="h4">坚向局中</view>
+		<view class="h3">坚向局中</view>
 		<view class="pf-flex pf-flex-space center">
 			<view class="xl-2">1</view>
 			<view class="xl-1">2</view>
 		</view>
-			<view class="h4">顶部对齐</view>
+			<view class="h3">顶部对齐</view>
 			<view class="pf-flex pf-flex-space baseline">
 				<view class="xl-2">1</view>
 				<view class="xl-1">2</view>
 			</view>	
-			<view class="h4">底部对齐</view>
+			<view class="h3">底部对齐</view>
 			<view class="pf-flex pf-flex-space end">
 				<view class="xl-2">1</view>
 				<view class="xl-1">2</view>
 			</view>	
-		<view class="h4">普通坚向</view>
+		<view class="h3">普通坚向</view>
 		<view class="pf-flex column">
 			<view class="xl-1">1</view>
 			<view class="xl-8">2</view>
 			<view class="xl-1">3</view>
 		</view>	
-		<view class="h4">自动换行</view>
+		<view class="h3">自动换行</view>
 		<view class="pf-flex row xl justify-between">
 			<view class="xl-1">1</view>
 			<view class="xl-1">2</view>
@@ -109,35 +109,58 @@
 </script>
 
 <style lang="scss" scoped="scoped">
-.Layout{
-	padding:10rpx;
+.content{
+	padding:40rpx;
+	box-sizing: border-box;
+	font-size: 14rpx;
+	.bnt{
+		  position: relative;
+		  width:100%;
+		  background: #2b9939;
+		  color: #fff;
+		  height:60rpx;
+		  line-height:60rpx;
+		  margin:0 auto 40rpx;
+		  text-align: center;
+		  font-size: 16rpx;
+		  border-radius:10rpx;
+		 } 
+	.h2{
+		font-size:24rpx; 
+		margin-bottom:10rpx; 
+		font-weight: bold;
+		}  
 	.h3{
-		font-size:30rpx;
-		font-weight:bold;
-		padding:20rpx 0;
-	}
-	.h4{
-		font-size:24rpx;
-		font-weight:bold;
-		padding:20rpx 0 0;
-	}
-	.pf-flex{
-		background:#eee;
+		 font-size:20rpx; 
+		 margin:20rpx auto; 
+		 font-weight: bold;
+		 color:red;
+	    }	 
+	.tip{
+		 font-size: 14rpx; 
+		 text-indent:15rpx; 
+		 margin:20rpx auto;
+		} 		
+	.title{
 		margin:20rpx auto;
-		min-height:50rpx;
-		view{
-			padding:20rpx;
-			background:#99a9bf;
-			&:nth-child(2n){
-			 background:#d3dce6;	
-			}
 		}
-		&.pf-flex-space{
-			height:180rpx;
+	.pf-flex{
+			background:#eee;
+			margin:20rpx auto;
+			min-height:50rpx;
 			view{
-				height:50rpx;
+				padding:20rpx;
+				background:#99a9bf;
+				&:nth-child(2n){
+				 background:#d3dce6;	
+				}
 			}
-		}
-	}
- }	
+			&.pf-flex-space{
+				height:180rpx;
+				view{
+					height:50rpx;
+				}
+			}
+		}		
+}						
 </style>

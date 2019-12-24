@@ -15,7 +15,7 @@
 <template>
 	<view class="content">
 		<view class="h2">Scorll 画廊组件</view>
-		<view class="tip">Scorll组件主要用于非模态信息提醒，无需用户交互.<strong>注:</strong>由于此组件基于UNI-APP实现，所以在使用之前，请确保自己了解过 </view>
+		<view class="tip">Scorll组件主要用于画廊展示。<strong>注:</strong>由于此组件基于UNI-APP实现，所以在使用之前，请确保自己了解过 </view>
 		<Scorll 
 			 :galleryheight="165" 
 			  bkstart="#000000" 
@@ -35,7 +35,8 @@
 </template>
 
 <script>
-	import {Scorll,Toast} from '@/components/PFUNI.js'
+	 import Toast from "@/components/Toast/Toast";
+	 import Scorll from "@/components/Scorll/Scorll";
 		export default {
 			components: {
 				Toast,
@@ -110,7 +111,6 @@
 .content{
 	padding:40rpx;
 	box-sizing: border-box;
-	font-size: 14rpx;
 	.bnt{
 		  position: relative;
 		  width:100%;
@@ -120,23 +120,19 @@
 		  line-height:60rpx;
 		  margin:0 auto 40rpx;
 		  text-align: center;
-		  font-size: 16rpx;
 		  border-radius:10rpx;
 		 } 
 	.h2{
-		font-size:24rpx; 
+		font-size:28rpx; 
 		margin-bottom:10rpx; 
 		font-weight: bold;
 		}  
 	.h3{
-		 font-size:20rpx; 
 		 margin:20rpx auto; 
 		 font-weight: bold;
 		 color:red;
 	    }	 
 	.tip{
-		 font-size: 14rpx; 
-		 text-indent:15rpx; 
 		 margin:20rpx auto;
 		} 		
 	.title{

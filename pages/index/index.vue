@@ -31,7 +31,7 @@
 	     <view class="list animated slideInUp">
 	   		    <view class="title">Basics 基础组件</view>
 				<view class="info" @click='goto("../components/Toast")'><i class="iconfont icon-arrowright"></i>Toast</view>
-				<view class="info" @click='goto("../components/Dialog")'><i class="iconfont icon-arrowright"></i>Dialog</view>   
+				<view class="info" @click='goto("../components/Confirm")'><i class="iconfont icon-arrowright"></i>Confirm</view>   
 	   			<view class="info" @click='goto("../components/Popup")'><i class="iconfont icon-arrowright"></i>Popup</view>
 	   			<view class="info" @click='goto("../components/Picke")'><i class="iconfont icon-arrowright"></i>Picke</view>
 	   			<view class="info" @click='goto("../components/DatePicke")'><i class="iconfont icon-arrowright"></i>DatePicke</view>
@@ -114,6 +114,7 @@
 	 box-sizing:border-box;
 	 background:#f5f5f5;
 	 -webkit-overflow-scrolling:touch;
+	 font-size:24rpx;
 	 .logo{
 		  height:100rpx;
 		  width:100rpx;
@@ -148,11 +149,13 @@
 			   padding:20rpx 40rpx;
 			   border-bottom:1rpx;
 			   border-bottom:1rpx solid #eee;
+			   font-size:24rpx;
 			   .text{
 				 position: absolute;
 				 top:20rpx;
 				 right:70rpx;
-				 color:#999;  
+				 color:#999;
+				 font-size:24rpx;  
 			   }
 			   .iconfont{
 				   position: absolute;

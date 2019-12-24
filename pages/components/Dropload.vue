@@ -37,7 +37,7 @@
 </template>
 
 <script>
-	  import {Dropload} from "@/components/PFUNI.js";
+	  import Dropload from "@/components/Dropload/Dropload";
 		export default {
 			components: {
 				Dropload

@@ -13,24 +13,26 @@
   *last update date : 2020-01-01 00:00
 -->
 <template>
-	<view class="Toast">
-		<view class="h3">Toast 提示信息</view>
-		<view class="p">注:由于此组件基于UIN-APP实现，所以在使用之前，请确保自己了解过
-		 <br>注意：如果没有特殊要求可以使用uniapp官网提供的uni.showToast()、uni.showLoading()这个方法</view>
-		<Button :type="'primary'" @click="getTost">点击显示Top</Button>
-		<Button :type="'info'" @click="showToastCentre">点击显示Centre</Button>
-		<Button :type="'primary'" @click="showToastBottom">点击显示Bottom</Button>
+	<view class="content">
+		<view class="h2">Toast 提示信息</view>
+		<view class="tip">Toast组件主要用于弹出提示信息，无需用户交互。<b>注:</b>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过!</view>
+		<Buttons :type="'info'" @click="showToastCentre">点击显示Centre</Buttons>
+		<Buttons :type="'primary'" @click="showToastBottom">点击显示Bottom</Buttons>
+		<Buttons :type="'primary'" @click="getTost">点击显示Top</Buttons>
+		<view class="h3">注意:如果没有特殊要求可以使用uniapp官网提供的uni.showToast()、uni.showLoading()这个方法</view>
 	    <Toast ref="toast"></Toast>
 	</view>
 </template>
 
 <script>
-	import {Toast,Button} from "@/components/PFUNI.js";
+	import Toast from "@/components/Toast/Toast";
+	import Buttons from "@/components/Button/Button";
+	
 	export default{
 		name:'Toasts',
 	    components: {
 		      Toast,
-			  Button
+			  Buttons
 		    },
 		data() {
 			return{}
@@ -53,16 +55,35 @@
 </script>
 
 <style lang="scss" scoped="scoped">
-.Toast{
-	padding:10rpx;
+.content{
+	padding:40rpx;
+	box-sizing: border-box;
+	.bnt{
+		  position: relative;
+		  width:100%;
+		  background: #2b9939;
+		  color: #fff;
+		  height:60rpx;
+		  line-height:60rpx;
+		  margin:0 auto 40rpx;
+		  text-align: center;
+		  border-radius:10rpx;
+		 } 
+	.h2{
+		font-size:28rpx; 
+		margin-bottom:10rpx; 
+		font-weight: bold;
+		}  
 	.h3{
-		font-size:30rpx;
-		font-weight:bold;
-		padding:20rpx 0;
-	}
-	.p{
-	 padding:20rpx 0;
-	 font-weight:bold;
-	}
-}	
+		 margin:20rpx auto; 
+		 font-weight: bold;
+		 color:red;
+	    }	 
+	.tip{
+		 margin:20rpx auto;
+		} 		
+	.title{
+		margin:20rpx auto;
+		}	
+}						
 </style>

@@ -38,7 +38,7 @@
 </template>
 
 <script>
-	import {Cell} from "@/components/PFUNI.js";
+	import Cell from "@/components/Cell/Cell";
 	export default{
 		name:'Cells',
 	    components: {

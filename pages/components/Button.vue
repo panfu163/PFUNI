@@ -15,44 +15,45 @@
 <template>
 	<view class="Button">
 		<view class="h3">Button 按钮</view>
-		<h5 class="h5">按钮类型</h5> 
+		<view class="h5">按钮类型</view> 
 		<view class="p">按钮类型支持default、primary、info、warning、danger五种类型，默认为default</view>
-	    <Button>默认按钮</Button>
-		<Button :type="'primary'">主要按钮</Button>
-		<Button :type="'info'">信息按钮</Button>
-		<Button :type="'warning'">警告按钮</Button>
-		<Button :type="'danger'">危险按钮</Button>
-		<h5 class="h5">朴素按钮</h5>
-		<Button plain :plain="'plain'">默认按钮</Button>
-		<Button :type="'primary'"  :plain="'plain'">主要按钮</Button>
-		<Button :type="'info'"  :plain="'plain'">信息按钮</Button>
-		<Button :type="'warning'"  :plain="'plain'">警告按钮</Button>
-		<Button :type="'danger'"  :plain="'plain'">危险按钮</Button>
-	    <h5 class="h5">禁用状态</h5> 
-		<Button  :disabled ="'disabled '">默认按钮</Button>
-		<Button :type="'primary'"  :disabled ="'disabled '">主要按钮</Button>
-		<Button :type="'info'"  :disabled ="'disabled '">信息按钮</Button>
-		<Button :type="'warning'"  :disabled ="'disabled '">警告按钮</Button>
-		<Button :type="'danger'"  :disabled ="'disabled '">危险按钮</Button>
-	    <h5 class="h5">按形状</h5>
-		<Button :shape ="'round '">默认按钮</Button>
-		<Button :type="'primary'"  :shape ="'round '">主要按钮</Button>
-		<Button :type="'info'"  :shape ="'round '">信息按钮</Button>
-		<Button :type="'warning'"  :shape ="'round '">警告按钮</Button>
-		<Button :type="'danger'"  :shape ="'round '">危险按钮</Button>
+	    <Buttons>默认按钮</Buttons>
+		<Buttons :type="'primary'">主要按钮</Buttons>
+		<Buttons :type="'info'">信息按钮</Buttons>
+		<Buttons :type="'warning'">警告按钮</Buttons>
+		<Buttons :type="'danger'">危险按钮</Buttons>
+		<view class="h5">朴素按钮</view>
+		<Buttons plain :plain="'plain'">默认按钮</Buttons>
+		<Buttons :type="'primary'"  :plain="'plain'">主要按钮</Buttons>
+		<Buttons :type="'info'"  :plain="'plain'">信息按钮</Buttons>
+		<Buttons :type="'warning'"  :plain="'plain'">警告按钮</Buttons>
+		<Buttons :type="'danger'"  :plain="'plain'">危险按钮</Buttons>
+	    <view class="h5">禁用状态</view> 
+		<Buttons  :disabled ="'disabled '">默认按钮</Buttons>
+		<Buttons :type="'primary'"  :disabled ="'disabled '">主要按钮</Buttons>
+		<Buttons :type="'info'"  :disabled ="'disabled '">信息按钮</Buttons>
+		<Buttons :type="'warning'"  :disabled ="'disabled '">警告按钮</Buttons>
+		<Buttons :type="'danger'"  :disabled ="'disabled '">危险按钮</Buttons>
+	    <view class="h5">按形状</view>
+		<Buttons :shape ="'round '">默认按钮</Buttons>
+		<Buttons :type="'primary'"  :shape ="'round '">主要按钮</Buttons>
+		<Buttons :type="'info'"  :shape ="'round '">信息按钮</Buttons>
+		<Buttons :type="'warning'"  :shape ="'round '">警告按钮</Buttons>
+		<Buttons :type="'danger'"  :shape ="'round '">危险按钮</Buttons>
 	</view>
 </template>
 
 <script>
-	import {Toast,Button} from "@/components/PFUNI.js";
+	import Buttons from "@/components/Button/Button";
 	export default{
-		name:'Buttons',
+		name:'Button',
 	    components: {
-		      Toast,
-			  Button
+		      Buttons
 		    },
 		data() {
-			return{}
+			return{
+				
+			}
 		},
 		mounted() {
 			

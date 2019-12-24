@@ -17,7 +17,7 @@
 		<view class="h2">Keyboard 移动端自定义键盘</view>
 		<view class="tip">Keyboard组件主要用于移动端自定义键盘，无需用户交互。<strong>注:</strong>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过 </view>
 		<view class="h3">示例1</view>
-		<Button :type="'warning'" @click="showKeyboard">数字和字母</Button>
+		<Buttons :type="'warning'" @click="showKeyboard">数字和字母</Buttons>
 		<view  class="tip">结果:{{result}}</view>
 		<Keyboard ref="Keyboard" @keyboardValueChanged="keyboardValueChanged" @delKeyboard="delKeyboard"></Keyboard>
 		<view class="h3">示例2</view>
@@ -36,11 +36,12 @@
 </template>
 
 <script>
-	  import {Keyboard,Button} from "@/components/PFUNI.js";
+	   import Keyboard from "@/components/Keyboard/Keyboard";
+	   import Buttons from "@/components/Button/Button";
 	  export default {
 	    components: {
 				Keyboard,
-				Button
+				Buttons
 			},
 		data() {
 			return {
@@ -124,12 +125,11 @@
 	}
 	
 </script>
-
+	
 <style lang="scss" scoped="scoped">
 .content{
-	padding:40upx;
+	padding:40rpx;
 	box-sizing: border-box;
-	font-size: 14rpx;
 	.bnt{
 		  position: relative;
 		  width:100%;
@@ -139,49 +139,46 @@
 		  line-height:60rpx;
 		  margin:0 auto 40rpx;
 		  text-align: center;
-		  font-size: 16rpx;
 		  border-radius:10rpx;
 		 } 
 	.h2{
-		font-size:24rpx; 
+		font-size:28rpx; 
 		margin-bottom:10rpx; 
 		font-weight: bold;
 		}  
 	.h3{
-		 font-size:20rpx; 
 		 margin:20rpx auto; 
 		 font-weight: bold;
 		 color:red;
 	    }	 
 	.tip{
-		 font-size: 14rpx; 
-		 text-indent:15rpx; 
 		 margin:20rpx auto;
 		} 		
 	.title{
 		margin:20rpx auto;
-		}
+		}	
 	.list-box{
-		width:100%;
-		display:flex;
-		text{
-			border:1rpx solid #eee;
-			margin-right:10px;
-			width:70rpx;
-			height:70rpx;
-			line-height:70rpx;
-			text-align:center;
-			display:inline-block;
-			&.deg{
-				border:0;
-				width:10rpx;
+			width:100%;
+			display:flex;
+			text{
+				border:1rpx solid #eee;
+				margin-right:10px;
+				width:70rpx;
 				height:70rpx;
 				line-height:70rpx;
+				text-align:center;
+				display:inline-block;
+				&.deg{
+					border:0;
+					width:10rpx;
+					height:70rpx;
+					line-height:70rpx;
+				}
+				&.on{
+				  border:1rpx solid #f47a37;	
+				}
 			}
-			&.on{
-			  border:1rpx solid #f47a37;	
-			}
-		}
-	}		
+		}		
+		
 }						
 </style>	

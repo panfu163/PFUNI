@@ -16,11 +16,11 @@
 	<view class="content">
 		<view class="h2">Speaker 滚动公告</view>
 			<view class="tip">Speaker组件主要用于滚动公告，无需用户交互。<strong>注:</strong>由于此组件基于PFUIN实现，所以在使用之前，请确保自己了解过 </view>
-				<view  class="h2">横向滚动</view>
+				<view  class="h3">横向滚动</view>
 				<Speaker :vertical="false" :interval="5000" iconClass="icon-tubiao1jingyin" :list="list"></Speaker>
-				<view  class="h2">竖向滚动</view>
+				<view  class="h3">竖向滚动</view>
 				<Speaker :vertical="true" iconColor="#E76B61" :interval="5000" iconClass="icon-tubiao1jingyin" :list="list"></Speaker>
-		 <view  class="h2">无缝滚动</view>
+		 <view  class="h3">无缝滚动</view>
 		 <Speaker :scrolling="true" iconColor="#E76B61" iconClass="icon-tubiao1jingyin">
 			 <view>PFUIN兼容微信小程序、uni-app，一套代码多端发布！完美兼容 helloUniApp 框架 !</view>
 		 </Speaker>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-	import Speaker from '../../components/Speaker/Speaker.vue';     //导入
+	import Speaker from "@/components/Speaker/Speaker";
 		export default {
 			components: {
 				Speaker,
@@ -56,39 +56,35 @@
 
 <style lang="scss" scoped="scoped">
 .content{
-	padding:40upx;
+	padding:40rpx;
 	box-sizing: border-box;
-	font-size: 14upx;
 	.bnt{
 		  position: relative;
 		  width:100%;
 		  background: #2b9939;
 		  color: #fff;
-		  height:60upx;
-		  line-height:60upx;
-		  margin:0 auto 40upx;
+		  height:60rpx;
+		  line-height:60rpx;
+		  margin:0 auto 40rpx;
 		  text-align: center;
-		  font-size: 16upx;
-		  border-radius:10upx;
+		  border-radius:10rpx;
 		 } 
 	.h2{
-		font-size:24upx; 
-		margin-bottom:10upx; 
+		font-size:28rpx; 
+		margin-bottom:10rpx; 
 		font-weight: bold;
 		}  
 	.h3{
-		 font-size:20upx; 
-		 margin:20upx auto; 
+		 margin:20rpx auto; 
 		 font-weight: bold;
 		 color:red;
 	    }	 
 	.tip{
-		 font-size: 14upx; 
-		 text-indent:15rpx; 
-		 margin:20upx auto;
-		} 
+		 margin:20rpx auto;
+		} 		
 	.title{
-		margin:20upx auto;
-		}
+		margin:20rpx auto;
+		}	
 }						
-</style>	
+</style>
+	

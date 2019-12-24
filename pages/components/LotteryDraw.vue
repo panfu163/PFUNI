@@ -22,7 +22,7 @@
 </template>
 
 <script>
-	  import {LotteryDraw} from "@/components/PFUNI.js";
+	import LotteryDraw from "@/components/LotteryDraw/LotteryDraw";
 	  export default {
 	    components: {
 				LotteryDraw
@@ -59,9 +59,8 @@
 
 <style lang="scss" scoped="scoped">
 .content{
-	padding:40upx;
+	padding:40rpx;
 	box-sizing: border-box;
-	font-size: 14rpx;
 	.bnt{
 		  position: relative;
 		  width:100%;
@@ -71,27 +70,23 @@
 		  line-height:60rpx;
 		  margin:0 auto 40rpx;
 		  text-align: center;
-		  font-size: 16rpx;
 		  border-radius:10rpx;
 		 } 
 	.h2{
-		font-size:24rpx; 
+		font-size:28rpx; 
 		margin-bottom:10rpx; 
 		font-weight: bold;
 		}  
 	.h3{
-		 font-size:20rpx; 
 		 margin:20rpx auto; 
 		 font-weight: bold;
 		 color:red;
 	    }	 
 	.tip{
-		 font-size: 14rpx; 
-		 text-indent:15rpx; 
 		 margin:20rpx auto;
 		} 		
 	.title{
 		margin:20rpx auto;
 		}	
 }						
-</style>	
+</style>		
