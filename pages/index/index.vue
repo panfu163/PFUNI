@@ -26,7 +26,7 @@
 		 <view class="info" @click='goto("../components/Border")'><i class="iconfont icon-arrowright"></i>Border <text class="text">边框</text></view>
 		 <view class="info" @click='goto("../components/Cell")'><i class="iconfont icon-arrowright"></i>Cell <text class="text">单元格</text></view>
 		 <view class="info" @click='goto("../components/Loading")'><i class="iconfont icon-arrowright"></i>Loading <text class="text">加载图标</text></view>
-		 <view class="info" @click='goto("../components/Icon")'><i class="iconfont icon-arrowright"></i>Icon<text class="text">图标</text></view>
+		 <!-- <view class="info" @click='goto("../components/Icon")'><i class="iconfont icon-arrowright"></i>Icon<text class="text">图标</text></view> -->
 		 </view>
 	     <view class="list animated slideInUp">
 	   		    <view class="title">Basics 基础组件</view>

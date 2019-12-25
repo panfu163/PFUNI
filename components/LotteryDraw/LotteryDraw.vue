@@ -15,9 +15,12 @@
 <template>
  <view class="LotteryDraw">
 	 <view class="rotate" :style="{transform:rotateZ}">
-		 <image class="image" :src="url"></image>
+		 <image class="image" :src="roundUrl"></image>
 	 </view>
-	 <view class="start" :style=" {background:pointerUrl}"  @click="getLotteryDraw">开始<br>抽奖</view>
+	 <view class="start" :style=" {background:pointerUrl}"  @click="getLotteryDraw">
+		 <view class="text" v-html="title"><!--开始<br>抽奖--></view>
+		  <image class="image" :src="StartUrl"></image>
+	 </view>
  </view>
 </template>
 <script>
@@ -27,16 +30,20 @@ export default{
 			type :String,
 			default :""
 		},
+		title:{ //中奖
+			type :String,
+			default :"开始<br>抽奖"
+		},
 		roundUrl : { //转盘图片地址
 			type :String, 
 			default(){
-				return require("components/LotteryDraw/img/round.png")
+				return "../../static/components/round.png"
 			}
 		},
 		StartUrl : { // 指针图片地址
 			type :String, 
 			default(){
-				return require("components/LotteryDraw/img/Start.png")
+				return "../../static/components/Start.png"
 			}
 		},
 		getData:{ //获取数据
@@ -61,12 +68,22 @@ export default{
 		}
 	},
 	created:function(){
-		this.getImgToBase64(this.roundUrl,(res)=>{
-			this.url=res
-		})
-		this.getImgToBase64(this.StartUrl,(res)=>{
-			this.pointerUrl="url("+res+") no-repeat"
-		})
+		
+		// this.getImgToBase64(this.roundUrl,(res)=>{
+		// 	this.url=res
+		// })
+		// this.getImgToBase64(this.StartUrl,(res)=>{
+		// 	this.pointerUrl="url("+res+") no-repeat"
+		// })
+		// this.urlTobase64(this.roundUrl,(res)=>{
+		// 	this.url=res
+		// })
+		// this.urlTobase64(this.StartUrl,(res)=>{
+		// 	this.pointerUrl="url("+res+") no-repeat"
+		// })
+	},
+	mounted() {
+	   
 	},
 	methods:{
 		    //将图片转换为Base64
@@ -84,6 +101,19 @@ export default{
 					canvas = null;
 				  };
 				  img.src = url;
+			},
+			//将图片转换为Base64
+			urlTobase64(url,callback){
+			    uni.request({
+				url: url,
+				method:'GET',
+				responseType:'arraybuffer',
+				success: ress => {
+					let base64 = wx.arrayBufferToBase64(ress.data); //把arraybuffer转成base64 
+					base64 = 'data:image/jpeg;base64,' + base64 //不加上这串字符，在页面无法显示的哦
+					callback(base64);
+				}
+			    })
 			},
 			//图片转动
 			lotteryDrew(){ 
@@ -160,7 +190,6 @@ export default{
 		  height:200rpx;
 		  padding-top:70rpx;
 		  text-align:center;
-		  font-size:32rpx;
 		  font-weight:bold;
 		  cursor:pointer;
 		  color:#fff;
@@ -169,6 +198,26 @@ export default{
 		   transform-origin:center left bottom;
 		  -webkit-transform-origin:center left bottom;
 		   transition: all 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+		  /* background:url("../../static/components/Start.png") no-repeat;*/
+		  .image{
+			  position:absolute;
+			  top:0;
+			  left:0;
+			  z-index:999;
+			  width:220rpx;
+			  height:220rpx;
+			  margin:0 auto;
+		  }
+		  .text{
+			  position:absolute;
+			  top:82rpx;
+			  left:10rpx;
+			  z-index:1000;
+			  width:100%;
+			  height:100%;
+			  margin:0 auto;
+			  font-size:32rpx;
+		  }
 		 }
 }	
 </style>

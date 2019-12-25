@@ -2,6 +2,7 @@
 
 #### 介绍
 PFUIN一款基于UNI-APP开发跨平台应用实现的精致移动端组件库，编写一套代码，可编译到iOS、Android、H5、小程序等多个平台。
+官网地址：http://www.pfuni.cn
 
 #### 软件架构
 ```bash
@@ -31,6 +32,7 @@ PFUIN一款基于UNI-APP开发跨平台应用实现的精致移动端组件库�
 
 1. 在网址https://uniapp.dcloud.io查看基础文档
 2. 需下载HBuilderX来打包项目
+3.注：由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过!
 
 
 #### 参与贡献

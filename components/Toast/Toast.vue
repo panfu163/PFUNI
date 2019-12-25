@@ -80,7 +80,7 @@ export default {
 	transition: opacity .3s linear;
 	-webkit-transition:opacity .3s linear;
 	text-align:center;
-	font-size:18rpx;
+	font-size:28rpx;
     &.placetop{
 	  left:50%;
 	  top:100rpx;

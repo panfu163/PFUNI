@@ -68,7 +68,7 @@ export default {
 	box-sizing:border-box;
 	display:inline-block;
 	padding: 0 30rpx;
-	font-size: 12rpx;
+	font-size:28rpx;
 	margin:0 16rpx 16rpx 0;
 	height:74rpx;
 	line-height:72rpx;

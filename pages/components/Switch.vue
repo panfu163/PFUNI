@@ -26,10 +26,10 @@
 </template>
 
 <script>
-		import Switch from "@/components/Switch/Switch";
+		import Switchs from "@/components/Switch/Switch";
 		export default {
 			components: {
-				Switch,
+				Switchs,
 			},
 			data() {
 				return {
