@@ -1,5 +1,5 @@
 <!--
-  * LotteryDraw 抽奖大转盘
+  * Login 弹出登录框
   * ============================================================================
   * 版权所有 2020-2024 www.pfuni.cn，并保留所有权利。
   * 网站地址: http://www.pfuni.cn；
@@ -14,49 +14,46 @@
 -->
 <template>
 	<view class="content">
-		<view class="h2">LotteryDraw 抽奖大转盘</view>
-		<view class="tip">LotteryDraw组件主要用于抽奖大转盘，无需用户交互。<strong>注:</strong>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过 </view>
+		<view class="h2">Login 登录窗口</view>
+		<view class="tip">Login组件主要用于登录窗，无需用户交互。<strong>注:</strong>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过 </view>
 		<view class="h3">示例1</view>
-		<LotteryDraw @getData="getDataLotteryDraw" :deg="60" @getPrize="getPrize" :result="result"></LotteryDraw>
-	</view>
+		<Buttons :type="'warning'" @click="isLogin">立即登录</Buttons>
+		<view class="tip">结果:{{result}}</view>
+		<Login ref="logIn"></Login>
+</view>
 </template>
 
 <script>
-	import LotteryDraw from "@/components/LotteryDraw/LotteryDraw";
+	   import Login from "@/components/Login/Login";
+	   import Buttons from "@/components/Button/Button";
 	  export default {
 	    components: {
-				LotteryDraw
+				Login,
+				Buttons
 			},
 		data() {
 			return {
-				result:"" ,//中奖结果
-				Prize:["谢谢参与","洗车券","保养","谢谢参与","洗车券","保养"] //奖项从0,1,2,3,5开始 有6个奖项deg=60 有10个奖项deg=36
+				result:"" ,
 			}
 		},
 		onLoad(e) {
 			
 		},
 		created() {
-	    
+		 
 	    },
 		methods: {
-			getDataLotteryDraw(){ //点击抽奖获取奖项--this.result为统过AJAX向后台请求返回的奖项
-				let res=Math.floor(Math.random() * 10 + 1)
-				this.result="1,"+res;
-			},
-			getPrize(res){
-				console.log(res)
-				uni.showToast({
-					title:this.Prize[res],
-					icon:"success",
-					duration: 2000
-				});
+			isLogin(){
+				 this.$refs.logIn.show(res => {
+					 console.log(res)
+					 this.result=res.data
+				 })
 			}
 		}
 	}
 	
 </script>
-
+	
 <style lang="scss" scoped="scoped">
 .content{
 	padding:40rpx;
@@ -88,5 +85,6 @@
 	.title{
 		margin:20rpx auto;
 		}	
+	
 }						
-</style>		
+</style>	

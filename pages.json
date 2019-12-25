@@ -160,6 +160,11 @@
 			"style": {
 				"navigationBarTitleText":"Keyboard"
 			}
+		},{
+			"path": "pages/components/Login",
+			"style": {
+				"navigationBarTitleText":"Login"
+			}
 		}
 	],
 	"subPackages": [{

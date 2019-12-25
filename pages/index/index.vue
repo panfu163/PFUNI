@@ -64,18 +64,12 @@
 				<view class="info" @click='goto("../components/Upload")'><i class="iconfont icon-arrowright"></i>Upload</view>
 	   </view>
 	   <view class="list animated slideInUp">
-	   	   		    <view class="title">Example 常用实例</view>
-	   	   		   	<view class="info" @click='goto("../../pagesA/LoadingMore")'>
-					<i class="iconfont icon-arrowright"></i>上拉加载</view>
-	 <view class="info" @click='goto("../components/LoadMore")'>
-		 <i class="iconfont icon-arrowright"></i>上拉下拉加载
-	  <text class="text">适合放长列表</text>
-	 </view>
+	   	   		    <view class="title">Example 常用实例</view><view class="info" @click='goto("../../pagesA/LoadingMore")'><i class="iconfont icon-arrowright"></i>上拉加载</view>
+	                <view class="info" @click='goto("../components/LoadMore")'><i class="iconfont icon-arrowright"></i>上拉下拉加载<text class="text">适合放长列表</text></view>
+					<view class="info" @click='goto("../components/Login")'><i class="iconfont icon-arrowright"></i>Login<text class="text">弹框登录</text></view>
 	  </view>
 	  <view class="list animated slideInUp">
-			<view class="title">subPackages 分包常用实例</view>
-			<view class="info" @click='goto("../../pagesA/LoadingMore")'>
-			<i class="iconfont icon-arrowright"></i>上拉加载</view>
+			<view class="title">subPackages 分包常用实例</view><view class="info" @click='goto("../../pagesA/LoadingMore")'><i class="iconfont icon-arrowright"></i>上拉加载</view>
 	  </view>
 	</view>
 </template>
