@@ -13,5 +13,5 @@
 </script>
 
 <style>
-	@import "font/font.wxss";
+	@import "font/font.css";
 </style>

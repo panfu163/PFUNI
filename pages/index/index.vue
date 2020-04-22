@@ -37,7 +37,8 @@
 	   			<view class="info" @click='goto("../components/DatePicke")'><i class="iconfont icon-arrowright"></i>DatePicke</view>
 				<view class="info" @click='goto("../components/CountDown")'><i class="iconfont icon-arrowright"></i>CountDown <text class="text">倒进时</text></view>
 				<view class="info" @click='goto("../components/NubmerAnimate")'><i class="iconfont icon-arrowright"></i>NubmerAnimate<text class="text">数值动画</text></view>
-	            <view class="info" @click='goto("../components/CirProgress")'><i class="iconfont icon-arrowright"></i>CirProgress<text class="text">进度圆环/条</text></view>
+	            <view class="info" @click='goto("../components/NavBar")'><i class="iconfont icon-arrowright"></i>NavBar<text class="text">切换导航</text></view>
+				<view class="info" @click='goto("../components/CirProgress")'><i class="iconfont icon-arrowright"></i>CirProgress<text class="text">进度圆环/条</text></view>
 			    <view class="info" @click='goto("../components/LotteryDraw")'><i class="iconfont icon-arrowright"></i>LotteryDraw<text class="text">抽奖大转盘</text></view>
 	            <view class="info" @click='goto("../components/Keyboard")'><i class="iconfont icon-arrowright"></i>Keyboard<text class="text">移动端键盘</text></view>
 	   </view>
@@ -46,12 +47,8 @@
 		   	<view class="info" @click='goto("../components/Scorll")'><i class="iconfont icon-arrowright"></i>Scorll</view>
 			<view class="info" @click='goto("../components/IndexList")'><i class="iconfont icon-arrowright"></i>IndexList</view>
 			<view class="info" @click='goto("../components/Swipe")'><i class="iconfont icon-arrowright"></i>Swipe</view>
-			<view class="info" @click='goto("../components/Speaker")'><i class="iconfont icon-arrowright"></i>Speaker
-			 <text class="text">滚动公告</text>
-			</view>
-			<view class="info" @click='goto("../components/Dropload")'><i class="iconfont icon-arrowright"></i>Dropload
-			 <text class="text">弹出使用-不适合放长列表</text>
-			</view>
+			<view class="info" @click='goto("../components/Speaker")'><i class="iconfont icon-arrowright"></i>Speaker<text class="text">滚动公告</text></view>
+			<view class="info" @click='goto("../components/Dropload")'><i class="iconfont icon-arrowright"></i>Dropload<text class="text">弹出使用-不适合放长列表</text></view>
 	   </view>
 	     <view class="list animated slideInUp">
 	   		    <view class="title">Form 表单组件</view>
@@ -67,6 +64,7 @@
 	   	   		    <view class="title">Example 常用实例</view><view class="info" @click='goto("../../pagesA/LoadingMore")'><i class="iconfont icon-arrowright"></i>上拉加载</view>
 	                <view class="info" @click='goto("../components/LoadMore")'><i class="iconfont icon-arrowright"></i>上拉下拉加载<text class="text">适合放长列表</text></view>
 					<view class="info" @click='goto("../components/Login")'><i class="iconfont icon-arrowright"></i>Login<text class="text">弹框登录</text></view>
+					<view class="info" @click='goto("../seat/seat")'><i class="iconfont icon-arrowright"></i>seat<text class="text">电影购票选座</text></view>
 	  </view>
 	  <view class="list animated slideInUp">
 			<view class="title">subPackages 分包常用实例</view><view class="info" @click='goto("../../pagesA/LoadingMore")'><i class="iconfont icon-arrowright"></i>上拉加载</view>

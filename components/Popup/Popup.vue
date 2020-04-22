@@ -49,7 +49,7 @@ export default {
 	 props: {
 		  position:{
 				type: String,
-				default:''
+				default:'' //top，middle，bottom，right，left
 		  },
 		},
 		data() {
@@ -120,16 +120,16 @@ export default {
 }	
 .popup-content-middle{
 	position: fixed;
-	top:20%;
-	left:0;
+	top:50%;
+	left:50%;
 	z-index:1000;
 	background:#fff;
-	width:100%;
-	height:100%;
-	transform: translateY(100%);
+	width:90%;
+	height:80%;
+	display:none;
     &.show-middle{
-	  transform:translateY(0); 
-	  -webkit-transition:fadeIn .3s linear;
+	  transform:translate(-50%,-50%) ;
+	  display: block;
 	}
 }	 
 .popup-content-bottom{

@@ -112,6 +112,7 @@
 				let arr=val.detail.value;
 				let province,city,area;
 				let checkArr=this.checkArr;
+				console.log(this.mode+"===========")
 			   switch(this.mode){
 				   case "provinces":
 				    province=this.datas.provinces[arr[0]].label; //省

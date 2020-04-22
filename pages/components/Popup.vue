@@ -14,17 +14,15 @@
 -->
 <template>
 	<view class="content">
-		<view class="h2">Popup 弹框</view>
-		<view class="tip">Popup组件主要用于弹框抽屉效果，无需用户交互。<b>注:</b>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过!
+		<view class="h2">Popup 弹框抽屉效果</view>
+		<view class="tip">Popup组件主要用于弹框抽屉效果，无需用户交互。
+		<b>注:</b>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过!
 		</view>
-			<view class="bnt" @click="showToastTop">点击上部弹出Popup-top</view>
-			<view class="bnt" @click="showToastCentre">点击中部弹出Popup-centre</view>
-			<view class="bnt" @click="showToastBottom">点击下部弹出Popup-bottom</view>
-			<view class="bnt" @click="showToastLeft">点击左侧弹出Popup-left</view>
-			<view class="bnt" @click="showToastRight">点击右侧弹出Popup-right</view>
-		
-	  <view class="title">time 字段决定了 Popup 显示的时间，如果设置为 0，则不会消失，需要手动调用组件的 hide 方法。</view>
-	
+		<view class="bnt" @click="showToastTop">点击上部弹出Popup-top</view>
+		<view class="bnt" @click="showToastCentre">点击中部弹出Popup-centre</view>
+		<view class="bnt" @click="showToastBottom">点击下部弹出Popup-bottom</view>
+		<view class="bnt" @click="showToastLeft">点击左侧弹出Popup-left</view>
+		<view class="bnt" @click="showToastRight">点击右侧弹出Popup-right</view>
 	<Popup ref="Popup1" :position="'top'"></Popup>
 	<Popup ref="Popup2" :position="'middle'"></Popup>
 	<Popup ref="Popup3" :position="'bottom'"></Popup>
@@ -34,7 +32,7 @@
 </template>
 
 <script>
-		 import Popup from "@/components/Popup/Popup";
+	   import Popup from "@/components/Popup/Popup";
 		export default {
 			components: {
 				Popup,
@@ -65,6 +63,9 @@
 			showToastRight(){ //显示在右面
 				this.$refs.Popup5.show({message:"向左滑"});
 			}
+		},
+		mounted(){
+			//this.$refs.Popup1.show({message:"从上往下滑动"});
 		}
 	}
 	

@@ -14,8 +14,8 @@
 -->
 <template name="Loading">
 	<view class="loading" v-if="loadingType < 5 && show">
-		<view class="loading-icon" v-if="loadingType === 1" :style="{color:iconColor}"></view>
-		<text :style="{color:textColor}">{{loadingText[loadingType]}}</text>
+		<view class="iconfont icon-quanjushuaxin" v-if="loadingType === 1" :style="{color:iconColor}"></view>
+		<view :style="{color:textColor}">{{loadingText[loadingType]}}</view>
 	</view>
 </template>
 <script>
@@ -47,11 +47,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped="scoped">
-@font-face {
-	font-family:"gFont"; 
-	//src:url('https://at.alicdn.com/t/font_1348684_f1lellt295.ttf') 
-	src:url('../../font/font_loading.ttf') format('truetype');
-}
 @keyframes rotate360{
 	0%{
 		transform:rotate(0deg);
@@ -71,19 +66,16 @@ export default {
 	padding-bottom:36rpx;
 	line-height:40rpx; 
 	color:#888;
-	text{margin-left:12rpx;}
-	.loading-icon{
+	font-size:24rpx;
+	text{margin-left:12rpx;font-size:24rpx;}
+	.iconfont{
 		width:40rpx;
 		height:40rpx;
 		justify-content:center;
 		line-height:40rpx; 
-		font-size:30rpx; 
-		text-align:center; 
-		font-family:"gFont" !important; 
+		font-size:40rpx; 
+		text-align:center;  
 		animation:rotate360 1200ms infinite linear;
-		&:before {
-			content:"\e6c4";
-		 }
 	  }
 }
 </style>

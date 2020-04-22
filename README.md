@@ -2,14 +2,16 @@
 
 #### 介绍
 PFUIN一款基于UNI-APP开发跨平台应用实现的精致移动端组件库，编写一套代码，可编译到iOS、Android、H5、小程序等多个平台。
-官网地址：http://www.pfuni.cn
+官网地址：http://www.pfuni.cn 
+参考地址：https://www.dcloud.io/
 
 #### 软件架构
 ```bash
 ├── common                                      #公用文件
 ├── components                                  #uni-app组件目录
      └─Dialog.vue                               #可复用的Dialog组件
-	 └─Toast.vue                               #可复用的Toast组件
+	 └─Toast.vue                                #可复用的Toast组件
+|── font                                        #样式文件
 ├── pages                                       #业务页面文件存放的目录
 │  ├─components                                 #组件实例 
      └─Dialog.vue                               #Dialog实例及文档
@@ -32,7 +34,7 @@ PFUIN一款基于UNI-APP开发跨平台应用实现的精致移动端组件库�
 
 1. 在网址https://uniapp.dcloud.io查看基础文档
 2. 需下载HBuilderX来打包项目
-3.注：由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过!
+3. 注：由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过!
 
 
 #### 参与贡献

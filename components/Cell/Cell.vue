@@ -13,7 +13,7 @@
   *last update date : 2020-01-01 00:00
 -->
 <template>
-	<view v-if="!arrow" @click="goTo" class="pf-cell">
+	<view v-if="!arrow" :class="{border:border}" @click="goTo" class="pf-cell">
 		<view class="cell-left">
 		  <view v-if="iconfont" class="icon-title"> 
 		  <view class="iconfont" :class="iconfont"></view>	
@@ -24,7 +24,7 @@
 		</view>
 		<view class="cell-right">{{val}}</view>
 	</view>
-	<view v-else class="pf-cell" @click="goTo">
+	<view v-else class="pf-cell" :class="{border:border}" @click="goTo">
 		<view class="cell-left">
 		  <view v-if="iconfont" class="icon-title"> 
 		  <view class="iconfont" :class="iconfont"></view>	
@@ -64,7 +64,11 @@ export default {
 		  },
 		  url:{
 			type: String,
-			default:''   //箭头方向  
+			default:''   //链接地址  
+		  },
+		  border:{
+			type:Boolean,
+			default:false   //边线  
 		  }
 		},
 		data() {
@@ -102,9 +106,14 @@ export default {
 	padding:0;
 	background:#fff;
 	display:flex;
-	padding:20rpx;
+	padding:30rpx 20rpx;
 	border-bottom:1rpx solid #eee;
 	position:relative;
+	box-sizing:border-box;
+	overflow:hidden;
+	&.border{
+		border:0;
+	}
 	.cell-left{
 	  flex:4;
 	  overflow:hidden;
@@ -114,12 +123,13 @@ export default {
 		  color:#969799
 	   }
 	   .icon-title{
-		   padding:0 0 5rpx 40rpx;
+		   padding:5rpx 0 5rpx 80rpx;
 		   position:relative;
 		.iconfont{
 		   position:absolute;
 		   top:0;
 		   left:0;
+		   font-size:40rpx
 		}   
 	   }
 
@@ -129,23 +139,43 @@ export default {
 	  overflow:hidden;
 	  text-align:right;
 	  color:#969799;
+	  position:relative;
+	  box-sizing:border-box;
 	  &.left{
-		 padding-right:25rpx;
+		 padding-right:30rpx;
+		 position:relative;
 		 &:after{
 		   content: "";
 		   position: absolute;
 		   top:50%;
-		   right:20rpx;
+		   right:10rpx;
 		   display: block;
 		   border-bottom:1rpx solid #969799;
 		   border-right:1rpx solid #969799;
 		   z-index: 1000;
-		   width:20rpx;
-		   height:20rpx;
+		   width:15rpx;
+		   height:15rpx;
 		   transform:translate(0,-50%) rotate(-45deg); 	
 		 }
 	  }
 	  &.right{
+	  		 padding-right:25rpx;
+			 position:relative;
+	  		 &:after{
+	  		   content: "";
+	  		   position: absolute;
+	  		   top:50%;
+	  		   right:0rpx;
+	  		   display: block;
+	  		   border-bottom:1rpx solid #969799;
+	  		   border-right:1rpx solid #969799;
+	  		   z-index: 1000;
+	  		   width:15rpx;
+	  		   height:15rpx;
+	  		   transform:translate(0,-50%) rotate(135deg); 	
+	  		 }
+	  }
+	  &.bottom{
 	  		 padding-right:25rpx;
 	  		 &:after{
 	  		   content: "";
@@ -156,24 +186,8 @@ export default {
 	  		   border-bottom:1rpx solid #969799;
 	  		   border-right:1rpx solid #969799;
 	  		   z-index: 1000;
-	  		   width:20rpx;
-	  		   height:20rpx;
-	  		   transform:translate(0,-50%) rotate(135deg); 	
-	  		 }
-	  }
-	  &.bottom{
-	  		 padding-right:25rpx;
-	  		 &:after{
-	  		   content: "";
-	  		   position: absolute;
-	  		   top:50%;
-	  		   right:20rpx;
-	  		   display: block;
-	  		   border-bottom:1rpx solid #969799;
-	  		   border-right:1rpx solid #969799;
-	  		   z-index: 1000;
-	  		   width:20rpx;
-	  		   height:20rpx;
+	  		   width:15rpx;
+	  		   height:15rpx;
 	  		   transform:translate(0,-50%) rotate(45deg); 	
 	  		 }
 	  }
@@ -183,13 +197,13 @@ export default {
 	  		   content: "";
 	  		   position: absolute;
 	  		   top:50%;
-	  		   right:20rpx;
+	  		   right:10rpx;
 	  		   display: block;
 	  		   border-bottom:1rpx solid #969799;
 	  		   border-right:1rpx solid #969799;
 	  		   z-index: 1000;
-	  		   width:20rpx;
-	  		   height:20rpx;
+	  		   width:15rpx;
+	  		   height:15rpx;
 	  		   transform:translate(0,0) rotate(-135deg); 	
 	  		 }
 	  }

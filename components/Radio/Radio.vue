@@ -77,7 +77,9 @@
 				  this.islabelList[index].checked=true;
 				  this.labelDataList=this.islabelList[index];
 			 }
-		  	 this.$emit('getCheckBox',this.labelDataList); //返结果
+			 console.log(this.labelDataList)
+			 this.$emit('getCheckBox',this.labelDataList); //返结果
+			
        }
     }
   }

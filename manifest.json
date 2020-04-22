@@ -93,9 +93,14 @@
             "urlCheck" : true,
             "minified" : true,
             "es6" : true,
-            "postcss" : true
+            "postcss" : true,
+            "checkSiteMap" : false
         },
-        "permission" : {},
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "获取你的当前位置信息"
+            }
+        },
         "usingComponents" : true
     },
     "h5" : {

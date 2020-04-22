@@ -56,11 +56,6 @@
 				"navigationBarTitleText":"CirProgress"
 			}
 		},{
-			"path": "pages/loadmore/LoadMore",
-			"style": {
-				"navigationBarTitleText":"LoadMore"
-			}
-		},{
 			"path": "pages/components/Toast",
 			"style": {
 				"navigationBarTitleText": "Toast"
@@ -164,6 +159,16 @@
 			"path": "pages/components/Login",
 			"style": {
 				"navigationBarTitleText":"Login"
+			}
+		},{
+			"path": "pages/seat/seat",
+			"style": {
+				"navigationBarTitleText":"seat"
+			}
+		},{
+			"path": "pages/components/NavBar",
+			"style": {
+				"navigationBarTitleText":"NavBar"
 			}
 		}
 	],

@@ -15,7 +15,8 @@
 <template>
 	<view class="content">
 		<view class="h2">Toast 提示信息</view>
-		<view class="tip">Toast组件主要用于弹出提示信息，无需用户交互。<b>注:</b>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过!</view>
+		<view class="tip">Toast组件主要用于弹出提示信息，无需用户交互。<b>注:</b>
+		由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过!</view>
 		<Buttons :type="'info'" @click="showToastCentre">点击显示Centre</Buttons>
 		<Buttons :type="'primary'" @click="showToastBottom">点击显示Bottom</Buttons>
 		<Buttons :type="'primary'" @click="getTost">点击显示Top</Buttons>

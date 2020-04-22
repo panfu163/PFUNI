@@ -80,10 +80,15 @@
 	    
 	    },
 		methods: {
-	      getCheckBox(e){
-			  console.log(e)
-			  this.result=e;
-			  console.log("到这里啦~~")
+	      getCheckBox(data){
+			   // #ifdef H5
+			    this.result=data;
+			   // #endif
+			   // #ifdef MP-WEIXIN
+			     console.log(data.detail.__args__[0].name)
+			     this.result=data.detail.__args__[0].name;
+			   // #endif
+			  
 		  }
 		}
 	}

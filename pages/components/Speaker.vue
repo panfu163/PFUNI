@@ -24,6 +24,8 @@
 		 <Speaker :scrolling="true" iconColor="#E76B61" iconClass="icon-tubiao1jingyin">
 			 <view>PFUIN兼容微信小程序、uni-app，一套代码多端发布！完美兼容 helloUniApp 框架 !</view>
 		 </Speaker>
+		 <view  class="h3">竖向滚动</view>
+		 <Speaker :vertical="true" iconColor="#E76B61" :interval="5000" iconClass="icon-tubiao1jingyin" :list="list"></Speaker>
 	</view>
 </template>
 

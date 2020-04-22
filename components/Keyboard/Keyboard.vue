@@ -14,8 +14,8 @@
 -->
 <template>
    <view class="keyboard" :class="{show:show}" >
-	  <view class="ul" v-for="(item,i) in currentDatas">
-		<text v-for="(item1,j) in item" @click.stop="clickKeyBoard(item1)" :class="{'optcity':item1==='　','finish1':item1==='完','finish':item1==='完' || item1==='成','del1':item1==='删','del':item1==='删' || item1==='除'}">{{item1}}</text>
+	  <view class="ul" v-for="(item,i) in currentDatas" :key="i">
+		<text v-for="(item1,j) in item" :key="j" @click.stop="clickKeyBoard(item1)" :class="{'optcity':item1==='　','finish1':item1==='完','finish':item1==='完' || item1==='成','del1':item1==='删','del':item1==='删' || item1==='除'}">{{item1}}</text>
 	  </view>
    </view>
 </template>
