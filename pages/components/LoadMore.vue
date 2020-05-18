@@ -2,7 +2,7 @@
 	<view class="content">
 	<view class="h2">加载更多</view>
 	<view class="tip">Toast组件主要用于加载更多数据，无需用户交互。<strong>注:</strong>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过 </view>	
-	  <view class="bnt" @click='goto("../loadmore/LoadMore")'>上拉更新下拉加载更多</view>
+	  <view class="bnt" @click='goto("../../example/LoadMore")'>上拉更新下拉加载更多</view>
 	</view>
 </template>
 

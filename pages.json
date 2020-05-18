@@ -100,6 +100,17 @@
 			"style": {
 				"navigationBarTitleText":"LoadMore"
 			}
+		},
+		{
+			"path": "pages/example/LoadingMore",
+			"style": {
+				"navigationBarTitleText":"LoadingMore"
+			}
+		},{
+			"path": "pages/components/Lazyload",
+			"style": {
+				"navigationBarTitleText":"Lazyload"
+			}
 		},{
 			"path": "pages/components/Dropload",
 			"style": {
@@ -159,6 +170,11 @@
 			"path": "pages/components/Login",
 			"style": {
 				"navigationBarTitleText":"Login"
+			}
+		},{
+			"path": "pages/components/Calendar",
+			"style": {
+				"navigationBarTitleText":"Calendar"
 			}
 		},{
 			"path": "pages/seat/seat",

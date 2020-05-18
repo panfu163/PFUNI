@@ -21,7 +21,7 @@
 	</view>
 </template>
 <script>
-import Loading from '../components/Loading/Loading.vue';
+import Loading from '@/components/Loading/Loading.vue';
 export default {
 	data() {
 		return {

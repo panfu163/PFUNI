@@ -16,27 +16,27 @@
 	<view>
 	    <view v-show="mask" class="popup-mask" :class="{'show':mask}"  @click="hide"></view>	
 	   <!--上-->
-		<view v-if="position=='top'" class="popup-content-top" :class="{'show-top':visible}">
+		<view v-if="position=='top'" :style="isStyle" class="popup-content-top" :class="{'show-top':visible}">
 			<view>{{message}}</view>
 			<slot></slot>
 		</view>
 			<!--中-->	
-		<view v-if="position=='middle'" class="popup-content-middle" :class="{'show-middle':visible}">
+		<view v-if="position=='middle'" :style="isStyle" class="popup-content-middle" :class="[{'show-middle':visible}]">
 			<view>{{message}}</view>
 			<slot></slot>
 		</view>
 		<!--下-->	
-		<view v-if="position=='bottom'" class="popup-content-bottom" :class="{'show-bottom':visible}">
+		<view v-if="position=='bottom'" :style="isStyle" class="popup-content-bottom" :class="{'show-bottom':visible}">
 			<view>{{message}}</view>
 			<slot></slot>
 		</view>
 			<!--左-->	
-		<view v-if="position=='left'" class="popup-content-left" :class="{'show-left':visible}">
+		<view v-if="position=='left'" :style="isStyle" class="popup-content-left" :class="{'show-left':visible}">
 			<view>{{message}}</view>
 			<slot></slot>
 		</view>
 			<!--右-->	
-		<view v-if="position=='right'" class="popup-content-right" :class="{'show-right':visible}">
+		<view v-if="position=='right'" :style="isStyle" class="popup-content-right" :class="{'show-right':visible}">
 			<view>{{message}}</view>
 			<slot></slot>
 		</view>
@@ -51,6 +51,10 @@ export default {
 				type: String,
 				default:'' //top，middle，bottom，right，left
 		  },
+		  isStyle:{
+			type: String,
+			default:'' //top，middle，bottom，right，left
+		  },
 		},
 		data() {
 			return {
@@ -62,10 +66,8 @@ export default {
 			}
 		},
 		onLoad(e) {
-			console.log(e+"=============")
 		},
 		created(e) {
-	    	console.log(e+"=============")
 	    },
 		methods: {
 	        hide() { //显示头部
@@ -125,8 +127,9 @@ export default {
 	z-index:1000;
 	background:#fff;
 	width:90%;
-	height:80%;
+	min-height:30%;
 	display:none;
+	border-radius:20rpx;
     &.show-middle{
 	  transform:translate(-50%,-50%) ;
 	  display: block;
@@ -137,7 +140,7 @@ export default {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height:90%;
+	min-height:30%;
 	transition: all 0.3s ease;
 	transform: translateY(100%);
 	z-index:1000;

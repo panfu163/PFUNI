@@ -16,14 +16,66 @@
 	<view class="content">
 		<view class="h2">DatePicke 时间组件</view>
 		<view class="tip">DatePicke组件主要用于时间插件。<strong>注:</strong>由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过 </view>
-		  <view class="bnt" :class="[{'active':index==tabIndex}]" @tap="toggleTab(index)" v-for="(item,index) in tabList" :key="index">{{item.name}}</view>
-		  <DatePicke :mode="mode" startYear="2016" endYear="2030" :defaultVal="defaultVal" @confirm="onConfirm" ref="DatePickes"></DatePicke>
-		<view class="h3">回调内容：{{dataResult}}</view>
+		 
+		 
+		 <view class="bnt" @click="DatePicke0">日期选择-年</view>
+		  <DatePicke 
+		  startYear="2016" 
+		  endYear="2030" 
+		  :val="selectedTime0"
+		  @confirm="onConfirm" 
+		  ref="DatePicke0"></DatePicke>
+		 
+		 <view class="bnt" @click="DatePicke1">日期选择-年月</view>
+		  <DatePicke 
+		  startYear="2016" 
+		  endYear="2030" 
+		  :val="selectedTime1"
+		  @confirm="onConfirm" 
+		  ref="DatePicke1"></DatePicke>
+		  
+		  <view class="bnt" @click="DatePicke2">日期选择-年月日</view>
+		   <DatePicke 
+		   startYear="2016" 
+		   endYear="2030" 
+		   :val="selectedTime2"
+		   @confirm="onConfirm" 
+		   ref="DatePicke2"></DatePicke>
+		 
+ <view class="bnt" @click="DatePicke3">日期选择-年月日时</view>
+		   <DatePicke 
+		   startYear="2016" 
+		   endYear="2030" 
+		   :val="selectedTime3"
+		   @confirm="onConfirm" 
+		   ref="DatePicke3"></DatePicke>
+		   
+		   <view class="bnt" @click="DatePicke4">日期选择-年月日时分</view>
+		   		   <DatePicke 
+		   		   startYear="2016" 
+		   		   endYear="2030" 
+		   		   :val="selectedTime4"
+		   		   @confirm="onConfirm" 
+		   		   ref="DatePicke4"></DatePicke>
+				   
+				   <view class="bnt" @click="DatePicke5">日期选择-年月日时分秒</view>
+				   		   <DatePicke 
+				   		   startYear="2016" 
+				   		   endYear="2030" 
+				   		   :val="selectedTime5"
+				   		   @confirm="onConfirm" 
+				   		   ref="DatePicke5"></DatePicke>
+	          <view class="bnt" @click="DatePicke6">日期选择-默认</view>
+			   <DatePicke 
+			   @confirm="onConfirm" 
+			   ref="DatePicke6"></DatePicke>
+		<view class="h3">回调内容:{{dataResult}}</view>
+		
 		<view class="h3">示例</view>
-	  <view class="title">注：mode类型：date、dateTime、time
-	    <view>日期选择开始年份 如果不填默认1970年 </view>
-		<view>endYear 日期选择结束年份 如果不填默认当前年份</view>
-		<view>defaultVal 选择初始值</view>
+	  <view class="title">注：val如果为空,当时时间为默认选择时间。
+	    <view>startYear日期选择开始年份 如果不填默认1970年 </view>
+		<view>endYear日期选择结束年份 如果不填默认当前年份</view>
+		<view>val 选择初始日期</view>
 		<view>@confirm 点击确认的回调获取picker结果</view>
 	  </view>
 
@@ -38,45 +90,49 @@
 			},
 		data() {
 			return {
-				tabList:[{
-					mode:"date",
-					name:"日期选择",
-					value:[0,1,0]
-				},{
-					mode:"dateTime",
-					name:"日期时间选择",
-					value:[0,1,0,1,0]
-				},{
-					mode:"time",
-					name:"时间选择",
-					value:[1,1]
-				}],
-				tabIndex:0,
-				dataResult:''
+				currentDate:"",
+				dataResult:'',
+				selectedTime0:"2019", //年
+				selectedTime1:"2020-01" ,//当前选中时间YYYY-MM-DD hh:mm
+				selectedTime2:"2020-11-02" ,//当前选中时间
+				selectedTime3:"2019-02-01 18",//当前选中时间
+				selectedTime4:"2020-11-02 23:22",//当前选中时间
+				selectedTime5:"2020-11-02 23:22:33",//当前选中时间
 			}
 		},
 		computed:{
-			mode(){//初始值
-				return this.tabList[this.tabIndex].mode
-			},
-			defaultVal(){ //初始值
-				return this.tabList[this.tabIndex].value
-			}
 		},
+		watch:{
+		 },
 		onLoad(e) {
-			
 		},
 		created() {
-	    
 	    },
 		methods: {
-			toggleTab(index){
-				this.tabIndex=index;
-				this.$refs.DatePickes.show();
+			DatePicke0(){
+				this.$refs.DatePicke0.show();
 			},
+			DatePicke1(){
+				this.$refs.DatePicke1.show();
+			},
+			DatePicke2(){
+				this.$refs.DatePicke2.show();
+			},
+			DatePicke3(){
+				this.$refs.DatePicke3.show();
+			},
+			DatePicke4(){
+				this.$refs.DatePicke4.show();
+			},
+			DatePicke5(){
+				this.$refs.DatePicke5.show();
+			},
+			DatePicke6(){
+				this.$refs.DatePicke6.show();
+			},
+			//点击确定返回数据
 			onConfirm(e){
-				console.log(e)
-				this.dataResult=JSON.stringify(e);
+				this.dataResult=e;
 			}
 	}
 	}

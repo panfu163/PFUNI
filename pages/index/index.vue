@@ -35,6 +35,7 @@
 	   			<view class="info" @click='goto("../components/Popup")'><i class="iconfont icon-arrowright"></i>Popup</view>
 	   			<view class="info" @click='goto("../components/Picke")'><i class="iconfont icon-arrowright"></i>Picke</view>
 	   			<view class="info" @click='goto("../components/DatePicke")'><i class="iconfont icon-arrowright"></i>DatePicke</view>
+				<view class="info" @click='goto("../components/Calendar")'><i class="iconfont icon-arrowright"></i>Calendar<text class="text">酒店日期时间选择</text></view>
 				<view class="info" @click='goto("../components/CountDown")'><i class="iconfont icon-arrowright"></i>CountDown <text class="text">倒进时</text></view>
 				<view class="info" @click='goto("../components/NubmerAnimate")'><i class="iconfont icon-arrowright"></i>NubmerAnimate<text class="text">数值动画</text></view>
 	            <view class="info" @click='goto("../components/NavBar")'><i class="iconfont icon-arrowright"></i>NavBar<text class="text">切换导航</text></view>
@@ -49,6 +50,7 @@
 			<view class="info" @click='goto("../components/Swipe")'><i class="iconfont icon-arrowright"></i>Swipe</view>
 			<view class="info" @click='goto("../components/Speaker")'><i class="iconfont icon-arrowright"></i>Speaker<text class="text">滚动公告</text></view>
 			<view class="info" @click='goto("../components/Dropload")'><i class="iconfont icon-arrowright"></i>Dropload<text class="text">弹出使用-不适合放长列表</text></view>
+			<view class="info" @click='goto("../components/Lazyload")'><i class="iconfont icon-arrowright"></i>Lazyload<text class="text">赖加载</text></view>
 	   </view>
 	     <view class="list animated slideInUp">
 	   		    <view class="title">Form 表单组件</view>
@@ -61,8 +63,8 @@
 				<view class="info" @click='goto("../components/Upload")'><i class="iconfont icon-arrowright"></i>Upload</view>
 	   </view>
 	   <view class="list animated slideInUp">
-	   	   		    <view class="title">Example 常用实例</view><view class="info" @click='goto("../../pagesA/LoadingMore")'><i class="iconfont icon-arrowright"></i>上拉加载</view>
-	                <view class="info" @click='goto("../components/LoadMore")'><i class="iconfont icon-arrowright"></i>上拉下拉加载<text class="text">适合放长列表</text></view>
+	   	   		    <view class="title">Example 常用实例</view>
+	                <view class="info" @click='goto("../example/LoadingMore")'><i class="iconfont icon-arrowright"></i>上拉下拉加载<text class="text">适合放长列表</text></view>
 					<view class="info" @click='goto("../components/Login")'><i class="iconfont icon-arrowright"></i>Login<text class="text">弹框登录</text></view>
 					<view class="info" @click='goto("../seat/seat")'><i class="iconfont icon-arrowright"></i>seat<text class="text">电影购票选座</text></view>
 	  </view>

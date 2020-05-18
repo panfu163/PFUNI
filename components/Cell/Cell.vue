@@ -100,7 +100,7 @@ export default {
 	}
 </script>
 
-<style lang="stylus" scoped="scoped">  
+<style lang="scss" scoped="scoped">  
 .pf-cell{
 	width:100%;
 	padding:0;
