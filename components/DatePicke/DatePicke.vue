@@ -19,7 +19,7 @@
 				<view class="pf-picker-btn" :style="{'color':themeColor}" @tap="pickerConfirm">确定</view>
 			</view>
 			<view class="pf-picker-view">
-				<picker-view indicator-style="height:80rpx;" :value="value" @change="bindChange">
+				<picker-view  v-if="!isMod" indicator-style="height:80rpx;" :value="value" @change="bindChange">
 					<picker-view-column v-if="yearStr">
 						<view class="item" v-for="(item,index) in datas.years" :key="index">{{item}}年</view>
 					</picker-view-column>
@@ -39,6 +39,21 @@
 						<view class="item" v-for="(item,index) in datas.seconds" :key="index">{{item}}秒</view>
 					</picker-view-column>
 				</picker-view>
+			    
+				 <picker-view v-if="isMod" indicator-style="height:80rpx;" :value="valueMinutes" @change="bindChange">
+					<picker-view-column v-if="hours">
+						<view class="item" v-for="(item,index) in datas.hours" :key="index">{{item}}时</view>
+					</picker-view-column>
+					<picker-view-column v-if="minutes">
+						<view class="item" v-for="(item,index) in datas.minutes" :key="index">{{item}}分</view>
+					</picker-view-column>
+					<picker-view-column v-if="seconds">
+						<view class="item" v-for="(item,index) in datas.seconds" :key="index">{{item}}秒</view>
+					</picker-view-column>
+				</picker-view>
+				
+				
+			  
 			</view>
 		</view>
 	</view>
@@ -48,7 +63,8 @@
 	export default {
 		data() {
 			return {
-				value:[],
+				value:[],//年月日时分秒用的
+				valueMinutes:[],//时分秒用的
 				datas: {},
 				checkArr:[],//返回选中数据
 				showPicker: false,
@@ -57,7 +73,8 @@
 				dayStr:true,//日
 				hours:true,//时
 				minutes:true,//分
-				seconds:true//秒
+				seconds:true,//秒
+				isMod:false, //处理显示模式
 			}
 		},
 		props: {
@@ -130,108 +147,159 @@
 			//返回数据处理
 			returnData(){
 				let date=[],result;
-				if(this.yearStr){ //年
-				    date.push(this.checkArr[0])
-				}
-				if(this.monthStr){ //月
-				    date.push(this.checkArr[1])
-				}
-				if(this.dayStr){ //日
-				    date.push(this.checkArr[2])
-				}
-				if(this.hours){ //时
-				    date.push(this.checkArr[3])
-				}
-				if(this.minutes){//分
-				    date.push(this.checkArr[4])
-				}
-				if(this.seconds){ //秒
-				    date.push(this.checkArr[5])
-				}
-				console.log(date.length)
-				switch(date.length-1){ //返回时间格式2020 2020-01 2020-01-09 2020-01-09 22  2020-01-09 22:32 2020-01-09 22:32:34
-					case 0: 
-					result=date[0];
-					break;
-					case 1: 
-					result=date[0]+'-'+date[1];
-					break;
-					case 2: 
-					result=date[0]+'-'+date[1]+'-'+date[2];
-					break;
-					case 3: 
-					result=date[0]+'-'+date[1]+'-'+date[2]+' '+date[3];
-					break;
-					case 4: 
-					result=date[0]+'-'+date[1]+'-'+date[2]+' '+date[3]+":"+date[4];
-					break;
-					case 5:
-					  result=date[0]+'-'+date[1]+'-'+date[2]+' '+date[3]+":"+date[4]+":"+date[5];
-					break;
-				}
-				console.log(result)
+				 if(this.isMod){
+					 if(this.hours){ //时
+					 	  date.push(this.checkArr[0])
+					 }
+					 if(this.minutes){//分
+					     date.push(this.checkArr[1])
+					 }
+					 if(this.seconds){ //秒
+					 	  date.push(this.checkArr[2])
+					 }
+					 console.log(date.length)
+					 switch(date.length-1){ //返回时间格式2020 2020-01 2020-01-09 2020-01-09 22  2020-01-09 22:32 2020-01-09 22:32:34
+					 	case 0: 
+					 	result=date[0];
+					 	break;
+					 	case 1: 
+					 	result=date[0]+':'+date[1];
+					 	break;
+					 	case 2: 
+					 	result=date[0]+':'+date[1]+':'+date[2];
+					 	break;
+					 }
+				 }else{
+					if(this.yearStr){ //年
+					    date.push(this.checkArr[0])
+					}
+					if(this.monthStr){ //月
+					    date.push(this.checkArr[1])
+					}
+					if(this.dayStr){ //日
+					    date.push(this.checkArr[2])
+					}
+					if(this.hours){ //时
+						  date.push(this.checkArr[3])
+					}
+					if(this.minutes){//分
+					    date.push(this.checkArr[4])
+					}
+					if(this.seconds){ //秒
+						  date.push(this.checkArr[5])
+					}
+					console.log(date.length)
+					switch(date.length-1){ //返回时间格式2020 2020-01 2020-01-09 2020-01-09 22  2020-01-09 22:32 2020-01-09 22:32:34
+						case 0: 
+						result=date[0];
+						break;
+						case 1: 
+						result=date[0]+'-'+date[1];
+						break;
+						case 2: 
+						result=date[0]+'-'+date[1]+'-'+date[2];
+						break;
+						case 3: 
+						result=date[0]+'-'+date[1]+'-'+date[2]+' '+date[3];
+						break;
+						case 4: 
+						result=date[0]+'-'+date[1]+'-'+date[2]+' '+date[3]+":"+date[4];
+						break;
+						case 5:
+						  result=date[0]+'-'+date[1]+'-'+date[2]+' '+date[3]+":"+date[4]+":"+date[5];
+						break;
+					}
+				}	
 				return result;
 			},
 			//当前选中时间-默认处理
 			selectedTimeInit(){
 				let dateArray=this.checkValue(this.val);
 				let crtDate = new Date();
-				let yearStr=dateArray[0]?dateArray[0]:crtDate.getFullYear(); //年
-				let monthStr=dateArray[1]?dateArray[1]:this.forMatNum(crtDate.getMonth() + 1);//月
-				let dayStr=dateArray[2]?dateArray[2]:this.forMatNum(new Date(yearStr,monthStr,0).getDate());//日
-				let hours=dateArray[3]?dateArray[3]:this.forMatNum(crtDate.getHours());//时
-				let minutes=dateArray[4]?dateArray[4]:this.forMatNum(crtDate.getMinutes());//分
-				let seconds=dateArray[5]?dateArray[5]:this.forMatNum(crtDate.getSeconds());//秒
-				if(monthStr>12){
-					console.log("时间格不正确,月不能大预12")
-					monthStr=12;
+				let slctDate;
+				if(this.isMod){
+					let hours=dateArray[0]?dateArray[0]:this.forMatNum(crtDate.getHours());//时
+					let minutes=dateArray[1]?dateArray[1]:this.forMatNum(crtDate.getMinutes());//分
+					let seconds=dateArray[2]?dateArray[2]:this.forMatNum(crtDate.getSeconds());//秒
+					slctDate=[hours,minutes,seconds];
+				}else{
+					let yearStr=dateArray[0]?dateArray[0]:crtDate.getFullYear(); //年
+					let monthStr=dateArray[1]?dateArray[1]:this.forMatNum(crtDate.getMonth() + 1);//月
+					let dayStr=dateArray[2]?dateArray[2]:this.forMatNum(new Date(yearStr,monthStr,0).getDate());//日
+					let hours=dateArray[3]?dateArray[3]:this.forMatNum(crtDate.getHours());//时
+					let minutes=dateArray[4]?dateArray[4]:this.forMatNum(crtDate.getMinutes());//分
+					let seconds=dateArray[5]?dateArray[5]:this.forMatNum(crtDate.getSeconds());//秒
+					if(monthStr>12){
+						console.log("时间格不正确,月不能大预12")
+						monthStr=12;
+					}
+					if(dayStr>31){
+						console.log("时间格不正确,日不能大预31");
+						dayStr=31;
+					}
+					if(hours>24){
+						console.log("时间格不正确,日不能大预23");
+						hours="00";
+					}
+					if(minutes>59 || seconds>59 ){
+						console.log("时间格不正确,分、秒不能大预59");
+						dayStr=59;
+					}
+					slctDate = [yearStr,monthStr,dayStr,hours,minutes,seconds]; //年月日分秒
 				}
-				if(dayStr>31){
-					console.log("时间格不正确,日不能大预31");
-					dayStr=31;
-				}
-				if(hours>24){
-					console.log("时间格不正确,日不能大预23");
-					hours="00";
-				}
-				if(minutes>59 || seconds>59 ){
-					console.log("时间格不正确,分、秒不能大预59");
-					dayStr=59;
-				}
-				let slctDate = [yearStr,monthStr,dayStr,hours,minutes,seconds]; //年月日分秒
-				
 				this.resetSelectDate(slctDate);
 			},
 			//刷新当前选中日期
 			resetSelectDate(newValue) {	
-				let pickVal=[0,0,0,0,0,0] //年月日时分秒
-				for (let i = 0; i < newValue.length; i++){
-					switch (i) {
-						case 0://年
-							pickVal[i]=this.queryItemForArray(this.datas.years,newValue[i]);
-							break;
-						case 1://月
-							pickVal[i]=this.queryItemForArray(this.datas.months,newValue[i]);
-							break;
-						case 2://日
-							pickVal[i]=this.queryItemForArray(this.datas.days,newValue[i]);
-							break;
-						case 3: //时
-						   	 pickVal[i]=this.queryItemForArray(this.datas.hours,newValue[i]); 
-							break;	
-						case 4: //分
-			                pickVal[i]=this.queryItemForArray(this.datas.minutes,newValue[i]); 
-							break;	
-						case 5://秒
-						   pickVal[i]=this.queryItemForArray(this.datas.seconds,newValue[i]);
-							break;						
-					  }
-				    this.checkArr[i] = newValue[i];//选中时间 
+				if(this.isMod){
+					let pickVals=[0,0,0]
+					for (let i = 0; i < newValue.length; i++){
+						switch (i) {
+							case 0: //时
+								 pickVals[i]=this.queryItemForArray(this.datas.hours,newValue[i]); 
+								break;	
+							case 1: //分
+								pickVals[i]=this.queryItemForArray(this.datas.minutes,newValue[i]); 
+								break;	
+							case 2://秒
+							   pickVals[i]=this.queryItemForArray(this.datas.seconds,newValue[i]);
+								break;						
+						  } 
+						this.checkArr[i] = newValue[i];//选中时间 
+					}
+					this.$nextTick(()=>{
+					  this.valueMinutes=pickVals;
+					})	
+				}else{
+					let pickVal=[0,0,0,0,0,0] //年月日时分秒
+					for (let i = 0; i < newValue.length; i++){
+						switch (i) {
+							case 0://年
+								pickVal[i]=this.queryItemForArray(this.datas.years,newValue[i]);
+								break;
+							case 1://月
+								pickVal[i]=this.queryItemForArray(this.datas.months,newValue[i]);
+								break;
+							case 2://日
+								pickVal[i]=this.queryItemForArray(this.datas.days,newValue[i]);
+								break;
+							case 3: //时
+								 pickVal[i]=this.queryItemForArray(this.datas.hours,newValue[i]); 
+								break;	
+							case 4: //分
+								pickVal[i]=this.queryItemForArray(this.datas.minutes,newValue[i]); 
+								break;	
+							case 5://秒
+							   pickVal[i]=this.queryItemForArray(this.datas.seconds,newValue[i]);
+								break;						
+						  } 
+						this.checkArr[i] = newValue[i];//选中时间 
+					}	
+					this.$nextTick(()=>{
+					  this.value=pickVal;
+					})	
 				}
-				console.log(pickVal)
-			    this.$nextTick(()=>{
-				  this.value=pickVal;
-				})			
+			   		
 			},
 			// 查询值在数组中对应的索引
 			queryItemForArray(array,value) {
@@ -244,15 +312,25 @@
 			//滚动获取值
 			bindChange(val) {
 				let arr=val.detail.value;
+				 console.log("==============================取到的值")
+				 console.log(arr)
 				let year,month,day,hour,minute,seconds;
 				let dataS=[];
+				if(this.isMod){
+					hour = this.datas.hours[arr[0]]
+					minute = this.datas.minutes[arr[1]];
+					seconds = this.datas.seconds[arr[2]]
+				    dataS=[hour,minute,seconds];
+				}else{
 					year = this.datas.years[arr[0]];
 					month = this.datas.months[arr[1]]
 					day = this.datas.days[arr[2]];
 					hour = this.datas.hours[arr[3]]
 					minute = this.datas.minutes[arr[4]];
 					seconds = this.datas.seconds[arr[5]]
-				    dataS=[year,month,day,hour,minute,seconds];
+					dataS=[year,month,day,hour,minute,seconds];
+				}
+				console.log(dataS)
 				this.checkArr=dataS
 			},
 			//年月 
@@ -299,13 +377,15 @@
 			},
 			//验证时间是否正确
 			checkValue(value){
-				let example,strReg=[];
+				let example="2019-02-01",strReg=[];
 				let yearstrReg=/^\d{4}$/; //年2019
 				let monthstrReg=/^\d{4}-\d{2}$/;//月 
 				let daystrReg=/^\d{4}-\d{2}-\d{2}$/;//日
 				let hoursReg=/^\d{4}-\d{2}-\d{2} \d{2}(?!:)/;//时 
 				let minutesReg=/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}(:\d{2}){0,1}?$/;//分
 				let secondstrReg=/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/;//秒
+				let minutesRegs=/^\d{2}:\d{2}$/;//分  
+				let secondstrRegs=/^\d{2}:\d{2}:\d{2}$/;//秒
 				if(secondstrReg.test(value)){
 					 console.log("秒")
 					 example="2019-02-01 18:06:01";
@@ -355,7 +435,27 @@
 					 this.minutes=false//分
 					 this.seconds=false//秒
 				}else{
-					console.log("请传入正确的时间值，例value="+example+"");
+					console.log(value)
+					console.log(minutesRegs.test(value))
+					if(minutesRegs.test(value)){ //时分
+					    console.log(value+"==========")
+						example="23:59";
+						strReg=value.split(":");
+						this.isMod=true;
+						this.yearStr=false
+						this.monthStr=false//月
+						this.dayStr=false//日
+						this.seconds=false//秒
+					}else if(secondstrRegs.test(value)){
+						example="23:59:59";
+						strReg=value.split(":");
+						this.yearStr=false
+						this.monthStr=false//月
+						this.dayStr=false//日
+						this.isMod=true;
+					}else{
+					  console.log("请传入正确的时间值，例value="+example+"");	
+					}
 				}
 				return strReg;				
 			},

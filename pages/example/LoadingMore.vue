@@ -25,7 +25,7 @@ import Loading from '@/components/Loading/Loading.vue';
 export default {
 	data() {
 		return {
-			demoDate: ["H", "C", 'O', 'D', 'E', 'R', 'D', 'E', 'M', 'O', 'T', 'E', 'S', 'T'],
+			demoDate: ["A","H", "C", 'O', 'D', 'E', 'R', 'D', 'E', 'M', 'O', 'T', 'E', 'S', 'T'],
 			loadingType : 0,
 			isEnd : false,
 			page:1
@@ -40,6 +40,14 @@ export default {
 		this.loadingType = 0;
 		this.isEnd = false;
 	},
+	//监听用户下拉动作，一般用于下拉刷新
+	onPullDownRefresh:function(){
+		console.log("============")
+		setTimeout(function () {
+		            uni.stopPullDownRefresh();
+		  }, 1000);
+	},
+	//页面上拉触底事件的处理函数
 	onReachBottom : function(){
 		//避免多次触发
 		if (this.loadingType == 1 || this.isEnd){return ;}

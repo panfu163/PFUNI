@@ -35,6 +35,7 @@ PFUIN一款基于UNI-APP开发跨平台应用实现的精致移动端组件库�
 1. 在网址https://uniapp.dcloud.io查看基础文档
 2. 需下载HBuilderX来打包项目
 3. 注：由于此组件基于uni-app实现，所以在使用之前，请确保自己了解过!
+4. 需使用命令npm install安装依赖 
 
 
 #### 参与贡献

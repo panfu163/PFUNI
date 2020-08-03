@@ -69,6 +69,20 @@
 			   <DatePicke 
 			   @confirm="onConfirm" 
 			   ref="DatePicke6"></DatePicke>
+			   
+			   <view class="bnt" @click="DatePicke7">日期选择-时分</view>
+			    <DatePicke 
+			    @confirm="onConfirm" 
+				:val="selectedTime7"
+			    ref="DatePicke7"></DatePicke>
+				
+				<view class="bnt" @click="DatePicke8">日期选择-时分秒</view>
+				 <DatePicke 
+				 @confirm="onConfirm" 
+				 :val="selectedTime8"
+				 ref="DatePicke8"></DatePicke>
+			   
+			   
 		<view class="h3">回调内容:{{dataResult}}</view>
 		
 		<view class="h3">示例</view>
@@ -97,7 +111,9 @@
 				selectedTime2:"2020-11-02" ,//当前选中时间
 				selectedTime3:"2019-02-01 18",//当前选中时间
 				selectedTime4:"2020-11-02 23:22",//当前选中时间
-				selectedTime5:"2020-11-02 23:22:33",//当前选中时间
+				selectedTime5:"2020-11-02 23:22:24",//当前选中时间
+				selectedTime7:"11:22",//当前选中时间
+				selectedTime8:"12:22:23",//当前选中时间
 			}
 		},
 		computed:{
@@ -129,6 +145,12 @@
 			},
 			DatePicke6(){
 				this.$refs.DatePicke6.show();
+			},
+			DatePicke7(){
+				this.$refs.DatePicke7.show();
+			},
+			DatePicke8(){
+				this.$refs.DatePicke8.show();
 			},
 			//点击确定返回数据
 			onConfirm(e){

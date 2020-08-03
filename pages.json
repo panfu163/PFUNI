@@ -104,7 +104,8 @@
 		{
 			"path": "pages/example/LoadingMore",
 			"style": {
-				"navigationBarTitleText":"LoadingMore"
+				"navigationBarTitleText":"LoadingMore",
+				"enablePullDownRefresh": true
 			}
 		},{
 			"path": "pages/components/Lazyload",
@@ -185,6 +186,21 @@
 			"path": "pages/components/NavBar",
 			"style": {
 				"navigationBarTitleText":"NavBar"
+			}
+		},{
+			"path": "pages/components/lang",
+			"style": {
+				"navigationBarTitleText":"lang"
+			}
+		},{
+			"path": "pages/components/qrcode",
+			"style": {
+				"navigationBarTitleText":"qrcode-维码生成器"
+			}
+		},{
+			"path": "pages/components/share",
+			"style": {
+				"navigationBarTitleText":"share-分享二维码"
 			}
 		}
 	],

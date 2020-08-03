@@ -101,7 +101,10 @@
                 "desc" : "获取你的当前位置信息"
             }
         },
-        "usingComponents" : true
+        "usingComponents" : true,
+		"optimization":{
+					"subPackages":true
+				}
     },
     "h5" : {
         "title" : "PFUNI框架",

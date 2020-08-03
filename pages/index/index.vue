@@ -67,6 +67,10 @@
 	                <view class="info" @click='goto("../example/LoadingMore")'><i class="iconfont icon-arrowright"></i>上拉下拉加载<text class="text">适合放长列表</text></view>
 					<view class="info" @click='goto("../components/Login")'><i class="iconfont icon-arrowright"></i>Login<text class="text">弹框登录</text></view>
 					<view class="info" @click='goto("../seat/seat")'><i class="iconfont icon-arrowright"></i>seat<text class="text">电影购票选座</text></view>
+					<view class="info" @click='goto("../components/lang")'><i class="iconfont icon-arrowright"></i>lang<text class="text">多国语言切换</text></view>
+					<view class="info" @click='goto("../components/qrcode")'><i class="iconfont icon-arrowright"></i>qrcode<text class="text">二维码生成器</text></view>
+					<view class="info" @click='goto("../components/share")'><i class="iconfont icon-arrowright"></i>share<text class="text">微信小程序分享和保存二维码</text></view>
+					
 	  </view>
 	  <view class="list animated slideInUp">
 			<view class="title">subPackages 分包常用实例</view><view class="info" @click='goto("../../pagesA/LoadingMore")'><i class="iconfont icon-arrowright"></i>上拉加载</view>
