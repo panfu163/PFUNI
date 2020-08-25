@@ -284,7 +284,7 @@ export default {
 		getDayName(year, data) {
 			let name = data.day;
 			let yearData = this.holidayList['y' + year];
-			let holidayName = yearData['holidayName'];
+			let holidayName = yearData?yearData['holidayName'] : "";
 			var monthAndDay = data.month + '' + data.day;
 			if (holidayName[monthAndDay]) {
 				name = holidayName[monthAndDay];
