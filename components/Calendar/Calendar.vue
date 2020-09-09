@@ -173,8 +173,7 @@ export default {
 						'1004': true,
 						'1005': true,
 						'1006': true,
-						'1007': true,
-						'1008': true
+						'1007': true
 					},
 					workday: { '0119': true, '0201': true, '0426': true, '0509': true, '0628': true, '0927': true, '1010': true }
 				}
@@ -224,7 +223,7 @@ export default {
 		},
 		daysCount: {
 			type: Number,
-			default: 150 //默认显示150天-最小60天最大360天
+			default: 150 //默认显示150天-最小30天最大360天
 		},
 		singleDate: {
 			type: Boolean,
@@ -243,12 +242,13 @@ export default {
 			this.isShow_NoH5 ? this.hideCalendar() : this.showCalendar();
 		},
 		startDate: function(newVal, oldVal) {
-			console.log('--startDate');
 			this.dateData();
 		},
 		endDate: function(newVal, oldVal) {
-			console.log('--endDate');
 			this.dateData();
+		},
+		daysCount:function(){
+			this.daysCount()
 		}
 	},
 	methods: {
@@ -269,7 +269,6 @@ export default {
 			//#endif
 
 			this.dateData();
-
 			if (this.modal) {
 				//如果是弹窗模式，那么初始时就派发change事件
 				this.$emit('change', {
@@ -278,10 +277,11 @@ export default {
 				});
 			}
 		},
-		getDayType(data) {
+		getDayType: function(data) {
 			return data.re != this.today && data.re != this.tomorrow && data.re != this.afterTomorrow ? data.act.subject : '';
 		},
-		getDayName(year, data) {
+		//处理时间今天、明天、后天
+		getDayName: function(year, data) {
 			let name = data.day;
 			let yearData = this.holidayList['y' + year];
 			let holidayName = yearData?yearData['holidayName'] : "";
@@ -297,8 +297,8 @@ export default {
 			}
 			return name;
 		},
-		isHoliday(year, day) {
-			//判断是否为法定节假日
+		//判断是否为法定节假日
+		isHoliday: function(year, day) {
 			let yearData = this.holidayList['y' + year];
 			let result = false;
 			if (yearData) {
@@ -307,8 +307,8 @@ export default {
 			}
 			return result ? '假' : '';
 		},
-		isWorkday(year, day) {
-			//判断是否要补班
+		//判断是否要补班
+		isWorkday: function(year, day) {
 			let yearData = this.holidayList['y' + year];
 			let result = false;
 			if (yearData) {
@@ -317,9 +317,9 @@ export default {
 			}
 			return result ? '班' : '';
 		},
+		//获取layer-list窗器的top
 		getLayerTop: function() {
 			return new Promise(resolve => {
-				//获取layer-list窗器的top
 				let view2 = uni.createSelectorQuery().select('.layer-list');
 				view2
 					.boundingClientRect(data => {
@@ -328,9 +328,9 @@ export default {
 					.exec();
 			});
 		},
+		//获取每个月的文字头的top
 		getMonthTitleRectList: function() {
 			return new Promise(resolve => {
-				//获取每个月的文字头的top
 				let view = uni.createSelectorQuery().selectAll('.month-title');
 				view.boundingClientRect(data => {
 					resolve(data);
@@ -350,8 +350,8 @@ export default {
 			}
 			if (isInitRectData == false) this.monthTitleRectList = await this.getMonthTitleRectList();
 		},
+		//存储未更新前的数据
 		showCalendar: function() {
-			//存储未更新前的数据
 			this.bak_date = JSON.parse(JSON.stringify(this.date));
 			this.bak_weeks = JSON.parse(JSON.stringify(this.weeks));
 			this.bak_choiceDate = JSON.parse(JSON.stringify(this.choiceDate));
@@ -406,6 +406,7 @@ export default {
 			this.choiceDateArr = JSON.parse(JSON.stringify(this.bak_choiceDateArr));
 			// console.log('h 4');
 		},
+		//设置时间
 		setData: function(obj) {
 			let that = this;
 			let keys = [];
@@ -426,24 +427,7 @@ export default {
 				});
 			});
 		},
-		onScroll: function(e) {
-			//////暂时还有问题，效率也不太好，等后缀再优化
-			//<scroll-view class='layer-list' scroll-y="true" @scroll="onScroll">
-			//<view v-for="(monthData,index) in date" :key="index" class="month" :class="fixedId == ('m-' + monthData[0].year + '-' + monthData[0].month) ? 'fixed' : ''">
-			//
-			// this.getRectList();
-			//
-			// let scorllTop = e.detail.scrollTop;
-			// this.curScrollTop = scorllTop + this.layerTop;
-			//
-			// ///////////////////////////////////////////
-			// this.monthTitleRectList.forEach((item, i) => {
-			// 	if (this.curScrollTop > item.top - 70) {
-			// 		this.fixedId = item.id;
-			// 		///////////这里理应需要 节流 和 return，后面再处理/////////////
-			// 	}
-			// });
-		},
+		//时间表
 		dateData: function() {
 			let dataAll = []; //总日历数据
 			let dataAll2 = []; //总日历数据
@@ -455,8 +439,8 @@ export default {
 			let weeks = [];
 			let month = date.getMonth() + 1; //当前月份
 			let day = date.getDate(); //当天
-			let daysCount = Math.min(this.daysCount, 60); //一共显示多少天
-			daysCount = Math.min(this.daysCount, 360); //最小60天，最大360天
+			let daysCount = Math.min(this.daysCount, 30); //一共显示多少天
+			daysCount = Math.min(this.daysCount, 360); //最小30天，最大360天
 			daysCount += day;
 			let dayscNow = 0; //计数器
 			let monthList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; //月份列表
@@ -672,7 +656,8 @@ export default {
 			this.choiceDateArr = this.choiceDate;
 			// console.log(this.choiceDate);
 		},
-		getWeek(weeks, firstMonth, thisYear, curYear, curMonth, day) {
+		//获取周几
+		getWeek: function(weeks, firstMonth, thisYear, curYear, curMonth, day) {
 			/**
 			 * 获取周几
 			 * weeks 每个月第一天周几
@@ -714,11 +699,9 @@ export default {
 		dayClick: function(e) {
 			let indexs = e.currentTarget.dataset.indexs;
 			let index = e.currentTarget.dataset.index;
-			// console.log('selectday ', indexs, index);
 			this.selectday(index, indexs, true);
 		},
 		selectday: function(index, indexs, isUserClick) {
-			// console.log("001", this.dateFlag, isUserClick)
 			//单个日期
 			if (this.singleDate) {
 				if (!isUserClick && JSON.stringify(this.dateFlag) != '{}') {
@@ -726,7 +709,6 @@ export default {
 				}
 				this.dateFlag = {};
 			}
-			// console.log("002", indexs)
 			if (indexs == -1) {
 				return;
 			}
@@ -735,8 +717,6 @@ export default {
 				//如果是用户点击今天之前的日期的话，就返回
 				if (isUserClick) return;
 			}
-			// console.log("003", indexs)
-
 			curDate.selected = 1;
 			curDate.act.tip = '入住';
 			if (this.dateFlag.date && curDate.dateTime < this.dateFlag.date.dateTime) {
@@ -752,17 +732,12 @@ export default {
 				};
 				this.choice = false;
 				this.dayCount = 1;
-				//
 				this.choiceDate[0] = curDate;
 			} else if (this.dateFlag && this.dateFlag.date) {
-				// console.log("005")
 				if (this.dateFlag.index == index && this.dateFlag.indexs == indexs) {
 					return;
 				}
 				curDate.act.tip = '离店';
-				//
-				// console.log("00555555")
-				//
 				var that = this;
 				var dateFlagDateTime = that.dateFlag.date.dateTime;
 				var choiceDateTime = that.date[index][indexs].dateTime;
@@ -849,11 +824,10 @@ export default {
 				};
 				this.choice = false;
 				this.dayCount = 1;
-				//
 				this.choiceDate[0] = curDate;
-				// console.log("this.choice ", this.choice)
 			}
 		},
+		//返回时间事件
 		submitbtn: function() {
 			this.choiceDate[0] = this.choiceDateArr[0];
 			this.choiceDate[1] = this.choiceDateArr[this.choiceDateArr.length - 1];

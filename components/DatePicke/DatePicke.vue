@@ -312,8 +312,6 @@
 			//滚动获取值
 			bindChange(val) {
 				let arr=val.detail.value;
-				 console.log("==============================取到的值")
-				 console.log(arr)
 				let year,month,day,hour,minute,seconds;
 				let dataS=[];
 				if(this.isMod){
