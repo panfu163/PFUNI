@@ -48,6 +48,8 @@
 		   	<view class="info" @click='goto("../components/Scorll")'><i class="iconfont icon-arrowright"></i>Scorll</view>
 			<view class="info" @click='goto("../components/IndexList")'><i class="iconfont icon-arrowright"></i>IndexList</view>
 			<view class="info" @click='goto("../components/Swipe")'><i class="iconfont icon-arrowright"></i>Swipe</view>
+			<view class="info" @click='goto("../components/SlideList")'><i class="iconfont icon-arrowright"></i>SlideList<text class="text">滑动删除</text></view>
+			<view class="info" @click='goto("../components/VideoSwipe")'><i class="iconfont icon-arrowright"></i>VideoSwipe<text class="text">视频图片焦点图</text></view>
 			<view class="info" @click='goto("../components/Speaker")'><i class="iconfont icon-arrowright"></i>Speaker<text class="text">滚动公告</text></view>
 			<view class="info" @click='goto("../components/Dropload")'><i class="iconfont icon-arrowright"></i>Dropload<text class="text">弹出使用-不适合放长列表</text></view>
 			<view class="info" @click='goto("../components/Lazyload")'><i class="iconfont icon-arrowright"></i>Lazyload<text class="text">赖加载</text></view>

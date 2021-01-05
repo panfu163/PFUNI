@@ -202,6 +202,16 @@
 			"style": {
 				"navigationBarTitleText":"share-分享二维码"
 			}
+		},{
+			"path": "pages/components/VideoSwipe",
+			"style": {
+				"navigationBarTitleText":"VideoSwipe-视频图片焦点图转化"
+			}
+		},{
+			"path": "pages/components/SlideList",
+			"style": {
+				"navigationBarTitleText":"SlideList-画动删除组件"
+			}
 		}
 	],
 	"subPackages": [{
