@@ -29,10 +29,6 @@
 					hover-class="uni-item--hover" 
 					:style="{ width: windowWidth + 'px' }" 
 					@click="clickItemMethod(item)">
-					<block v-if="type">
-						<slot></slot>
-					</block>
-					<block v-else>
 							<image class="icon-image" v-if="item.image" :src="item.image"></image>
 							<view class="icon-circle" v-else-if="item.surname">{{ item.surname }}</view>
 							<view class="list-right">
@@ -40,7 +36,6 @@
 								<view class="list-detail" v-if="item.detail">{{ item.detail }}</view>
 							</view>
 							<view class="list-right-1" v-if="item.rightDetail">{{ item.rightDetail }}</view>
-					</block>
 					</view>
 					<view class="group-btn">
 						<view class="btn-div" v-for="(value, key) in button" :key="key" @click="clickMethod(item, value, index)" :style="{background: value.background}">{{value.title}}</view>
@@ -69,10 +64,6 @@ export default {
 			default() {
 				return [];
 			}
-		},
-		type: {//自定义样式类型
-			type: Boolean,
-			default: false
 		},
 		button: {//按钮数据list
 			type: Array,

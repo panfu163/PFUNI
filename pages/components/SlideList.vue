@@ -24,19 +24,6 @@
 		  @click="clickMethod"
 		  @change="changeMethod">
 	   </SlideList>
-	   <view class="h3">示例2</view>
-	   <SlideList
-	   		  :list="list" 
-	   		  :button="buttonList" 
-	   		  :border="true" 
-			  :type="true"
-	   		  @click="clickMethod"
-	   		  @change="changeMethod">
-	   		  <view>
-	   			  显示数据信息
-	   		  </view>
-	    </SlideList>
-	   
 	</view>
 </template>
 
@@ -50,7 +37,7 @@
 				return {
 					list:[{
 						id: 1,
-						image: '../../static/slide-list/logo.png',
+						image: '../../static/logo.png',
 						title: '张三',
 						rightDetail: '2019-03-18',
 						detail: 'XXXXXXXXXXXXXXXXXXX公司',
