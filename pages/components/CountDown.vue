@@ -27,13 +27,34 @@
 		></CountDown>
 		<view class="h3">示例2</view>
 		<CountDown
-		:type="'box'"
+		type="box"
 		:years="yearing"
 		:months="monthing"
 		:days="days"
 		:hours="hours"
 		:minutes="minutes"
 		:seconds="seconds"
+		></CountDown>
+		<view class="h3">示例3-年月日时分秒倒计时</view>
+		<CountDown
+		:years="yearing"
+		:months="monthing"
+		:days="days"
+		:hours="hours"
+		:minutes="minutes"
+		:seconds="seconds"
+		:isMonth="true"
+		></CountDown>
+		<view class="h3">示例4-年月日时分秒倒计时</view>
+		<CountDown
+		type="box"
+		:years="yearing"
+		:months="monthing"
+		:days="days"
+		:hours="hours"
+		:minutes="minutes"
+		:seconds="seconds"
+		:isMonth="true"
 		></CountDown>
 	</view>
 </template>
@@ -46,9 +67,9 @@
 			},
 		data() {
 			return {
-				yearing:"2021",
+				yearing:"2099",
 				monthing:"12",
-				years:"2020",
+				years:"2099",
 				months:"12",
 				days:"18",
 				hours:"22",
