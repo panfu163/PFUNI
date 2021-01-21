@@ -15,7 +15,7 @@
 <template>
 	<view class="LoadingMore">
 		<view class="refreshDmo">
-			<view v-for="(item, index) in itmes" :key="index">{{item}}</view>
+			<view v-for="(item, index) in demoDate" :key="index">{{item}}</view>
 		</view>
 		<Loading :loadingType="loadingMore.loadingType"></Loading>
 	</view>
@@ -23,16 +23,13 @@
 <script>
 import Loading from '@/components/Loading/Loading.vue';
 export default {
-	components: {
-		Loading
-	},
 	data() {
 		return {
-			itmes: ["A","H", "C", 'O', 'D', 'E', 'R', 'D', 'E', 'M', 'O', 'T', 'E', 'S', 'T'],
+			demoDate: ["A","H", "C", 'O', 'D', 'E', 'R', 'D', 'E', 'M', 'O', 'T', 'E', 'S', 'T'],
 			loadingMore:{
 				loadingType : 0,
 				isEnd : false,
-				page:1	
+				page:1
 			}
 		}
 	},
@@ -42,9 +39,8 @@ export default {
 	//监听用户下拉动作，一般用于下拉刷新
 	onPullDownRefresh:function(){
 		console.log("============")
-		this.loadingMore.page=1;
 		setTimeout(function () {
-		     uni.stopPullDownRefresh();
+		            uni.stopPullDownRefresh();
 		  }, 1000);
 	},
 	//页面上拉触底事件的处理函数
@@ -54,26 +50,27 @@ export default {
 		//假设 this.page > 2 代表加载了全部数据
 		// 实际开的过程以 api 接口返回数据为准
 		if (this.loadingMore.page > 2){
-			this.loadingMore.loadingMoreisEnd = true;
+			this.loadingMore.isEnd = true;
 			this.loadingMore.loadingType = 2;
 			return ;
 		}
 		//展示loading
-		this.loadingMoreloadingType = 1;
-		this.loadingMore.page++;
+		this.loadingMore.loadingType = 1;
+		
 		
 		//追加数据(延迟1秒 模拟网络请求)
 		setTimeout(()=>{
 			this.loadingMore.loading  = false;
-			var newData    = this.getList(this.itmes);
-			this.itmes = this.itmes.concat(newData);
+			var newData    = this.getArrRandomly(this.demoDate);
+			this.demoDate = this.demoDate.concat(newData);
 			//累加页码
+			this.loadingMore.page++;
 			this.loadingMore.loadingType = 0;
 		}, 1000);
 	},
 	methods:{
-		//生成假数据
-		getList:(arr)=>{
+		//生成数据
+		getArrRandomly:(arr)=>{
 			var len = arr.length;
 			for (var i = 0; i < len; i++) {
 				var randomIndex = Math.floor(Math.random() * (len - i));
@@ -83,6 +80,9 @@ export default {
 			}
 			return arr;
 		}
+	},
+	components: {
+		Loading
 	}
 }
 </script>
