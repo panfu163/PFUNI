@@ -46,16 +46,19 @@ PFUIN一款基于UNI-APP开发跨平台应用实现的精致移动端组件库�
 4. 新建 Pull Request
 
 - 操作步骤
-a.切换到基础分支，如主干
+```bash
+1.切换到基础分支，如主干
 git checkout dev
-b.创建并切换到新分支
+
+2.创建并切换到新分支
 git checkout -b dev
 git branch可以看到已经在dev分支上
-c.更新分支代码并提交
+
+3.更新分支代码并提交
 git add *
 git commit -m "创建dev分支"
 git push origin dev
-
+```
 
 #### 成功案例
 
