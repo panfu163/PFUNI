@@ -44,12 +44,44 @@ PFUIN一款基于UNI-APP开发跨平台应用实现的精致移动端组件库�
 2. 新建 Feat_xxx 分支
 3. 提交代码
 4. 新建 Pull Request
+5. 
+##### 操作步骤
+a.切换到基础分支，如主干
+git checkout dev
+b.创建并切换到新分支
+git checkout -b dev
+git branch可以看到已经在dev分支上
+c.更新分支代码并提交
+git add *
+git commit -m "创建dev分支"
+git push origin dev
+
 
 #### 成功案例
 
 ![Image text](https://gitee.com/panfu/PFUNI/raw/master/static/logo/logo.png)
 ![Image text](https://gitee.com/panfu/PFUNI/raw/master/static/logo/logo2.png)
 ![Image text](https://gitee.com/panfu/PFUNI/raw/master/static/logo/logo3.png)
+
+
+#### 技术选型
+
+技术 | 说明 | 官网
+----|----|----
+uniapp | 基础框架 | [https://uniapp.dcloud.net.cn/](https://uniapp.dcloud.net.cn//)
+Vue | 前端框架 | [https://vuejs.org/](https://vuejs.org/)
+Vue-router | 路由框架 | [https://router.vuejs.org/](https://router.vuejs.org/)
+Vuex | 全局状态管理框架 | [https://vuex.vuejs.org/](https://vuex.vuejs.org/)
+Element | 前端UI框架 | [https://element.eleme.io/](https://element.eleme.io/)
+Axios | 前端HTTP框架 | [https://github.com/axios/axios](https://github.com/axios/axios)
+v-charts | 基于Echarts的图表框架 | [https://v-charts.js.org/](https://v-charts.js.org/)
+nprogress | 进度条控件 | [https://github.com/rstacruz/nprogress](https://github.com/rstacruz/nprogress)
+vue-i18n | 多语言处理 | [http://kazupon.github.io/vue-i18n/](http://kazupon.github.io/vue-i18n/)
+vue-puzzle-vcode | 滑动验证 | [https://github.com/javaLuo/vue-puzzle-vcode](https://github.com/javaLuo/vue-puzzle-vcode)
+vuedraggable| 可拖拽组件 | [https://github.com/SortableJS/Vue.Draggable](https://github.com/SortableJS/Vue.Draggable)
+vuedraggable| 可拖拽组件 | [https://github.com/SortableJS/Vue.Draggable](https://github.com/SortableJS/Vue.Draggable)
+vue-quill-editor| 富文本编辑器 | [https://github.surmon.me/vue-quill-editor/](https://github.surmon.me/vue-quill-editor/)
+VueTreeselect| 多选树形控件 | [https://www.vue-treeselect.cn/](https://www.vue-treeselect.cn/)
 
 
 #### git同时发布多个平台
