@@ -45,7 +45,10 @@ PFUIN一款基于UNI-APP开发跨平台应用实现的精致移动端组件库�
 3. 提交代码
 4. 新建 Pull Request
 
-#### 基于本组件库搭建案例
+#### 成功案例
+
+![Image text](https://gitee.com/panfu/PFUNI/raw/master/static/logo/logo.png)
+![Image text](https://gitee.com/panfu/PFUNI/raw/master/static/logo/logo2.png)
 
 #### git同时发布多个平台
 ```bash
