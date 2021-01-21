@@ -44,8 +44,8 @@ PFUIN一款基于UNI-APP开发跨平台应用实现的精致移动端组件库�
 2. 新建 Feat_xxx 分支
 3. 提交代码
 4. 新建 Pull Request
-5. 
-##### 操作步骤
+
+- 操作步骤
 a.切换到基础分支，如主干
 git checkout dev
 b.创建并切换到新分支
