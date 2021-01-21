@@ -47,8 +47,8 @@ PFUIN一款基于UNI-APP开发跨平台应用实现的精致移动端组件库�
 
 #### 成功案例
 
-![Image text](https://gitee.com/panfu/PFUNI/raw/master/static/logo/logo.png)<br/>房侍郎
-![Image text](https://gitee.com/panfu/PFUNI/raw/master/static/logo/logo2.png)<br/>优途贵州
+![Image text](https://gitee.com/panfu/PFUNI/raw/master/static/logo/logo.png)房侍郎<br/>
+![Image text](https://gitee.com/panfu/PFUNI/raw/master/static/logo/logo2.png)优途贵州<br/>
 
 #### git同时发布多个平台
 ```bash
