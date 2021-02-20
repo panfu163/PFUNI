@@ -8,9 +8,17 @@ PFUIN一款基于UNI-APP开发跨平台应用实现的精致移动端组件库�
 #### 软件架构
 ```bash
 ├── common                                      #公用文件
+     ├── common                                      #css文件
+	 ├── data                                      #测试数据(可删除)  
+	 ├── js                                        #js文件 
+	     ├── api                                        #接口地址文件 
+		 ├── lang                                        #语言文件
+		 ├── libs                                        #共用JS库  
+		 ├── tools                                       #共用JS工具和方法  
 ├── components                                  #uni-app组件目录
      └─Dialog.vue                               #可复用的Dialog组件
 	 └─Toast.vue                                #可复用的Toast组件
+├── common                                      #配置文件	 
 |── font                                        #样式文件
 ├── pages                                       #业务页面文件存放的目录
 │  ├─components                                 #组件实例 

@@ -75,7 +75,7 @@
 					
 	  </view>
 	  <view class="list animated slideInUp">
-			<view class="title">subPackages 分包常用实例</view><view class="info" @click='goto("../../pagesA/LoadingMore")'><i class="iconfont icon-arrowright"></i>上拉加载</view>
+			<view class="title">subPackages 分包常用实例</view><view class="info" @click='goto("../list/LoadingMore")'><i class="iconfont icon-arrowright"></i>上拉加载</view>
 	  </view>
 	</view>
 </template>
