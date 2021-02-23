@@ -12,6 +12,4 @@
 	}
 </script>
 
-<style>
-	@import "font/font.css";
-</style>
+<style></style>

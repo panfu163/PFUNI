@@ -13,6 +13,7 @@
   *last update date : 2020-01-01 00:00
 */
 @import url("animate.css");/**动画效果**/
+@import url("@/font/font.css");
 
 *{font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;margin:0;padding:0;box-sizing:border-box;-webkit-text-size-adjust: none;font-size:24rpx;}
 
@@ -107,4 +108,32 @@
 	bottom:0;
 	z-index:999;
 	background:rgba($color: #000000, $alpha:0.5);
+}
+
+/**无数据样式**/
+.error{
+	width:100%;
+	text-align: center;
+	position:relative;
+	height:100%;
+	padding:200rpx 0;
+	color:#999;
+	&::after{
+		content:"\e65e";
+		position:absolute;
+		top:50%;
+		left:50%;
+		z-index:9;
+		transform: translate(-50%,-50%);
+		font-size:200rpx;
+	}
+	&::before{
+		content:"暂无数据~~";
+		position:absolute;
+		top:85%;
+		left:50%;
+		z-index:9;
+		transform: translate(-50%,-50%);
+		font-size:28rpx;
+	}
 }
