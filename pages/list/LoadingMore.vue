@@ -13,7 +13,7 @@
   *last update date : 2020-01-01 00:00
 -->
 <template>
-	<view class="LoadingMore">
+	<view>
 		<view class="refreshDmo">
 			<view v-for="(item, index) in demoDate" :key="index">{{item}}</view>
 		</view>
