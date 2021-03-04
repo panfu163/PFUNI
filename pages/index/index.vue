@@ -75,7 +75,28 @@
 					
 	  </view>
 	  <view class="list animated slideInUp">
-			<view class="title">subPackages 分包常用实例</view><view class="info" @click='goto("../list/LoadingMore")'><i class="iconfont icon-arrowright"></i>上拉加载</view>
+			<view class="title">subPackages 分包常用实例</view>
+			<view class="info" @click='goto("../list/LoadingMore")'><i class="iconfont icon-arrowright"></i>上拉加载</view>
+	  </view>
+	  <view class="list animated slideInUp">
+	  			<view class="title">ucharts 高性能跨全端图表</view>
+				<view class="info" @click='goto("../echarts/line")'><i class="iconfont icon-arrowright"></i>折线图</view>
+				<view class="info" @click='goto("../echarts/histogram")'><i class="iconfont icon-arrowright"></i>柱状图</view>
+				<view class="info" @click='goto("../echarts/pie")'><i class="iconfont icon-arrowright"></i>饼图</view>
+				<!--
+				<view class="info" @click='goto("../echarts/bar")'><i class="iconfont icon-arrowright"></i>条形图</view>
+				<view class="info" @click='goto("../echarts/ring")'><i class="iconfont icon-arrowright"></i>环图</view>
+				<view class="info" @click='goto("../echarts/funnel")'><i class="iconfont icon-arrowright"></i>漏斗图</view>
+				<view class="info" @click='goto("../echarts/radar")'><i class="iconfont icon-arrowright"></i>瀑布图</view>
+				<view class="info" @click='goto("../echarts/map")'><i class="iconfont icon-arrowright"></i>地图</view>
+				<view class="info" @click='goto("../echarts/sankey")'><i class="iconfont icon-arrowright"></i>桑基图</view>
+				<view class="info" @click='goto("../echarts/sankey")'><i class="iconfont icon-arrowright"></i>热力图</view>
+				<view class="info" @click='goto("../echarts/sankey")'><i class="iconfont icon-arrowright"></i>散点图</view>
+				<view class="info" @click='goto("../echarts/sankey")'><i class="iconfont icon-arrowright"></i>k线图</view>
+				<view class="info" @click='goto("../echarts/sankey")'><i class="iconfont icon-arrowright"></i>仪表盘</view>
+				<view class="info" @click='goto("../echarts/sankey")'><i class="iconfont icon-arrowright"></i>树图</view>
+	            <view class="info" @click='goto("../echarts/sankey")'><i class="iconfont icon-arrowright"></i>百度地图</view>
+                <view class="info" @click='goto("../echarts/sankey")'><i class="iconfont icon-arrowright"></i>高德地图</view>-->	
 	  </view>
 	</view>
 </template>

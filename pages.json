@@ -222,6 +222,29 @@
 				        "navigationBarTitleText":"上拉加载"
 					}
 		   }]
+	},{
+		 "root":"pages/echarts",//子包的根目录
+		 "pages": [{
+		            "path": "line",
+		            "style": {
+				        "navigationBarTitleText":"折线图"
+					}
+		   },{
+		            "path": "bar",
+		            "style": {
+				        "navigationBarTitleText":"条形图"
+					}
+		   },{
+		            "path": "histogram",
+		            "style": {
+				        "navigationBarTitleText":"柱状图"
+					}
+		   },{
+		            "path": "pie",
+		            "style": {
+				        "navigationBarTitleText":"饼图"
+					}
+		   }]
 	}],
 	 "preloadRule": { //分包预载配置
 	        "pages/list/LoadingMore": {
