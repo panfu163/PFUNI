@@ -13,11 +13,11 @@
   *last update date : 2020-01-01 00:00
 -->
 <template>
-	<view>
+	<view class="LoadingMore">
 		<view class="refreshDmo">
 			<view v-for="(item, index) in demoDate" :key="index">{{item}}</view>
 		</view>
-		<Loading :loadingType="loadingType"></Loading>
+		<Loading :loadingType="loadingMore.loadingType"></Loading>
 	</view>
 </template>
 <script>
@@ -25,48 +25,51 @@ import Loading from '@/components/Loading/Loading.vue';
 export default {
 	data() {
 		return {
-			demoDate: ["H", "C", 'O', 'D', 'E', 'R', 'D', 'E', 'M', 'O', 'T', 'E', 'S', 'T'],
-			loadingType : 0,
-			isEnd : false,
-			page:1
+			demoDate: ["A","H", "C", 'O', 'D', 'E', 'R', 'D', 'E', 'M', 'O', 'T', 'E', 'S', 'T'],
+			loadingMore:{
+				loadingType : 0,
+				isEnd : false,
+				page:1
+			}
 		}
 	},
 	onLoad: function (options) {
 		
 	},
-	onBackPress:function(){
-		this.page = 1;
-		this.loading = false;
-		this.loadingType = 0;
-		this.isEnd = false;
+	//监听用户下拉动作，一般用于下拉刷新
+	onPullDownRefresh:function(){
+		console.log("============")
+		setTimeout(function () {
+		            uni.stopPullDownRefresh();
+		  }, 1000);
 	},
+	//页面上拉触底事件的处理函数
 	onReachBottom : function(){
 		//避免多次触发
-		if (this.loadingType == 1 || this.isEnd){return ;}
-		this.loadMoreFunc();
+		if (this.loadingMore.loadingType == 1 || this.loadingMore.isEnd){return ;}
+		//假设 this.page > 2 代表加载了全部数据
+		// 实际开的过程以 api 接口返回数据为准
+		if (this.loadingMore.page > 2){
+			this.loadingMore.isEnd = true;
+			this.loadingMore.loadingType = 2;
+			return ;
+		}
+		//展示loading
+		this.loadingMore.loadingType = 1;
+		
+		
+		//追加数据(延迟1秒 模拟网络请求)
+		setTimeout(()=>{
+			this.loadingMore.loading  = false;
+			var newData    = this.getArrRandomly(this.demoDate);
+			this.demoDate = this.demoDate.concat(newData);
+			//累加页码
+			this.loadingMore.page++;
+			this.loadingMore.loadingType = 0;
+		}, 1000);
 	},
 	methods:{
-		//加载更多时执行的函数
-		loadMoreFunc: function (){
-			//假设 this.page > 2 代表加载了全部数据
-			// 实际开的过程以 api 接口返回数据为准
-			if (this.page > 2){
-				this.isEnd = true;
-				this.loadingType = 2;
-				return ;
-			}
-			//展示loading
-			this.loadingType = 1;
-			//追加数据(延迟1秒 模拟网络请求)
-			setTimeout(()=>{
-				this.loading  = false;
-				var newData    = this.getArrRandomly(this.demoDate);
-				this.demoDate = this.demoDate.concat(newData);
-				//累加页码
-				this.page++;
-				this.loadingType = 0;
-			}, 1000);
-		},
+		//生成数据
 		getArrRandomly:(arr)=>{
 			var len = arr.length;
 			for (var i = 0; i < len; i++) {
@@ -93,8 +96,8 @@ export default {
 		  background:#F1F2F3;
 		  color:#888888; 
 		  border-radius:3px; 
-		  height:160rpx; 
-		  line-height:160px;
+		  height:80px; 
+		  line-height:80px;
 		  text-align:center;
 		  width:48%; 
 		  margin:15rpx 1%;

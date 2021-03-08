@@ -29,6 +29,9 @@ PFUIN一款基于UNI-APP开发跨平台应用实现的精致移动端组件库�
 │  └─list
 │     └─list.vue                                #list页面
 ├─static                #存放应用引用静态资源（如图片、视频等）的地方，注意：静态资源只能存放于此
+├─views                 #分包处理-subPackages分包常用实例
+    └─list
+       └─list.vue                                #LoadingMore上拉加载更多页面
 ├─main.js               #Vue初始化入口文件
 ├─App.vue               #应用配置，用来配置App全局样式以及监听 应用生命周期
 ├─manifest.json         #配置应用名称、appid、logo、版本等打包信息，
@@ -85,7 +88,7 @@ Vue-router | 路由框架 | [https://router.vuejs.org/](https://router.vuejs.org
 Vuex | 全局状态管理框架 | [https://vuex.vuejs.org/](https://vuex.vuejs.org/)
 Element | 前端UI框架 | [https://element.eleme.io/](https://element.eleme.io/)
 Axios | 前端HTTP框架 | [https://github.com/axios/axios](https://github.com/axios/axios)
-v-charts | 基于Echarts的图表框架 | [https://v-charts.js.org/](https://v-charts.js.org/)
+uCharts | uCharts高性能跨全端图表 | [https://www.ucharts.cn/](https://www.ucharts.cn/)
 nprogress | 进度条控件 | [https://github.com/rstacruz/nprogress](https://github.com/rstacruz/nprogress)
 vue-i18n | 多语言处理 | [http://kazupon.github.io/vue-i18n/](http://kazupon.github.io/vue-i18n/)
 vue-puzzle-vcode | 滑动验证 | [https://github.com/javaLuo/vue-puzzle-vcode](https://github.com/javaLuo/vue-puzzle-vcode)

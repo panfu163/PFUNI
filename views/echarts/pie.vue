@@ -132,7 +132,7 @@
 	   padding:20rpx;
 	   font-size:24rpx;
 	}
-.qiun-padding{padding:2%; width:96%;}
+.qiun-padding{padding:2%; width:95%; margin:0 auto;}
 .qiun-wrap{display:flex; flex-wrap:wrap;}
 .qiun-rows{display:flex; flex-direction:row !important;}
 .qiun-columns{display:flex; flex-direction:column !important;}

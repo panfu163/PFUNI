@@ -76,13 +76,13 @@
 	  </view>
 	  <view class="list animated slideInUp">
 			<view class="title">subPackages 分包常用实例</view>
-			<view class="info" @click='goto("../list/LoadingMore")'><i class="iconfont icon-arrowright"></i>上拉加载</view>
+			<view class="info" @click='goto("../../views/list/LoadingMore")'><i class="iconfont icon-arrowright"></i>上拉加载</view>
 	  </view>
 	  <view class="list animated slideInUp">
 	  			<view class="title">ucharts 高性能跨全端图表</view>
-				<view class="info" @click='goto("../echarts/line")'><i class="iconfont icon-arrowright"></i>折线图</view>
-				<view class="info" @click='goto("../echarts/histogram")'><i class="iconfont icon-arrowright"></i>柱状图</view>
-				<view class="info" @click='goto("../echarts/pie")'><i class="iconfont icon-arrowright"></i>饼图</view>
+				<view class="info" @click='goto("../../views/echarts/line")'><i class="iconfont icon-arrowright"></i>折线图</view>
+				<view class="info" @click='goto("../../views/echarts/histogram")'><i class="iconfont icon-arrowright"></i>柱状图</view>
+				<view class="info" @click='goto("../../views/echarts/pie")'><i class="iconfont icon-arrowright"></i>饼图</view>
 				<!--
 				<view class="info" @click='goto("../echarts/bar")'><i class="iconfont icon-arrowright"></i>条形图</view>
 				<view class="info" @click='goto("../echarts/ring")'><i class="iconfont icon-arrowright"></i>环图</view>

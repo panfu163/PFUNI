@@ -215,39 +215,40 @@
 		}
 	],
 	"subPackages": [{
-		 "root":"pages/list",//子包的根目录
+		 "root":"views",//子包的根目录
 		 "pages": [{
-		            "path": "LoadingMore",
+		            "path": "list/LoadingMore",
 		            "style": {
-				        "navigationBarTitleText":"上拉加载"
+				        "navigationBarTitleText":"上拉加载",
+						"enablePullDownRefresh": true
 					}
 		   }]
 	},{
-		 "root":"pages/echarts",//子包的根目录
+		 "root":"views",//子包的根目录
 		 "pages": [{
-		            "path": "line",
+		            "path": "echarts/line",
 		            "style": {
 				        "navigationBarTitleText":"折线图"
 					}
 		   },{
-		            "path": "bar",
+		            "path": "echarts/bar",
 		            "style": {
 				        "navigationBarTitleText":"条形图"
 					}
 		   },{
-		            "path": "histogram",
+		            "path": "echarts/histogram",
 		            "style": {
 				        "navigationBarTitleText":"柱状图"
 					}
 		   },{
-		            "path": "pie",
+		            "path": "echarts/pie",
 		            "style": {
 				        "navigationBarTitleText":"饼图"
 					}
 		   }]
 	}],
 	 "preloadRule": { //分包预载配置
-	        "pages/list/LoadingMore": {
+	        "views/list/LoadingMore": {
 	            "network": "all", //在指定网络下预下载，可选值为：all（不限网络）、wifi（仅wifi下预下载）
 	            "packages": ["__APP__"] //进入页面后预下载分包的 root 或 name。APP 表示主包
 	        }
